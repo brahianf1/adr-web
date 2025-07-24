@@ -180,6 +180,11 @@ const Quizzes = () => {
     }
   }
 
+  const capitalizeFirst = (text) => {
+    if (!text) return text
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+  }
+
   const getScoreColor = (percentage) => {
     if (percentage >= 80) return 'text-green-600 dark:text-green-400'
     if (percentage >= 60) return 'text-yellow-600 dark:text-yellow-400'
@@ -280,7 +285,7 @@ const Quizzes = () => {
                     
                     <div className="flex items-center space-x-4 mt-3">
                       <span className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(result.difficulty)}`}>
-                        {result.difficulty}
+                        {capitalizeFirst(result.difficulty)}
                       </span>
                       <span className="text-xs text-gray-500 dark:text-gray-400">
                         {result.topic}
@@ -349,14 +354,14 @@ const Quizzes = () => {
           />
         </div>
 
-        {/* Question Card - Responsive with scroll handling */}
-        <div className="flex-1 flex items-start sm:items-center justify-center p-4 overflow-hidden min-h-0">
-          <div className="w-full max-w-4xl flex flex-col min-h-0 max-h-full">
+        {/* Question Card - Positioned higher, not centered */}
+        <div className="flex-1 flex items-start justify-center p-4 pt-8">
+          <div className="w-full max-w-4xl">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               key={currentQuestionIndex} // Re-animate on question change
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden relative flex flex-col max-h-full"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden relative"
             >
               {/* Transition Progress Bar - At the top of the card */}
               <AnimatePresence>
@@ -377,12 +382,12 @@ const Quizzes = () => {
                 )}
               </AnimatePresence>
 
-              <div className="flex flex-col min-h-0 max-h-[calc(100vh-12rem)] sm:max-h-[calc(100vh-8rem)]">
-                {/* Header - Fixed height */}
-                <div className="flex-shrink-0 p-6 sm:p-8 pb-4">
+              <div>
+                {/* Header */}
+                <div className="p-6 sm:p-8 pb-4">
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
-                      {currentQuestion.difficulty}
+                      {capitalizeFirst(currentQuestion.difficulty)}
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                       {currentQuestion.topic}
@@ -394,8 +399,8 @@ const Quizzes = () => {
                   </h2>
                 </div>
                 
-                {/* Scrollable Options Area */}
-                <div className="flex-1 px-6 sm:px-8 pb-6 sm:pb-8 overflow-y-auto min-h-0 quiz-options-scroll">
+                {/* Options Area - No scroll, natural spacing */}
+                <div className="px-6 sm:px-8 pb-6 sm:pb-8">
                   <div className="space-y-3">
                 {currentQuestion.options.map((option, index) => {
                   const isSelected = selectedAnswer === option
