@@ -308,148 +308,150 @@ const Quizzes = () => {
     )
   }
 
-  // Active Quiz View
+  // Active Quiz View - Fullscreen without site header
   if (isQuizActive && currentQuiz) {
     const currentQuestion = currentQuiz[currentQuestionIndex]
     const progress = ((currentQuestionIndex + 1) / currentQuiz.length) * 100
 
     return (
-      <div className="min-h-screen p-4 lg:p-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Quiz Header */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
-                Pregunta {currentQuestionIndex + 1} de {currentQuiz.length}
-              </h1>
-              
-              <button
-                onClick={resetQuiz}
-                className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                Salir
-              </button>
-            </div>
-            
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-              <motion.div
-                className="bg-primary-600 h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.5 }}
-              />
-            </div>
-          </motion.div>
-
-          {/* Question Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="card mb-8"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
-                {currentQuestion.difficulty}
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {currentQuestion.topic}
-              </span>
-            </div>
-            
-            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-relaxed">
-              {currentQuestion.question}
-            </h2>
-            
-            {/* Answer Options */}
-            <div className="space-y-3">
-              {currentQuestion.options.map((option, index) => {
-                const isSelected = selectedAnswer === option
-                const isCorrect = option === currentQuestion.correct_option
-                const showCorrectAnswer = showResult && isCorrect
-                const showWrongAnswer = showResult && isSelected && !isCorrect
-                
-                return (
-                  <motion.button
-                    key={index}
-                    onClick={() => selectAnswer(option)}
-                    disabled={showResult}
-                    className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
-                      showCorrectAnswer
-                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400'
-                        : showWrongAnswer
-                        ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'
-                        : isSelected
-                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-gray-50 dark:hover:bg-gray-700'
-                    } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer hover:scale-102 active:scale-98'}`}
-                    whileHover={!showResult ? { scale: 1.02 } : {}}
-                    whileTap={!showResult ? { scale: 0.98 } : {}}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <div className="flex items-start space-x-3">
-                      <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                        showCorrectAnswer
-                          ? 'border-green-500 bg-green-500'
-                          : showWrongAnswer
-                          ? 'border-red-500 bg-red-500'
-                          : isSelected
-                          ? 'border-primary-500 bg-primary-500'
-                          : 'border-gray-300 dark:border-gray-600'
-                      }`}>
-                        {showCorrectAnswer && (
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 0.2 }}
-                          >
-                            <CheckIcon className="w-4 h-4 text-white" />
-                          </motion.div>
-                        )}
-                        {showWrongAnswer && (
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 0.2 }}
-                          >
-                            <XMarkIcon className="w-4 h-4 text-white" />
-                          </motion.div>
-                        )}
-                        {isSelected && !showResult && (
-                          <CheckIcon className="w-4 h-4 text-white" />
-                        )}
-                      </div>
-                      <span className="font-medium flex-1">{option}</span>
-                    </div>
-                  </motion.button>
-                )
-              })}
-            </div>
-          </motion.div>
-
-          {/* Progress indicator for mobile - shows current progress */}
-          {showResult && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-6"
+      <div className="fixed inset-0 bg-gray-50 dark:bg-gray-900 z-50 flex flex-col overflow-hidden">
+        {/* Quiz Header */}
+        <div className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 shadow-sm flex-shrink-0">
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={resetQuiz}
+              className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                {currentQuestionIndex < currentQuiz.length - 1 
-                  ? 'Siguiente pregunta en...' 
-                  : 'Finalizando quiz...'
-                }
+              <XMarkIcon className="w-5 h-5" />
+              <span className="hidden sm:inline">Salir</span>
+            </button>
+          </div>
+          
+          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+            Pregunta {currentQuestionIndex + 1} de {currentQuiz.length}
+          </div>
+          
+          <div className="w-8"> {/* Spacer for balance */}
+          </div>
+        </div>
+        
+        {/* Full-width Progress Bar */}
+        <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 flex-shrink-0">
+          <div
+            className="bg-gradient-to-r from-primary-500 to-secondary-500 h-2 transition-all duration-500 ease-out"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+
+        {/* Question Card - Centered without scroll */}
+        <div className="flex-1 flex items-center justify-center p-4 overflow-hidden">
+          <div className="w-full max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              key={currentQuestionIndex} // Re-animate on question change
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
+                  {currentQuestion.difficulty}
+                </span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {currentQuestion.topic}
+                </span>
               </div>
-              <div className="w-8 h-8 mx-auto">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
+              
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-relaxed">
+                {currentQuestion.question}
+              </h2>
+              
+              {/* Answer Options */}
+              <div className="space-y-3">
+                {currentQuestion.options.map((option, index) => {
+                  const isSelected = selectedAnswer === option
+                  const isCorrect = option === currentQuestion.correct_option
+                  const showCorrectAnswer = showResult && isCorrect
+                  const showWrongAnswer = showResult && isSelected && !isCorrect
+                  
+                  return (
+                    <motion.button
+                      key={`${currentQuestionIndex}-${index}`} // Add question index to key
+                      onClick={() => selectAnswer(option)}
+                      disabled={showResult}
+                      className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
+                        showCorrectAnswer
+                          ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400'
+                          : showWrongAnswer
+                          ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'
+                          : isSelected
+                          ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
+                          : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                      } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer hover:scale-102 active:scale-98'}`}
+                      whileHover={!showResult ? { scale: 1.02 } : {}}
+                      whileTap={!showResult ? { scale: 0.98 } : {}}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                          showCorrectAnswer
+                            ? 'border-green-500 bg-green-500'
+                            : showWrongAnswer
+                            ? 'border-red-500 bg-red-500'
+                            : isSelected
+                            ? 'border-primary-500 bg-primary-500'
+                            : 'border-gray-300 dark:border-gray-600'
+                        }`}>
+                          {showCorrectAnswer && (
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{ delay: 0.2 }}
+                            >
+                              <CheckIcon className="w-4 h-4 text-white" />
+                            </motion.div>
+                          )}
+                          {showWrongAnswer && (
+                            <motion.div
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{ delay: 0.2 }}
+                            >
+                              <XMarkIcon className="w-4 h-4 text-white" />
+                            </motion.div>
+                          )}
+                          {isSelected && !showResult && (
+                            <CheckIcon className="w-4 h-4 text-white" />
+                          )}
+                        </div>
+                        <span className="font-medium flex-1">{option}</span>
+                      </div>
+                    </motion.button>
+                  )
+                })}
               </div>
             </motion.div>
-          )}
+
+            {/* Progress indicator for mobile - shows current progress */}
+            {showResult && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-6"
+              >
+                <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  {currentQuestionIndex < currentQuiz.length - 1 
+                    ? 'Siguiente pregunta en...' 
+                    : 'Finalizando quiz...'
+                  }
+                </div>
+                <div className="w-8 h-8 mx-auto">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
+                </div>
+              </motion.div>
+            )}
+          </div>
         </div>
       </div>
     )
