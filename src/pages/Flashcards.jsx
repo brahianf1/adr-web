@@ -150,7 +150,12 @@ const Flashcards = () => {
   const handleReset = () => {
     resetFlashcards()
     setIsFlipped(false)
-    // Toast removed for better UX - progress is visible in the interface
+    setCurrentFlashcardIndex(0)
+    
+    // Si el modo aleatorio está activo, reordenar las tarjetas
+    if (isShuffled) {
+      setFilteredCards(prevCards => [...prevCards].sort(() => Math.random() - 0.5))
+    }
   }
 
   const handleShuffle = () => {
@@ -163,6 +168,11 @@ const Flashcards = () => {
     setShowSettings(false)
     // Hide instructions in study mode for focused experience
     setShowInstructions(false)
+    
+    // Si el modo aleatorio está activo, reordenar las tarjetas al iniciar
+    if (isShuffled) {
+      setFilteredCards(prevCards => [...prevCards].sort(() => Math.random() - 0.5))
+    }
   }
 
   const exitStudyMode = () => {
@@ -437,51 +447,63 @@ const Flashcards = () => {
 
         {/* Mobile-Optimized Navigation */}
         <div className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-          <div className="flex items-center justify-center space-x-8 py-4">
-            {/* Previous Button */}
+          <div className="flex items-center justify-between px-4 py-4">
+            {/* Left Side - Previous Button */}
             <button
               onClick={handlePrevious}
               disabled={currentFlashcardIndex === 0}
-              className={`flex items-center justify-center w-14 h-14 rounded-full transition-all duration-200 ${
+              className={`flex items-center justify-center w-12 h-12 rounded-full transition-all duration-200 ${
                 currentFlashcardIndex === 0
                   ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
                   : 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/30 active:scale-95'
               }`}
             >
-              <ChevronLeftIcon className="w-6 h-6" />
+              <ChevronLeftIcon className="w-5 h-5" />
             </button>
 
-            {/* Center Action - Flip Indicator */}
-            <div 
-              onClick={handleFlip}
-              className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full text-white cursor-pointer hover:shadow-lg active:scale-95 transition-all duration-200"
-            >
-              <motion.div
-                animate={{ 
-                  rotateZ: isFlipped ? 180 : 0,
-                  scale: isFlipped ? 1.1 : 1
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+            {/* Center Actions */}
+            <div className="flex items-center space-x-4">
+              {/* Restart Button */}
+              <button
+                onClick={handleReset}
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-95 transition-all duration-200"
+                title="Reiniciar flashcards"
               >
-                {isFlipped ? (
-                  <ArrowUturnDownIcon className="w-6 h-6" />
-                ) : (
-                  <EyeIcon className="w-6 h-6" />
-                )}
-              </motion.div>
+                <ArrowPathIcon className="w-5 h-5" />
+              </button>
+
+              {/* Center Action - Flip Indicator */}
+              <div 
+                onClick={handleFlip}
+                className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full text-white cursor-pointer hover:shadow-lg active:scale-95 transition-all duration-200"
+              >
+                <motion.div
+                  animate={{ 
+                    rotateZ: isFlipped ? 180 : 0,
+                    scale: isFlipped ? 1.1 : 1
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  {isFlipped ? (
+                    <ArrowUturnDownIcon className="w-6 h-6" />
+                  ) : (
+                    <EyeIcon className="w-6 h-6" />
+                  )}
+                </motion.div>
+              </div>
             </div>
 
-            {/* Next Button */}
+            {/* Right Side - Next Button */}
             <button
               onClick={handleNext}
               disabled={currentFlashcardIndex === totalCards - 1}
-              className={`flex items-center justify-center w-14 h-14 rounded-full transition-all duration-200 ${
+              className={`flex items-center justify-center w-12 h-12 rounded-full transition-all duration-200 ${
                 currentFlashcardIndex === totalCards - 1
                   ? 'bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
                   : 'bg-primary-100 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/30 active:scale-95'
               }`}
             >
-              <ChevronRightIcon className="w-6 h-6" />
+              <ChevronRightIcon className="w-5 h-5" />
             </button>
           </div>
         </div>
