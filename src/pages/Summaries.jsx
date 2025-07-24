@@ -74,6 +74,44 @@ const Summaries = () => {
   const endIndex = startIndex + itemsPerPage
   const currentSummaries = filteredSummaries.slice(startIndex, endIndex)
 
+  // Keyboard navigation for desktop
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Only handle keyboard events if not typing in an input field
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT' || event.target.tagName === 'TEXTAREA') {
+        return
+      }
+
+      // Only navigate if there are multiple pages
+      if (totalPages <= 1) return
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault()
+          if (currentPage > 1) {
+            handlePageChange(currentPage - 1, true)
+          }
+          break
+        case 'ArrowRight':
+          event.preventDefault()
+          if (currentPage < totalPages) {
+            handlePageChange(currentPage + 1, true)
+          }
+          break
+        default:
+          break
+      }
+    }
+
+    // Add event listener
+    window.addEventListener('keydown', handleKeyPress)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [currentPage, totalPages, handlePageChange])
+
   // Group current summaries by topic
   const summariesByTopic = currentSummaries.reduce((acc, summary) => {
     if (!acc[summary.topic]) {
@@ -117,9 +155,23 @@ const Summaries = () => {
                 <span>Vista concentrada</span>
               </button>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
               Accede a resúmenes organizados por temas para repasar rápidamente los conceptos clave.
             </p>
+            
+            {/* Keyboard navigation hint for desktop */}
+            {totalPages > 1 && (
+              <div className="hidden lg:flex items-center justify-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <span>Navegación:</span>
+                  <div className="flex items-center space-x-1">
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">←</span>
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">→</span>
+                    <span className="text-xs">cambiar página</span>
+                  </div>
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
 
@@ -318,47 +370,51 @@ const Summaries = () => {
             >
               {Object.entries(summariesByTopic).map(([topic, topicSummaries], topicIndex) => (
                 <div key={topic}>
-                  {/* Topic Header */}
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-2 h-8 bg-primary-600 rounded-full"></div>
-                    <div>
-                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        {topic}
-                      </h2>
+                  {/* Topic Header - Aligned with cards */}
+                  <div className="flex justify-center">
+                    <div className="flex items-center space-x-3 mb-6 max-w-5xl w-full">
+                      <div className="w-2 h-8 bg-primary-600 rounded-full"></div>
+                      <div>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                          {topic}
+                        </h2>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Summaries Grid - Simplified animation */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {topicSummaries.map((summary, index) => (
-                      <div
-                        key={summary.id}
-                        className="card group hover:shadow-xl transition-all duration-300"
-                      >
-                        <div className="flex items-start space-x-4">
-                          <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                            <HiDocument className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-                          </div>
-                          
-                          <div className="flex-1">
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                              {searchTerm ? (
-                                // Highlight search term
-                                summary.summary.split(new RegExp(`(${searchTerm})`, 'gi')).map((part, i) => 
-                                  part.toLowerCase() === searchTerm.toLowerCase() ? (
-                                    <mark key={i} className="bg-yellow-200 dark:bg-yellow-800/50 px-1 rounded">
-                                      {part}
-                                    </mark>
-                                  ) : part
-                                )
-                              ) : (
-                                summary.summary
-                              )}
-                            </p>
+                  {/* Summaries Grid - Centered and larger on desktop */}
+                  <div className="flex justify-center">
+                    <div className="grid grid-cols-1 xl:grid-cols-1 gap-8 max-w-5xl w-full">
+                      {topicSummaries.map((summary, index) => (
+                        <div
+                          key={summary.id}
+                          className="card group hover:shadow-xl transition-all duration-300"
+                        >
+                          <div className="flex items-start space-x-6">
+                            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                              <HiDocument className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                            </div>
+                            
+                            <div className="flex-1">
+                              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                                {searchTerm ? (
+                                  // Highlight search term
+                                  summary.summary.split(new RegExp(`(${searchTerm})`, 'gi')).map((part, i) => 
+                                    part.toLowerCase() === searchTerm.toLowerCase() ? (
+                                      <mark key={i} className="bg-yellow-200 dark:bg-yellow-800/50 px-1 rounded">
+                                        {part}
+                                      </mark>
+                                    ) : part
+                                  )
+                                ) : (
+                                  summary.summary
+                                )}
+                              </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
