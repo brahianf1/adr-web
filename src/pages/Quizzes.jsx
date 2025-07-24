@@ -86,22 +86,17 @@ const Quizzes = () => {
   }
 
   const selectAnswer = (answer) => {
+    if (showResult) return // Prevent selection after result is shown
+    
     setSelectedAnswer(answer)
-  }
-
-  const submitAnswer = () => {
-    if (!selectedAnswer) {
-      // Visual feedback through button state instead of toast
-      // The disabled state of the button already indicates this
-      return
-    }
-
+    
+    // Immediate result showing - no need to confirm
     const currentQuestion = currentQuiz[currentQuestionIndex]
-    const isCorrect = selectedAnswer === currentQuestion.correct_option
+    const isCorrect = answer === currentQuestion.correct_option
     
     const result = {
       question: currentQuestion.question,
-      selectedAnswer,
+      selectedAnswer: answer,
       correctAnswer: currentQuestion.correct_option,
       isCorrect,
       topic: currentQuestion.topic,
@@ -114,8 +109,21 @@ const Quizzes = () => {
     // Update study progress
     updateStudyProgress('quiz', currentQuestion.id, isCorrect)
     
-    // Visual feedback is handled by the UI color changes
-    // No need for toast notifications as the answer options show the result clearly
+    // Auto-advance after showing result (like Duolingo/Kahoot)
+    setTimeout(() => {
+      if (currentQuestionIndex < currentQuiz.length - 1) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1)
+        setSelectedAnswer('')
+        setShowResult(false)
+      } else {
+        finishQuiz()
+      }
+    }, 1500) // Show result for 1.5 seconds, then auto-advance
+  }
+
+  // Remove the old submitAnswer function since we don't need it anymore
+  const submitAnswer = () => {
+    // This function is no longer needed with instant selection
   }
 
   const nextQuestion = () => {
@@ -367,9 +375,9 @@ const Quizzes = () => {
                 return (
                   <motion.button
                     key={index}
-                    onClick={() => !showResult && selectAnswer(option)}
+                    onClick={() => selectAnswer(option)}
                     disabled={showResult}
-                    className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-200 ${
+                    className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
                       showCorrectAnswer
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400'
                         : showWrongAnswer
@@ -377,12 +385,15 @@ const Quizzes = () => {
                         : isSelected
                         ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
                         : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-gray-50 dark:hover:bg-gray-700'
-                    } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                    } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer hover:scale-102 active:scale-98'}`}
                     whileHover={!showResult ? { scale: 1.02 } : {}}
                     whileTap={!showResult ? { scale: 0.98 } : {}}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
                   >
                     <div className="flex items-start space-x-3">
-                      <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+                      <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         showCorrectAnswer
                           ? 'border-green-500 bg-green-500'
                           : showWrongAnswer
@@ -392,10 +403,22 @@ const Quizzes = () => {
                           : 'border-gray-300 dark:border-gray-600'
                       }`}>
                         {showCorrectAnswer && (
-                          <CheckIcon className="w-4 h-4 text-white" />
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.2 }}
+                          >
+                            <CheckIcon className="w-4 h-4 text-white" />
+                          </motion.div>
                         )}
                         {showWrongAnswer && (
-                          <XMarkIcon className="w-4 h-4 text-white" />
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.2 }}
+                          >
+                            <XMarkIcon className="w-4 h-4 text-white" />
+                          </motion.div>
                         )}
                         {isSelected && !showResult && (
                           <CheckIcon className="w-4 h-4 text-white" />
@@ -409,28 +432,24 @@ const Quizzes = () => {
             </div>
           </motion.div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center justify-center space-x-4">
-            {!showResult ? (
-              <button
-                onClick={submitAnswer}
-                disabled={!selectedAnswer}
-                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
-              >
-                <CheckIcon className="w-5 h-5" />
-                <span>Confirmar respuesta</span>
-              </button>
-            ) : (
-              <button
-                onClick={nextQuestion}
-                className="btn-primary flex items-center space-x-2"
-              >
-                <span>
-                  {currentQuestionIndex < currentQuiz.length - 1 ? 'Siguiente pregunta' : 'Ver resultados'}
-                </span>
-              </button>
-            )}
-          </div>
+          {/* Progress indicator for mobile - shows current progress */}
+          {showResult && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-6"
+            >
+              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                {currentQuestionIndex < currentQuiz.length - 1 
+                  ? 'Siguiente pregunta en...' 
+                  : 'Finalizando quiz...'
+                }
+              </div>
+              <div className="w-8 h-8 mx-auto">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     )
