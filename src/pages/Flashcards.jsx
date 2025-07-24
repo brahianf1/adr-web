@@ -276,7 +276,13 @@ const Flashcards = () => {
   // Study Mode - Fullscreen focused experience
   if (isStudyMode) {
     return (
-      <div className="fixed inset-0 bg-gray-50 dark:bg-gray-900 z-50 flex flex-col">
+      <div 
+        className="fixed inset-0 bg-gray-50 dark:bg-gray-900 z-50 flex flex-col overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        style={{ touchAction: 'none' }} // Disable all native touch behaviors on mobile
+      >
         {/* Minimal Header */}
         <div className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 shadow-sm">
           <button
@@ -376,8 +382,8 @@ const Flashcards = () => {
           )}
         </AnimatePresence>
 
-        {/* Main Flashcard Area */}
-        <div className="flex-1 flex items-center justify-center p-4">
+        {/* Main Flashcard Area - Full swipe area */}
+        <div className="flex-1 flex items-center justify-center p-4 w-full h-full">
           <motion.div
             key={currentCard?.id}
             initial={{ opacity: 0, scale: 0.95 }}
@@ -386,10 +392,6 @@ const Flashcards = () => {
           >
             <div 
               className={`flip-card h-80 sm:h-96 ${isFlipped ? 'flipped' : ''}`}
-              onTouchStart={onTouchStart}
-              onTouchMove={onTouchMove}
-              onTouchEnd={onTouchEnd}
-              style={{ touchAction: 'pan-y' }} // Permite scroll vertical pero mantiene gestos horizontales
             >
               <div
                 className="flip-card-inner w-full h-full cursor-pointer"
