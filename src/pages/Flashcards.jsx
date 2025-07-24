@@ -347,8 +347,9 @@ const Flashcards = () => {
               >
                 {/* Front */}
                 <div className="flip-card-front absolute inset-0 w-full h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl h-full flex flex-col p-6 sm:p-8">
-                    <div className="flex items-center justify-between mb-4 flex-shrink-0">
+                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl h-full relative p-6 sm:p-8">
+                    {/* Header positioned absolutely to not affect centering */}
+                    <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentCard?.difficulty)}`}>
                         {currentCard?.difficulty}
                       </span>
@@ -357,7 +358,8 @@ const Flashcards = () => {
                       </span>
                     </div>
                     
-                    <div className="flex-1 flex items-center justify-center min-h-0">
+                    {/* Content centered in full card */}
+                    <div className="h-full flex items-center justify-center">
                       <h2 className="flashcard-content text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white text-center leading-relaxed break-words hyphens-auto w-full px-2">
                         {currentCard?.question}
                       </h2>
@@ -367,20 +369,14 @@ const Flashcards = () => {
 
                 {/* Back */}
                 <div className="flip-card-back absolute inset-0 w-full h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl h-full flex flex-col p-6 sm:p-8">
-                    <div className="flex items-center justify-between mb-4 flex-shrink-0">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentCard?.difficulty)}`}>
-                        {currentCard?.difficulty}
-                      </span>
-                      <div className="flex items-center space-x-2">
-                        <CheckIcon className="w-5 h-5 text-green-500" />
-                        <span className="text-sm text-gray-500 dark:text-gray-400">
-                          {currentCard?.topic}
-                        </span>
-                      </div>
+                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl shadow-xl h-full relative p-6 sm:p-8 border-l-4 border-primary-500">
+                    {/* Small indicator in corner instead of full header */}
+                    <div className="absolute top-4 right-4">
+                      <CheckIcon className="w-6 h-6 text-primary-500" />
                     </div>
                     
-                    <div className="flex-1 flex items-center justify-center min-h-0 overflow-y-auto">
+                    {/* Content centered in full card */}
+                    <div className="h-full flex items-center justify-center">
                       <div className="flashcard-content text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 text-center leading-relaxed break-words hyphens-auto max-h-full overflow-y-auto w-full px-2">
                         {currentCard?.answer}
                       </div>
