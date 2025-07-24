@@ -476,8 +476,9 @@ const Quizzes = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center mb-8"
         >
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -490,8 +491,9 @@ const Quizzes = () => {
 
         {/* Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 }}
           className="card mb-8"
         >
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
@@ -614,9 +616,9 @@ const Quizzes = () => {
 
         {/* Quiz Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6"
         >
           {[
