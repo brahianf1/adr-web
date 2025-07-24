@@ -484,9 +484,21 @@ const Quizzes = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Quiz de Administración
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
             Pon a prueba tus conocimientos con preguntas de opción múltiple
           </p>
+          
+          {/* Start Quiz Button */}
+          <div className="flex justify-center">
+            <button
+              onClick={startQuiz}
+              disabled={filteredQuizzes.length === 0}
+              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center space-x-2"
+            >
+              <PlayIcon className="w-6 h-6" />
+              <span>Comenzar Quiz</span>
+            </button>
+          </div>
         </motion.div>
 
         {/* Filters */}
@@ -597,20 +609,11 @@ const Quizzes = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               <span className="font-semibold text-primary-600 dark:text-primary-400">
                 {filteredQuizzes.length}
               </span> preguntas disponibles con los filtros seleccionados
             </p>
-            
-            <button
-              onClick={startQuiz}
-              disabled={filteredQuizzes.length === 0}
-              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 mx-auto px-8 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              <PlayIcon className="w-5 h-5" />
-              <span>Comenzar Quiz</span>
-            </button>
           </div>
         </motion.div>
 
