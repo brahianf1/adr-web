@@ -39,7 +39,7 @@ const Flashcards = () => {
   const [filteredCards, setFilteredCards] = useState([])
   const [selectedTopic, setSelectedTopic] = useState('all')
   const [selectedDifficulty, setSelectedDifficulty] = useState('all')
-  const [isShuffled, setIsShuffled] = useState(false)
+  const [isShuffled, setIsShuffled] = useState(true)
   const [isStudyMode, setIsStudyMode] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
 
