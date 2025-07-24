@@ -30,6 +30,7 @@ const Quizzes = () => {
   const [isShuffled, setIsShuffled] = useState(false)
   const [shuffleOptions, setShuffleOptions] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [currentAnswerIsCorrect, setCurrentAnswerIsCorrect] = useState(false)
 
   // Get unique topics and difficulties
   const topics = [...new Set(quizzes.map(quiz => quiz.topic))].sort()
@@ -85,6 +86,7 @@ const Quizzes = () => {
     setQuizResults([])
     setIsQuizActive(true)
     setIsTransitioning(false)
+    setCurrentAnswerIsCorrect(false)
   }
 
   const selectAnswer = (answer) => {
@@ -108,11 +110,15 @@ const Quizzes = () => {
     setQuizResults([...quizResults, result])
     setShowResult(true)
     setIsTransitioning(true)
+    setCurrentAnswerIsCorrect(isCorrect)
     
     // Update study progress
     updateStudyProgress('quiz', currentQuestion.id, isCorrect)
     
     // Auto-advance after showing result (like Duolingo/Kahoot)
+    // Use different timing based on correctness: more time for incorrect answers to read the correct one
+    const delayTime = isCorrect ? 1500 : 3000 // 1.5s for correct, 3s for incorrect
+    
     setTimeout(() => {
       setIsTransitioning(false)
       if (currentQuestionIndex < currentQuiz.length - 1) {
@@ -122,7 +128,7 @@ const Quizzes = () => {
       } else {
         finishQuiz()
       }
-    }, 1500) // Show result for 1.5 seconds, then auto-advance
+    }, delayTime)
   }
 
   // Remove the old submitAnswer function since we don't need it anymore
@@ -158,6 +164,7 @@ const Quizzes = () => {
     setQuizResults([])
     setIsQuizActive(false)
     setIsTransitioning(false)
+    setCurrentAnswerIsCorrect(false)
   }
 
   const restartQuiz = () => {
@@ -191,6 +198,7 @@ const Quizzes = () => {
     setShowResult(false)
     setQuizResults([])
     setIsTransitioning(false)
+    setCurrentAnswerIsCorrect(false)
   }
 
   const getDifficultyColor = (difficulty) => {
@@ -409,7 +417,10 @@ const Quizzes = () => {
                     <motion.div
                       initial={{ width: '0%' }}
                       animate={{ width: '100%' }}
-                      transition={{ duration: 1.5, ease: 'linear' }}
+                      transition={{ 
+                        duration: currentAnswerIsCorrect ? 1.5 : 3.0, 
+                        ease: 'linear' 
+                      }}
                       className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-500"
                     />
                   </motion.div>
