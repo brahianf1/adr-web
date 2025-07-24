@@ -27,8 +27,8 @@ const Quizzes = () => {
   const [filteredQuizzes, setFilteredQuizzes] = useState([])
   const [selectedTopic, setSelectedTopic] = useState('all')
   const [selectedDifficulty, setSelectedDifficulty] = useState('all')
-  const [isShuffled, setIsShuffled] = useState(false)
-  const [shuffleOptions, setShuffleOptions] = useState(false)
+  const [isShuffled, setIsShuffled] = useState(true)
+  const [shuffleOptions, setShuffleOptions] = useState(true)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [currentAnswerIsCorrect, setCurrentAnswerIsCorrect] = useState(false)
 
