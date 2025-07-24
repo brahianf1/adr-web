@@ -244,14 +244,14 @@ const Flashcards = () => {
           </button>
           
           {/* Elegant Progress Bar */}
-          <div className="flex-1 mx-4 max-w-md">
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1">
+          <div className="flex-1 mx-4 max-w-md flex flex-col justify-center">
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1 mb-1">
               <div
                 className="bg-primary-500 h-1 rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${((currentFlashcardIndex + 1) / totalCards) * 100}%` }}
               />
             </div>
-            <div className="text-xs text-center text-gray-500 dark:text-gray-400 mt-1">
+            <div className="text-xs text-center text-gray-500 dark:text-gray-400">
               {currentFlashcardIndex + 1} / {totalCards}
             </div>
           </div>
