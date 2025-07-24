@@ -103,6 +103,50 @@ const Flashcards = () => {
     }
   }
 
+  // Keyboard controls for desktop navigation
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Only handle keyboard events if not typing in an input field
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'SELECT' || event.target.tagName === 'TEXTAREA') {
+        return
+      }
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault()
+          if (currentFlashcardIndex > 0) {
+            handlePrevious()
+          }
+          break
+        case 'ArrowRight':
+          event.preventDefault()
+          if (currentFlashcardIndex < totalCards - 1) {
+            handleNext()
+          }
+          break
+        case 'ArrowUp':
+        case 'ArrowDown':
+          event.preventDefault()
+          handleFlip()
+          break
+        case ' ': // Spacebar as alternative to flip
+          event.preventDefault()
+          handleFlip()
+          break
+        default:
+          break
+      }
+    }
+
+    // Add event listener
+    window.addEventListener('keydown', handleKeyPress)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [currentFlashcardIndex, totalCards, isFlipped, handleNext, handlePrevious, handleFlip]) // Dependencies to ensure handlers have current values
+
   const handleReset = () => {
     resetFlashcards()
     setIsFlipped(false)
@@ -244,16 +288,17 @@ const Flashcards = () => {
           </button>
           
           {/* Card counter */}
-          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-            {currentFlashcardIndex + 1} / {totalCards}
+          <div className="flex items-center space-x-4">
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+              {currentFlashcardIndex + 1} / {totalCards}
+            </div>
+            <button
+              onClick={() => setShowSettings(!showSettings)}
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              <Cog6ToothIcon className="w-5 h-5" />
+            </button>
           </div>
-
-          <button
-            onClick={() => setShowSettings(!showSettings)}
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Cog6ToothIcon className="w-5 h-5" />
-          </button>
         </div>
 
         {/* Full-width Progress Bar - Completely separate component */}
@@ -454,9 +499,32 @@ const Flashcards = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Flashcards
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+          <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
             Estudia con tarjetas interactivas. Configura tus preferencias y comienza el modo de estudio enfocado.
           </p>
+          
+          {/* Keyboard Controls Hint */}
+          <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400 mb-6">
+            <div className="flex items-center space-x-1">
+              <span className="hidden sm:inline">Teclado:</span>
+              <div className="flex items-center space-x-1">
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">←</span>
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">→</span>
+                <span className="text-xs hidden sm:inline">navegar</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1">
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">↑</span>
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">↓</span>
+                <span className="text-xs hidden sm:inline">voltear</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono">Space</span>
+              <span className="text-xs hidden sm:inline">voltear</span>
+            </div>
+          </div>
           
           {/* Study Mode Button */}
           <div className="flex justify-center">
