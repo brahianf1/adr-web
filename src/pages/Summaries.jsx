@@ -1,13 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { 
   HiDocument, 
-  HiFunnel, 
-  HiMagnifyingGlass,
-  HiChevronLeft,
-  HiChevronRight,
-  HiChevronDoubleLeft,
-  HiChevronDoubleRight
+  HiMagnifyingGlass
 } from 'react-icons/hi2'
 import { useDataStore } from '../store'
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -22,8 +17,27 @@ const Summaries = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage, setItemsPerPage] = useState(6)
 
+  // Ref for content area to scroll to
+  const contentRef = useRef(null)
+  const topPaginationRef = useRef(null)
+
   // Get unique topics
   const topics = [...new Set(summaries.map(summary => summary.topic))].sort()
+
+  // Professional page change handler with smooth scroll
+  const handlePageChange = (newPage, scrollToContent = false) => {
+    setCurrentPage(newPage)
+    
+    // Scroll to top pagination when changing page from bottom pagination (professional UX)
+    if (scrollToContent && topPaginationRef.current) {
+      setTimeout(() => {
+        topPaginationRef.current.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        })
+      }, 100) // Small delay to ensure content is updated
+    }
+  }
 
   // Filter summaries and reset pagination when filters change
   useEffect(() => {
@@ -166,6 +180,37 @@ const Summaries = () => {
           </div>
         </motion.div>
 
+        {/* Top Pagination - Minimal design for quick access */}
+        <div ref={topPaginationRef}>
+          {totalPages > 1 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex items-center justify-center space-x-3 py-2 mb-6"
+            >
+              <button
+                onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
+                disabled={currentPage === 1}
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              >
+                ← Anterior
+              </button>
+              
+              <span className="text-sm text-gray-600 dark:text-gray-400 font-medium px-3">
+                {currentPage} / {totalPages}
+              </span>
+              
+              <button
+                onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
+                disabled={currentPage === totalPages}
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              >
+                Siguiente →
+              </button>
+            </motion.div>
+          )}
+        </div>
+
         {/* No Results */}
         {filteredSummaries.length === 0 && (
           <motion.div
@@ -196,88 +241,81 @@ const Summaries = () => {
         )}
 
         {/* Summaries by Topic */}
-        {Object.keys(summariesByTopic).length > 0 && (
-          <div className="space-y-8">
-            {Object.entries(summariesByTopic).map(([topic, topicSummaries], topicIndex) => (
-              <motion.div
-                key={topic}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: topicIndex * 0.1 }}
-              >
-                {/* Topic Header */}
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-2 h-8 bg-primary-600 rounded-full"></div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      {topic}
-                    </h2>
+        <div ref={contentRef}>
+          {Object.keys(summariesByTopic).length > 0 && (
+            <motion.div
+              key={currentPage} // Key change triggers smooth re-render
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="space-y-8"
+            >
+              {Object.entries(summariesByTopic).map(([topic, topicSummaries], topicIndex) => (
+                <div key={topic}>
+                  {/* Topic Header */}
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-2 h-8 bg-primary-600 rounded-full"></div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        {topic}
+                      </h2>
+                    </div>
                   </div>
-                </div>
 
-                {/* Summaries Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {topicSummaries.map((summary, index) => (
-                    <motion.div
-                      key={summary.id}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: (topicIndex * 0.1) + (index * 0.05) }}
-                      className="card group hover:shadow-xl transition-all duration-300"
-                    >
-                      <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                          <HiDocument className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-                        </div>
-                        
-                        <div className="flex-1">
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            {searchTerm ? (
-                              // Highlight search term
-                              summary.summary.split(new RegExp(`(${searchTerm})`, 'gi')).map((part, i) => 
-                                part.toLowerCase() === searchTerm.toLowerCase() ? (
-                                  <mark key={i} className="bg-yellow-200 dark:bg-yellow-800/50 px-1 rounded">
-                                    {part}
-                                  </mark>
-                                ) : part
-                              )
-                            ) : (
-                              summary.summary
-                            )}
-                          </p>
+                  {/* Summaries Grid - Simplified animation */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {topicSummaries.map((summary, index) => (
+                      <div
+                        key={summary.id}
+                        className="card group hover:shadow-xl transition-all duration-300"
+                      >
+                        <div className="flex items-start space-x-4">
+                          <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <HiDocument className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                          </div>
+                          
+                          <div className="flex-1">
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                              {searchTerm ? (
+                                // Highlight search term
+                                summary.summary.split(new RegExp(`(${searchTerm})`, 'gi')).map((part, i) => 
+                                  part.toLowerCase() === searchTerm.toLowerCase() ? (
+                                    <mark key={i} className="bg-yellow-200 dark:bg-yellow-800/50 px-1 rounded">
+                                      {part}
+                                    </mark>
+                                  ) : part
+                                )
+                              ) : (
+                                summary.summary
+                              )}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+              ))}
+            </motion.div>
+          )}
+        </div>
 
-        {/* Pagination Controls */}
+        {/* Pagination Controls - Original design restored with professional scroll behavior */}
         {totalPages > 1 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center justify-center space-x-2 my-8"
           >
-            {/* First Page */}
-            <button
-              onClick={() => setCurrentPage(1)}
-              disabled={currentPage === 1}
-              className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <HiChevronDoubleLeft className="w-5 h-5" />
-            </button>
-
             {/* Previous Page */}
             <button
-              onClick={() => setCurrentPage(currentPage - 1)}
+              onClick={() => handlePageChange(currentPage - 1, true)}
               disabled={currentPage === 1}
               className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              <HiChevronLeft className="w-5 h-5" />
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
 
             {/* Page Numbers */}
@@ -297,7 +335,7 @@ const Summaries = () => {
                 return (
                   <button
                     key={pageNumber}
-                    onClick={() => setCurrentPage(pageNumber)}
+                    onClick={() => handlePageChange(pageNumber, true)}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       currentPage === pageNumber
                         ? 'bg-primary-600 text-white'
@@ -312,68 +350,14 @@ const Summaries = () => {
 
             {/* Next Page */}
             <button
-              onClick={() => setCurrentPage(currentPage + 1)}
+              onClick={() => handlePageChange(currentPage + 1, true)}
               disabled={currentPage === totalPages}
               className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              <HiChevronRight className="w-5 h-5" />
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
-
-            {/* Last Page */}
-            <button
-              onClick={() => setCurrentPage(totalPages)}
-              disabled={currentPage === totalPages}
-              className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <HiChevronDoubleRight className="w-5 h-5" />
-            </button>
-          </motion.div>
-        )}
-
-        {/* Summary Stats */}
-        {filteredSummaries.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mt-16 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/10 dark:to-secondary-900/10 rounded-2xl p-8"
-          >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-              Estadísticas de Resúmenes
-            </h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {[
-                {
-                  label: 'Total de resúmenes',
-                  value: summaries.length,
-                  icon: HiDocument
-                },
-                {
-                  label: 'Temas cubiertos',
-                  value: topics.length,
-                  icon: HiFunnel
-                },
-                {
-                  label: 'Resúmenes filtrados',
-                  value: filteredSummaries.length,
-                  icon: HiMagnifyingGlass
-                }
-              ].map((stat, index) => {
-                const Icon = stat.icon
-                return (
-                  <div key={stat.label} className="text-center">
-                    <Icon className="w-8 h-8 text-primary-600 dark:text-primary-400 mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      {stat.label}
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
           </motion.div>
         )}
       </div>
