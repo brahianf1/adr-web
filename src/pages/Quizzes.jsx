@@ -419,12 +419,12 @@ const Quizzes = () => {
                       } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer hover:scale-102 active:scale-98'}`}
                       whileHover={!showResult ? { scale: 1.02 } : {}}
                       whileTap={!showResult ? { scale: 0.98 } : {}}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.2, delay: index * 0.03 }}
                     >
                       <div className="flex items-start space-x-3">
-                        <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 mt-0.5 ${
+                        <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                           showCorrectAnswer
                             ? 'border-green-500 bg-green-500'
                             : showWrongAnswer
