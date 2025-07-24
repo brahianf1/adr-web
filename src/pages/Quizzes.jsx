@@ -167,6 +167,32 @@ const Quizzes = () => {
     setTimeout(() => startQuiz(), 100)
   }
 
+  const restartCurrentQuiz = () => {
+    // Restart quiz without exiting quiz mode (no flicker)
+    let processedQuiz = [...filteredQuizzes]
+    
+    // Apply shuffling if enabled
+    if (isShuffled) {
+      processedQuiz = processedQuiz.sort(() => Math.random() - 0.5)
+    }
+
+    // Shuffle options for each question if enabled
+    if (shuffleOptions) {
+      processedQuiz = processedQuiz.map(question => ({
+        ...question,
+        options: [...question.options].sort(() => Math.random() - 0.5)
+      }))
+    }
+    
+    // Reset quiz state without changing isQuizActive
+    setCurrentQuiz(processedQuiz)
+    setCurrentQuestionIndex(0)
+    setSelectedAnswer('')
+    setShowResult(false)
+    setQuizResults([])
+    setIsTransitioning(false)
+  }
+
   const getDifficultyColor = (difficulty) => {
     switch (difficulty?.toLowerCase()) {
       case 'fácil':
@@ -342,7 +368,15 @@ const Quizzes = () => {
             Pregunta {currentQuestionIndex + 1} de {currentQuiz.length}
           </div>
           
-          <div className="w-8"> {/* Spacer for balance */}
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={restartCurrentQuiz}
+              className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              title={`Reiniciar quiz${isShuffled || shuffleOptions ? ' con configuración actual' : ''}`}
+            >
+              <ArrowPathIcon className="w-5 h-5" />
+              <span className="hidden sm:inline">Reiniciar</span>
+            </button>
           </div>
         </div>
         
