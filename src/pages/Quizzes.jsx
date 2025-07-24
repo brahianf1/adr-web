@@ -29,6 +29,7 @@ const Quizzes = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState('all')
   const [isShuffled, setIsShuffled] = useState(false)
   const [shuffleOptions, setShuffleOptions] = useState(false)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   // Get unique topics and difficulties
   const topics = [...new Set(quizzes.map(quiz => quiz.topic))].sort()
@@ -83,6 +84,7 @@ const Quizzes = () => {
     setShowResult(false)
     setQuizResults([])
     setIsQuizActive(true)
+    setIsTransitioning(false)
   }
 
   const selectAnswer = (answer) => {
@@ -105,12 +107,14 @@ const Quizzes = () => {
 
     setQuizResults([...quizResults, result])
     setShowResult(true)
+    setIsTransitioning(true)
     
     // Update study progress
     updateStudyProgress('quiz', currentQuestion.id, isCorrect)
     
     // Auto-advance after showing result (like Duolingo/Kahoot)
     setTimeout(() => {
+      setIsTransitioning(false)
       if (currentQuestionIndex < currentQuiz.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1)
         setSelectedAnswer('')
@@ -138,6 +142,7 @@ const Quizzes = () => {
 
   const finishQuiz = () => {
     setIsQuizActive(false)
+    setIsTransitioning(false)
     const correctCount = quizResults.filter(r => r.isCorrect).length
     const totalQuestions = quizResults.length
     const percentage = Math.round((correctCount / totalQuestions) * 100)
@@ -152,6 +157,7 @@ const Quizzes = () => {
     setShowResult(false)
     setQuizResults([])
     setIsQuizActive(false)
+    setIsTransitioning(false)
   }
 
   const restartQuiz = () => {
@@ -343,30 +349,54 @@ const Quizzes = () => {
           />
         </div>
 
-        {/* Question Card - Centered without scroll */}
-        <div className="flex-1 flex items-center justify-center p-4 overflow-hidden">
-          <div className="w-full max-w-4xl">
+        {/* Question Card - Responsive with scroll handling */}
+        <div className="flex-1 flex items-start sm:items-center justify-center p-4 overflow-hidden min-h-0">
+          <div className="w-full max-w-4xl flex flex-col min-h-0 max-h-full">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               key={currentQuestionIndex} // Re-animate on question change
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden relative flex flex-col max-h-full"
             >
-              <div className="flex items-center justify-between mb-6">
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
-                  {currentQuestion.difficulty}
-                </span>
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {currentQuestion.topic}
-                </span>
-              </div>
-              
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-relaxed">
-                {currentQuestion.question}
-              </h2>
-              
-              {/* Answer Options */}
-              <div className="space-y-3">
+              {/* Transition Progress Bar - At the top of the card */}
+              <AnimatePresence>
+                {isTransitioning && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="absolute top-0 left-0 right-0 w-full bg-yellow-100 dark:bg-yellow-900/30 overflow-hidden rounded-t-2xl z-10"
+                  >
+                    <motion.div
+                      initial={{ width: '0%' }}
+                      animate={{ width: '100%' }}
+                      transition={{ duration: 1.5, ease: 'linear' }}
+                      className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-500"
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className="flex flex-col min-h-0 max-h-[calc(100vh-12rem)] sm:max-h-[calc(100vh-8rem)]">
+                {/* Header - Fixed height */}
+                <div className="flex-shrink-0 p-6 sm:p-8 pb-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
+                      {currentQuestion.difficulty}
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      {currentQuestion.topic}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white leading-relaxed">
+                    {currentQuestion.question}
+                  </h2>
+                </div>
+                
+                {/* Scrollable Options Area */}
+                <div className="flex-1 px-6 sm:px-8 pb-6 sm:pb-8 overflow-y-auto min-h-0 quiz-options-scroll">
+                  <div className="space-y-3">
                 {currentQuestion.options.map((option, index) => {
                   const isSelected = selectedAnswer === option
                   const isCorrect = option === currentQuestion.correct_option
@@ -378,7 +408,7 @@ const Quizzes = () => {
                       key={`${currentQuestionIndex}-${index}`} // Add question index to key
                       onClick={() => selectAnswer(option)}
                       disabled={showResult}
-                      className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
+                      className={`w-full p-3 sm:p-4 text-left rounded-xl border-2 transition-all duration-300 ${
                         showCorrectAnswer
                           ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400'
                           : showWrongAnswer
@@ -394,7 +424,7 @@ const Quizzes = () => {
                       transition={{ delay: index * 0.1 }}
                     >
                       <div className="flex items-start space-x-3">
-                        <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                        <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 mt-0.5 ${
                           showCorrectAnswer
                             ? 'border-green-500 bg-green-500'
                             : showWrongAnswer
@@ -425,32 +455,15 @@ const Quizzes = () => {
                             <CheckIcon className="w-4 h-4 text-white" />
                           )}
                         </div>
-                        <span className="font-medium flex-1">{option}</span>
+                        <span className="font-medium flex-1 text-sm sm:text-base break-words leading-relaxed">{option}</span>
                       </div>
                     </motion.button>
                   )
                 })}
+                  </div>
+                </div>
               </div>
             </motion.div>
-
-            {/* Progress indicator for mobile - shows current progress */}
-            {showResult && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-center py-6"
-              >
-                <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  {currentQuestionIndex < currentQuiz.length - 1 
-                    ? 'Siguiente pregunta en...' 
-                    : 'Finalizando quiz...'
-                  }
-                </div>
-                <div className="w-8 h-8 mx-auto">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
-                </div>
-              </motion.div>
-            )}
           </div>
         </div>
       </div>
