@@ -189,6 +189,11 @@ const Flashcards = () => {
     }
   }
 
+  const capitalizeFirst = (text) => {
+    if (!text) return text
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+  }
+
   if (!flashcards.length) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -351,7 +356,7 @@ const Flashcards = () => {
                     {/* Header positioned absolutely to not affect centering */}
                     <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentCard?.difficulty)}`}>
-                        {currentCard?.difficulty}
+                        {capitalizeFirst(currentCard?.difficulty)}
                       </span>
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {currentCard?.topic}
@@ -370,11 +375,6 @@ const Flashcards = () => {
                 {/* Back */}
                 <div className="flip-card-back absolute inset-0 w-full h-full">
                   <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl shadow-xl h-full relative p-6 sm:p-8 border-l-4 border-primary-500">
-                    {/* Small indicator in corner instead of full header */}
-                    <div className="absolute top-4 right-4">
-                      <CheckIcon className="w-6 h-6 text-primary-500" />
-                    </div>
-                    
                     {/* Content centered in full card */}
                     <div className="h-full flex items-center justify-center">
                       <div className="flashcard-content text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 text-center leading-relaxed break-words hyphens-auto max-h-full overflow-y-auto w-full px-2">
