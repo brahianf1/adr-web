@@ -1,0 +1,1705 @@
+[
+  {
+    "id": 1,
+    "question": "Según el texto, ¿cuál es el origen de la administración?",
+    "options": [
+      "La Revolución Industrial y la necesidad de producción en masa.",
+      "El desarrollo de las teorías económicas del siglo XX.",
+      "La necesidad humana de organizarse para lograr diferentes objetivos.",
+      "La creación de las primeras corporaciones multinacionales."
+    ],
+    "correct_option": "La necesidad humana de organizarse para lograr diferentes objetivos.",
+    "topic": "Administración General",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 2,
+    "question": "¿Qué significa el acrónimo PODIO en el contexto de la administración?",
+    "options": [
+      "Planificar, Ordenar, Definir, Investigar, Operar",
+      "Proyectar, Organizar, Determinar, Implementar, Observar",
+      "Planificar, Organizar, Dirigir, Integrar, Controlar",
+      "Procesar, Ordenar, Distribuir, Informar, Organizar"
+    ],
+    "correct_option": "Planificar, Organizar, Dirigir, Integrar, Controlar",
+    "topic": "Administración General",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 3,
+    "question": "En el modelo PODIO, ¿qué función se relaciona directamente con la creación de la Misión, Visión y Estrategias?",
+    "options": [
+      "Organizar",
+      "Planificar",
+      "Dirigir",
+      "Controlar"
+    ],
+    "correct_option": "Planificar",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es la principal diferencia entre Estrategia y Táctica?",
+    "options": [
+      "La táctica es a largo plazo y la estrategia a corto plazo.",
+      "La estrategia define el 'QUÉ' se quiere lograr, mientras que la táctica detalla el 'CÓMO' se logrará.",
+      "La estrategia se enfoca en acciones puntuales y la táctica en un plan global.",
+      "La táctica siempre es singular, mientras que la estrategia siempre es paralela."
+    ],
+    "correct_option": "La estrategia define el 'QUÉ' se quiere lograr, mientras que la táctica detalla el 'CÓMO' se logrará.",
+    "topic": "Estrategia y Táctica",
+    "difficulty": "medio"
+  },
+  {
+    "id": 5,
+    "question": "La declaración de Misión de una empresa responde principalmente a la pregunta:",
+    "options": [
+      "¿Hacia dónde vamos?",
+      "¿En qué nos queremos convertir?",
+      "¿Qué hacemos y quiénes somos actualmente?",
+      "¿Cuál será nuestro próximo producto?"
+    ],
+    "correct_option": "¿Qué hacemos y quiénes somos actualmente?",
+    "topic": "Misión y Visión",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 6,
+    "question": "La Visión estratégica de una empresa se enfoca en:",
+    "options": [
+      "Describir la actividad y propósito actual del negocio.",
+      "Retratar el horizonte de negocios futuro de la empresa.",
+      "Analizar las debilidades y amenazas del presente.",
+      "Detallar las tácticas de marketing para el próximo trimestre."
+    ],
+    "correct_option": "Retratar el horizonte de negocios futuro de la empresa.",
+    "topic": "Misión y Visión",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál de los siguientes NO es un elemento clave para crear una Misión estratégicamente reveladora?",
+    "options": [
+      "Las necesidades del cliente que se tratan de satisfacer.",
+      "Los grupos de clientes a los que se dirige.",
+      "La rentabilidad financiera esperada para el próximo año.",
+      "Las actividades, tecnologías y capacidades de la empresa."
+    ],
+    "correct_option": "La rentabilidad financiera esperada para el próximo año.",
+    "topic": "Misión y Visión",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 8,
+    "question": "¿Cuál es la diferencia fundamental entre una organización y una empresa según el texto?",
+    "options": [
+      "No hay ninguna diferencia, son términos intercambiables.",
+      "Una empresa es siempre más grande que una organización.",
+      "Una empresa es un tipo de organización con un objetivo de lucro.",
+      "Una organización se dedica a producir bienes y una empresa a servicios."
+    ],
+    "correct_option": "Una empresa es un tipo de organización con un objetivo de lucro.",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 9,
+    "question": "Los objetivos que son siempre medibles y se fijan en cantidades (porcentuales, enteras) se denominan:",
+    "options": [
+      "Cualitativos",
+      "Estratégicos",
+      "Financieros",
+      "Cuantitativos"
+    ],
+    "correct_option": "Cuantitativos",
+    "topic": "Objetivos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 10,
+    "question": "Según el modelo SMART para definir objetivos, ¿qué significa la 'T'?",
+    "options": [
+      "Táctico (Tactical)",
+      "Transparente (Transparent)",
+      "Limitado en el tiempo (Timely)",
+      "Total (Total)"
+    ],
+    "correct_option": "Limitado en el tiempo (Timely)",
+    "topic": "Objetivos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es la finalidad principal de los objetivos en una empresa?",
+    "options": [
+      "Reemplazar la necesidad de una misión y visión.",
+      "Transformar los lineamientos de la misión y visión en acciones concretas e indicadores de desempeño.",
+      "Servir únicamente para la evaluación del personal de bajo nivel.",
+      "Definir el organigrama y la jerarquía de la empresa."
+    ],
+    "correct_option": "Transformar los lineamientos de la misión y visión en acciones concretas e indicadores de desempeño.",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 12,
+    "question": "En el análisis FODA, ¿qué elementos son considerados factores externos a la organización?",
+    "options": [
+      "Fortalezas y Debilidades",
+      "Fortalezas y Oportunidades",
+      "Debilidades y Amenazas",
+      "Oportunidades y Amenazas"
+    ],
+    "correct_option": "Oportunidades y Amenazas",
+    "topic": "Administradores",
+    "difficulty": "medio"
+  },
+  {
+    "id": 13,
+    "question": "La pregunta '¿Hacia dónde queremos ir?' que se hacen los administradores está directamente relacionada con:",
+    "options": [
+      "La Misión de la empresa.",
+      "La Visión de la empresa.",
+      "La Estrategia de la empresa.",
+      "El análisis FODA de la empresa."
+    ],
+    "correct_option": "La Visión de la empresa.",
+    "topic": "Administradores",
+    "difficulty": "medio"
+  },
+  {
+    "id": 14,
+    "question": "Una estrategia que se ajusta sobre la marcha, según las nuevas situaciones o desafíos que surjan, se denomina:",
+    "options": [
+      "Estrategia Proactiva",
+      "Estrategia Híbrida",
+      "Estrategia Reactiva",
+      "Estrategia Defensiva"
+    ],
+    "correct_option": "Estrategia Reactiva",
+    "topic": "Administración Estratégica",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 15,
+    "question": "El conjunto 'VISIÓN ESTRATÉGICA + OBJETIVOS + ESTRATEGIA' conforma el:",
+    "options": [
+      "Modelo de Negocios",
+      "Plan de Marketing",
+      "Plan Estratégico",
+      "Análisis FODA"
+    ],
+    "correct_option": "Plan Estratégico",
+    "topic": "Administración Estratégica",
+    "difficulty": "medio"
+  },
+  {
+    "id": 16,
+    "question": "Una empresa como Flybondi, que se enfoca en reducir costos operativos para ofrecer los precios más bajos, está aplicando la estrategia de:",
+    "options": [
+      "Ofrecer características únicas.",
+      "Enfocarse en un nicho específico.",
+      "Mejor costo-híbrida.",
+      "Ser el proveedor más barato del mercado."
+    ],
+    "correct_option": "Ser el proveedor más barato del mercado.",
+    "topic": "Planeamientos Exitosos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 17,
+    "question": "La 'Prueba de Ajuste' para una estrategia ganadora evalúa si:",
+    "options": [
+      "La estrategia genera los resultados financieros esperados.",
+      "La estrategia otorga a la empresa una ventaja distintiva sobre sus competidores.",
+      "La estrategia encaja en el contexto y entorno de la empresa, alineándose con su visión y misión.",
+      "La estrategia es fácil de comunicar a todos los empleados de la organización."
+    ],
+    "correct_option": "La estrategia encaja en el contexto y entorno de la empresa, alineándose con su visión y misión.",
+    "topic": "Estrategias Ganadoras",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 18,
+    "question": "¿Cuál es el objetivo principal de la norma ISO 12207?",
+    "options": [
+      "Establecer un estándar para la seguridad física de los centros de datos.",
+      "Proporcionar un marco de referencia para los procesos del ciclo de vida del software.",
+      "Definir las mejores prácticas para la gestión de recursos humanos en empresas de tecnología.",
+      "Certificar la calidad de los componentes de hardware."
+    ],
+    "correct_option": "Proporcionar un marco de referencia para los procesos del ciclo de vida del software.",
+    "topic": "Norma ISO 12207",
+    "difficulty": "medio"
+  },
+  {
+    "id": 19,
+    "question": "Según la norma ISO 12207, ¿en qué categoría de proceso se encuentra la 'Auditoría'?",
+    "options": [
+      "Procesos Principales del Ciclo de Vida",
+      "Procesos Organizativos del Ciclo de Vida",
+      "Procesos de Apoyo del Ciclo de Vida",
+      "Procesos de Mantenimiento"
+    ],
+    "correct_option": "Procesos de Apoyo del Ciclo de Vida",
+    "topic": "Norma ISO 12207",
+    "difficulty": "medio"
+  },
+  {
+    "id": 20,
+    "question": "Un modelo de negocios se define fundamentalmente por dos pilares, la Propuesta de Valor para el cliente y...",
+    "options": [
+      "La Estrategia de Marketing",
+      "El Plan de Inversión",
+      "La Fórmula de Utilidades",
+      "El Organigrama de la empresa"
+    ],
+    "correct_option": "La Fórmula de Utilidades",
+    "topic": "Modelo de Negocios",
+    "difficulty": "medio"
+  },
+  {
+    "id": 21,
+    "question": "En el método 5W-2H, la pregunta 'How much?' se refiere a:",
+    "options": [
+      "¿Cómo lo haremos?",
+      "¿Cuánto tiempo tomará?",
+      "¿Cuántas personas estarán involucradas?",
+      "¿Cuánto costará?"
+    ],
+    "correct_option": "¿Cuánto costará?",
+    "topic": "Método 5W-2H",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 22,
+    "question": "¿Cuál es el propósito principal de la Separación de Entornos (Desarrollo, Testing, Producción) en el desarrollo de sistemas?",
+    "options": [
+      "Reducir los costos de hardware.",
+      "Acelerar la fase de codificación.",
+      "Aislar problemas, garantizar el control de calidad y reducir el riesgo de fallos en producción.",
+      "Facilitar el trabajo remoto de los desarrolladores."
+    ],
+    "correct_option": "Aislar problemas, garantizar el control de calidad y reducir el riesgo de fallos en producción.",
+    "topic": "Separación de Entornos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 23,
+    "question": "La práctica de dividir las tareas para que ninguna persona tenga control total sobre un proceso crítico se conoce como:",
+    "options": [
+      "Separación de Entornos",
+      "Auditoría Informática",
+      "Segregación de Funciones",
+      "Gestión de la Configuración"
+    ],
+    "correct_option": "Segregación de Funciones",
+    "topic": "Segregación de Funciones",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 24,
+    "question": "¿Qué es el CRMR (Computer Resource Management Review)?",
+    "options": [
+      "Una auditoría informática completa y formal.",
+      "Un estándar internacional para la seguridad de la información.",
+      "Una metodología para evaluar rápidamente la gestión de recursos informáticos y proponer mejoras.",
+      "Un software para monitorear el rendimiento de los servidores."
+    ],
+    "correct_option": "Una metodología para evaluar rápidamente la gestión de recursos informáticos y proponer mejoras.",
+    "topic": "CRMR",
+    "difficulty": "medio"
+  },
+  {
+    "id": 25,
+    "question": "La principal finalidad de una Auditoría es:",
+    "options": [
+      "Sancionar a los empleados que cometen errores.",
+      "Descubrir el valor del área evaluada para fortalecer y mejorar los procesos de la organización.",
+      "Aumentar los costos operativos de la empresa.",
+      "Reemplazar al equipo directivo."
+    ],
+    "correct_option": "Descubrir el valor del área evaluada para fortalecer y mejorar los procesos de la organización.",
+    "topic": "Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 26,
+    "question": "Una auditoría que se realiza como respuesta a la detección de un problema o incidencia en el sistema se denomina:",
+    "options": [
+      "Auditoría Proactiva",
+      "Auditoría Preventiva",
+      "Auditoría Reactiva",
+      "Auditoría Continua"
+    ],
+    "correct_option": "Auditoría Reactiva",
+    "topic": "Auditoría",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 27,
+    "question": "En la consolidación de un hecho importante en auditoría, ¿qué implica la fase de 'Repercusión del hecho'?",
+    "options": [
+      "Describir el hecho de manera clara y con evidencias.",
+      "Identificar el riesgo y las consecuencias negativas directas.",
+      "Describir los impactos en la reputación, procesos y objetivos de negocio.",
+      "Proponer una solución o recomendación."
+    ],
+    "correct_option": "Describir los impactos en la reputación, procesos y objetivos de negocio.",
+    "topic": "Auditoría",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 28,
+    "question": "Según el texto, ¿cuál es el objetivo común fundamental a cualquier auditoría informática?",
+    "options": [
+      "Encontrar fraudes económicos.",
+      "La operatividad de los sistemas y la continuidad del servicio.",
+      "Evaluar únicamente el software desarrollado internamente.",
+      "Reducir el presupuesto del departamento de TI."
+    ],
+    "correct_option": "La operatividad de los sistemas y la continuidad del servicio.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 29,
+    "question": "De los '4 síntomas de necesidad de auditoría informática' (DIDI), ¿cuál se manifiesta a través de la falta de atención a las necesidades de los usuarios y el incumplimiento de plazos?",
+    "options": [
+      "Descoordinación y Desorganización",
+      "Insatisfacción de los usuarios",
+      "Debilidades económico-financieras",
+      "Inseguridad"
+    ],
+    "correct_option": "Insatisfacción de los usuarios",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 30,
+    "question": "El principio que establece que un área debe manejarse con las mismas políticas de quien la contiene se denomina:",
+    "options": [
+      "Principio de Compatibilidad",
+      "Principio de Coherencia",
+      "Principio de Subordinación",
+      "Principio de Integración"
+    ],
+    "correct_option": "Principio de Subordinación",
+    "topic": "Principios de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 31,
+    "question": "¿Cuál es una de las principales ventajas de contratar una Auditoría Externa en lugar de usar la interna?",
+    "options": [
+      "Es más barata y rápida.",
+      "El auditor externo ya conoce la cultura de la empresa.",
+      "El auditor externo es más imparcial, lo que puede llevar a una calificación más objetiva del área.",
+      "No requiere acceso a información sensible de la empresa."
+    ],
+    "correct_option": "El auditor externo es más imparcial, lo que puede llevar a una calificación más objetiva del área.",
+    "topic": "Auditoría Interna vs Externa",
+    "difficulty": "medio"
+  },
+  {
+    "id": 32,
+    "question": "En la auditoría informática de Explotación, ¿cuál es la 'materia prima' que se transforma para obtener resultados?",
+    "options": [
+      "El hardware",
+      "Los programas",
+      "Los datos",
+      "Los informes impresos"
+    ],
+    "correct_option": "Los datos",
+    "topic": "Auditoría de Explotación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 33,
+    "question": "¿Cuál es una de las consideraciones clave en la auditoría de Desarrollo de Proyectos (MU-CIA-SU-CPEP)?",
+    "options": [
+      "La popularidad de las herramientas utilizadas.",
+      "La satisfacción de los usuarios como indicador clave del éxito.",
+      "La cantidad de líneas de código del programa.",
+      "La velocidad de compilación del software."
+    ],
+    "correct_option": "La satisfacción de los usuarios como indicador clave del éxito.",
+    "topic": "Auditoría de Desarrollo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 34,
+    "question": "En la auditoría de Sistemas, ¿qué es el 'Tuning'?",
+    "options": [
+      "La instalación de nuevo hardware.",
+      "El proceso de escribir código fuente.",
+      "El conjunto de técnicas de observación para evaluar el comportamiento de los sistemas y subsistemas.",
+      "La creación de bases de datos."
+    ],
+    "correct_option": "El conjunto de técnicas de observación para evaluar el comportamiento de los sistemas y subsistemas.",
+    "topic": "Auditoría de Sistemas",
+    "difficulty": "medio"
+  },
+  {
+    "id": 35,
+    "question": "¿Cuál es el objetivo principal de una Auditoría de Seguridad Informática?",
+    "options": [
+      "Evaluar la eficiencia de los programadores.",
+      "Optimizar el uso del ancho de banda de la red.",
+      "Identificar vulnerabilidades que puedan comprometer la confidencialidad, integridad y disponibilidad de la información.",
+      "Reducir el número de licencias de software."
+    ],
+    "correct_option": "Identificar vulnerabilidades que puedan comprometer la confidencialidad, integridad y disponibilidad de la información.",
+    "topic": "Auditoría de Seguridad",
+    "difficulty": "medio"
+  },
+  {
+    "id": 36,
+    "question": "Al redactar el Informe Final de una auditoría, ¿qué debe incluir la 'Carta de Presentación'?",
+    "options": [
+      "Una lista detallada de todas las recomendaciones técnicas.",
+      "Un resumen de la auditoría, sus objetivos, alcance y una conclusión general, pero sin exponer las recomendaciones.",
+      "Los currículums de todo el equipo auditor.",
+      "Un borrador del plan de acción para la empresa."
+    ],
+    "correct_option": "Un resumen de la auditoría, sus objetivos, alcance y una conclusión general, pero sin exponer las recomendaciones.",
+    "topic": "Informe de Auditoría",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 37,
+    "question": "¿Qué significa la afirmación de que la Administración de Recursos Humanos (RRHH) ha evolucionado?",
+    "options": [
+      "Ha pasado de centrarse en potenciar el valor de las personas a enfocarse solo en su control.",
+      "Se ha vuelto una disciplina exclusivamente legal y de contratos.",
+      "Ha pasado de enfocarse en el control de las personas a centrarse en potenciar su valor y bienestar.",
+      "Ahora se ocupa únicamente de la liquidación de sueldos."
+    ],
+    "correct_option": "Ha pasado de enfocarse en el control de las personas a centrarse en potenciar su valor y bienestar.",
+    "topic": "Administración de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 38,
+    "question": "El 'Paradigma del costo y beneficio de tener personas' en RRHH sugiere que los empleados deben ser vistos como:",
+    "options": [
+      "Un costo necesario que se debe minimizar.",
+      "Un recurso reemplazable sin valor estratégico.",
+      "Un activo y una inversión para la empresa.",
+      "Un factor de producción equivalente a la maquinaria."
+    ],
+    "correct_option": "Un activo y una inversión para la empresa.",
+    "topic": "Administración de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 39,
+    "question": "De los '4 pilares fundamentales de la Adm de RRHH', ¿cuál se refiere al conjunto de valores, creencias y normas que comparten los miembros de una organización?",
+    "options": [
+      "Motivación",
+      "Liderazgo y Poder",
+      "Comunicación Efectiva",
+      "Cultura Organizacional"
+    ],
+    "correct_option": "Cultura Organizacional",
+    "topic": "Pilares de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 40,
+    "question": "Según el texto, la manera más concreta de motivar a los empleados es:",
+    "options": [
+      "Ofrecer los salarios más altos del mercado exclusivamente.",
+      "Conocer y satisfacer sus necesidades (hacer, crecer, tener, pertenecer, etc.).",
+      "Implementar un sistema de control y vigilancia estricto.",
+      "Reducir las horas de trabajo."
+    ],
+    "correct_option": "Conocer y satisfacer sus necesidades (hacer, crecer, tener, pertenecer, etc.).",
+    "topic": "Motivación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 41,
+    "question": "En el contexto del liderazgo, ¿cuál es la diferencia clave entre un 'Líder' y un 'Administrador'?",
+    "options": [
+      "El líder se enfoca en el control y la racionalidad, mientras que el administrador se enfoca en la visión y la motivación.",
+      "El administrador tiene carisma y el líder se basa en la autoridad formal.",
+      "El líder se enfoca en la visión y la motivación ('por qué'), mientras que el administrador se enfoca en la ejecución eficiente de tareas ('cómo').",
+      "No hay diferencia, ambos roles son idénticos."
+    ],
+    "correct_option": "El líder se enfoca en la visión y la motivación ('por qué'), mientras que el administrador se enfoca en la ejecución eficiente de tareas ('cómo').",
+    "topic": "Liderazgo y Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 42,
+    "question": "Un 'Conductor', a diferencia de un 'Líder' carismático, basa su capacidad de dirección en:",
+    "options": [
+      "Una fe profunda y la toma de grandes riesgos.",
+      "La astucia y el conocimiento del enemigo.",
+      "Habilidades técnicas y de gestión que se pueden adquirir.",
+      "Un carisma innato y una presencia imponente."
+    ],
+    "correct_option": "Habilidades técnicas y de gestión que se pueden adquirir.",
+    "topic": "Líder vs Conductor",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué es la 'sorpresa gerencial' en el contexto de la delegación?",
+    "options": [
+      "Un premio inesperado que un gerente da a su equipo.",
+      "Cuando un superior se entera de un problema crítico en el último momento, generando tensión y desconfianza.",
+      "La delegación de una tarea sorpresa sin previo aviso.",
+      "Un cambio repentino en la estrategia de la empresa."
+    ],
+    "correct_option": "Cuando un superior se entera de un problema crítico en el último momento, generando tensión y desconfianza.",
+    "topic": "Delegación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 44,
+    "question": "En el proceso de comunicación, ¿qué es el 'ruido'?",
+    "options": [
+      "El canal por el que se transmite el mensaje.",
+      "El proceso de codificación del emisor.",
+      "Cualquier interferencia que distorsiona el mensaje y dificulta su comprensión.",
+      "La retroalimentación que envía el receptor."
+    ],
+    "correct_option": "Cualquier interferencia que distorsiona el mensaje y dificulta su comprensión.",
+    "topic": "Comunicación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 45,
+    "question": "¿En qué consiste el 'Coaching'?",
+    "options": [
+      "Un proceso formal de evaluación de desempeño anual.",
+      "Un método para sancionar a los empleados con bajo rendimiento.",
+      "Un proceso donde una persona experimentada asesora y apoya a otra para mejorar su desempeño y desarrollo.",
+      "Un tipo de terapia psicológica para empleados."
+    ],
+    "correct_option": "Un proceso donde una persona experimentada asesora y apoya a otra para mejorar su desempeño y desarrollo.",
+    "topic": "Coaching",
+    "difficulty": "medio"
+  },
+  {
+    "id": 46,
+    "question": "En el contexto del cambio organizacional, ¿qué es un 'cambio revolucionario'?",
+    "options": [
+      "Modificaciones pequeñas y progresivas a lo largo del tiempo.",
+      "Un cambio que solo afecta a la alta dirección.",
+      "Transformaciones radicales que afectan profundamente la estructura y operación en un corto período.",
+      "La implementación de una nueva encuesta de clima laboral."
+    ],
+    "correct_option": "Transformaciones radicales que afectan profundamente la estructura y operación en un corto período.",
+    "topic": "Cambio Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 47,
+    "question": "En el mapa conceptual de RRHH, ¿cuál es la técnica que sirve como base principal para todo el sistema de administración de personal?",
+    "options": [
+      "La evaluación de desempeño",
+      "La selección de personal",
+      "La encuesta de remuneraciones",
+      "La descripción de tareas"
+    ],
+    "correct_option": "La descripción de tareas",
+    "topic": "Planificación Estratégica de RRHH",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 48,
+    "question": "El propósito principal de una 'Evaluación de Tareas' es:",
+    "options": [
+      "Evaluar el desempeño individual de un empleado.",
+      "Analizar y asignar un valor a los distintos puestos para establecer una remuneración justa y coherente.",
+      "Realizar un seguimiento de la asistencia y puntualidad de los empleados.",
+      "Seleccionar al mejor candidato para una vacante."
+    ],
+    "correct_option": "Analizar y asignar un valor a los distintos puestos para establecer una remuneración justa y coherente.",
+    "topic": "Evaluación de Tareas",
+    "difficulty": "medio"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué es una 'Encuesta de Remuneración'?",
+    "options": [
+      "Una encuesta interna para saber si los empleados están contentos con su sueldo.",
+      "Una herramienta para relevar y comparar los salarios y beneficios que ofrecen otras empresas en el mercado.",
+      "Un formulario para que los empleados soliciten aumentos de sueldo.",
+      "Una evaluación del costo de vida en la región."
+    ],
+    "correct_option": "Una herramienta para relevar y comparar los salarios y beneficios que ofrecen otras empresas en el mercado.",
+    "topic": "Encuesta de Remuneración",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 50,
+    "question": "¿Cuál es uno de los objetivos principales de la 'Evaluación de Desempeño'?",
+    "options": [
+      "Determinar el valor relativo de un puesto de trabajo.",
+      "Justificar el despido de empleados.",
+      "Abrir canales de comunicación entre empleados y supervisores sobre el trabajo realizado.",
+      "Establecer la escala de remuneraciones de toda la empresa."
+    ],
+    "correct_option": "Abrir canales de comunicación entre empleados y supervisores sobre el trabajo realizado.",
+    "topic": "Evaluación de Desempeño",
+    "difficulty": "medio"
+  },
+  {
+    "id": 51,
+    "question": "La 'Carrera Tipo' en un plan de desarrollo profesional se refiere a:",
+    "options": [
+      "La carrera universitaria que debe tener un empleado.",
+      "La secuencia de puestos que una persona debería ocupar para llegar a una posición determinada.",
+      "Un tipo de competencia o carrera entre empleados para un ascenso.",
+      "El tiempo promedio que un empleado permanece en la empresa."
+    ],
+    "correct_option": "La secuencia de puestos que una persona debería ocupar para llegar a una posición determinada.",
+    "topic": "Plan de Carrera",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 52,
+    "question": "La evaluación del 'Potencial' de un empleado es una medición:",
+    "options": [
+      "Objetiva y basada en datos históricos de desempeño únicamente.",
+      "Subjetiva sobre las cualidades de un empleado para asumir responsabilidades futuras.",
+      "Basada en pruebas psicométricas estandarizadas.",
+      "Que realiza el propio empleado sobre sus capacidades."
+    ],
+    "correct_option": "Subjetiva sobre las cualidades de un empleado para asumir responsabilidades futuras.",
+    "topic": "Potencial",
+    "difficulty": "medio"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué es un 'Cuadro de Reemplazo'?",
+    "options": [
+      "Una lista de empleados que serán despedidos.",
+      "Un organigrama de la competencia.",
+      "Una herramienta que visualiza los posibles sustitutos para puestos clave en la organización.",
+      "Un plan de capacitación para nuevos ingresos."
+    ],
+    "correct_option": "Una herramienta que visualiza los posibles sustitutos para puestos clave en la organización.",
+    "topic": "Cuadros de Reemplazo",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 54,
+    "question": "¿Qué característica distingue a la 'Evaluación 360' de otras formas de evaluación?",
+    "options": [
+      "Es realizada únicamente por el supervisor directo.",
+      "Se enfoca exclusivamente en los resultados financieros del empleado.",
+      "Recoge las opiniones de múltiples fuentes que rodean al evaluado (superiores, pares, subordinados).",
+      "Es un proceso que dura 360 días."
+    ],
+    "correct_option": "Recoge las opiniones de múltiples fuentes que rodean al evaluado (superiores, pares, subordinados).",
+    "topic": "Evaluación 360",
+    "difficulty": "medio"
+  },
+  {
+    "id": 55,
+    "question": "¿Cuál es la principal diferencia entre la selección de personal propia y la externa (outsourcing)?",
+    "options": [
+      "La selección externa es siempre más rápida.",
+      "La selección propia se realiza internamente, dando un control más directo, mientras que la externa delega el proceso en expertos.",
+      "La selección propia solo busca candidatos dentro de la empresa.",
+      "La selección externa es gratuita para la empresa."
+    ],
+    "correct_option": "La selección propia se realiza internamente, dando un control más directo, mientras que la externa delega el proceso en expertos.",
+    "topic": "Selección de Personal",
+    "difficulty": "medio"
+  },
+  {
+    "id": 56,
+    "question": "En el proceso de una entrevista de selección, la etapa de 'Pre-entrevista' incluye:",
+    "options": [
+      "Hacer la oferta de trabajo al candidato.",
+      "Realizar la entrevista propiamente dicha.",
+      "Estudiar el currículum del candidato, definir el objetivo y preparar la logística.",
+      "Redactar el informe final sobre el candidato."
+    ],
+    "correct_option": "Estudiar el currículum del candidato, definir el objetivo y preparar la logística.",
+    "topic": "Entrevista",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 57,
+    "question": "El proceso de 'Inducción' para un nuevo empleado tiene como objetivo principal:",
+    "options": [
+      "Realizar la primera evaluación de desempeño.",
+      "Negociar las condiciones salariales finales.",
+      "Familiarizar al nuevo empleado con la empresa, sus valores, y su lugar de trabajo.",
+      "Firmar el contrato de trabajo."
+    ],
+    "correct_option": "Familiarizar al nuevo empleado con la empresa, sus valores, y su lugar de trabajo.",
+    "topic": "Inducción",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 58,
+    "question": "En la Administración de Recursos, ¿a qué se refiere el término MOHFT?",
+    "options": [
+      "Materiales, Organizativos, Humanos, Financieros, Tácticos",
+      "Materiales, Humanos, Operativos, Funcionales, Tecnológicos",
+      "Organizaciones, Materiales, Humanos, Financieros, Tecnológicos",
+      "Métodos, Operaciones, Herramientas, Finanzas, Tiempos"
+    ],
+    "correct_option": "Organizaciones, Materiales, Humanos, Financieros, Tecnológicos",
+    "topic": "Administración General",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 59,
+    "question": "Una estrategia de 'Mejor costo-híbrida' busca:",
+    "options": [
+      "Ofrecer el precio más bajo del mercado sin importar la calidad.",
+      "Tener los precios más bajos posibles igualando las características de calidad de los rivales.",
+      "Enfocarse en un nicho de mercado con productos de lujo.",
+      "Ofrecer características únicas a un precio muy elevado."
+    ],
+    "correct_option": "Tener los precios más bajos posibles igualando las características de calidad de los rivales.",
+    "topic": "Planeamientos Exitosos",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 60,
+    "question": "En la administración, ¿cómo se diferencia la 'eficiencia' de la 'eficacia'?",
+    "options": [
+      "La eficacia es hacer las cosas bien, mientras que la eficiencia es hacer las cosas correctas.",
+      "La eficacia es lograr los resultados esperados, mientras que la eficiencia es utilizar los recursos de la mejor manera posible.",
+      "La eficiencia se mide en términos de tiempo y la eficacia en términos de costo.",
+      "Son términos sinónimos que se utilizan indistintamente en la administración."
+    ],
+    "correct_option": "La eficacia es lograr los resultados esperados, mientras que la eficiencia es utilizar los recursos de la mejor manera posible.",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 61,
+    "question": "¿Cómo varía el tiempo que los gerentes dedican a las funciones gerenciales (PODIO) según su nivel jerárquico?",
+    "options": [
+      "Los supervisores de primera línea dedican más tiempo a planificar que los gerentes de alto nivel.",
+      "Todos los gerentes, sin importar su nivel, dedican la misma proporción de tiempo a cada función.",
+      "Los gerentes de alto nivel dedican más tiempo a planear y organizar, mientras que los supervisores de primera línea dedican más tiempo a dirigir.",
+      "La función de 'Controlar' es exclusiva de los gerentes de alto nivel."
+    ],
+    "correct_option": "Los gerentes de alto nivel dedican más tiempo a planear y organizar, mientras que los supervisores de primera línea dedican más tiempo a dirigir.",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 62,
+    "question": "¿Cuál de las siguientes opciones describe mejor el concepto de 'Ventaja Competitiva Sustentable'?",
+    "options": [
+      "Ofrecer el precio más bajo del mercado durante un corto período de tiempo.",
+      "Una ventaja que la empresa puede mantener a largo plazo a pesar de los esfuerzos de los competidores por igualarla.",
+      "Tener la campaña de marketing más creativa del sector.",
+      "Una ventaja basada únicamente en la ubicación geográfica de la empresa."
+    ],
+    "correct_option": "Una ventaja que la empresa puede mantener a largo plazo a pesar de los esfuerzos de los competidores por igualarla.",
+    "topic": "Administradores",
+    "difficulty": "medio"
+  },
+  {
+    "id": 63,
+    "question": "La estrategia de una empresa es una mezcla de elementos proactivos y reactivos. ¿Qué implica esto?",
+    "options": [
+      "La estrategia se define una sola vez y no se modifica.",
+      "La estrategia es un plan rígido que ignora los cambios del mercado.",
+      "La estrategia es una tarea en proceso, que combina un plan deliberado con ajustes adaptativos a nuevas circunstancias.",
+      "La estrategia es puramente reactiva, esperando a que los competidores actúen primero."
+    ],
+    "correct_option": "La estrategia es una tarea en proceso, que combina un plan deliberado con ajustes adaptativos a nuevas circunstancias.",
+    "topic": "Administración Estratégica",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 64,
+    "question": "¿Cuál es la relación entre el Modelo de Negocios de una empresa y su Estrategia?",
+    "options": [
+      "La estrategia define el modelo de negocios, pero no al revés.",
+      "Son conceptos completamente independientes que no se relacionan.",
+      "El modelo de negocios (qué y cómo se genera valor y utilidad) proporciona la base sobre la cual se construye la estrategia (el plan de acción).",
+      "El modelo de negocios se enfoca en los clientes y la estrategia en los competidores."
+    ],
+    "correct_option": "El modelo de negocios (qué y cómo se genera valor y utilidad) proporciona la base sobre la cual se construye la estrategia (el plan de acción).",
+    "topic": "Modelo de Negocios",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 65,
+    "question": "En el proceso de 'Adquisición' (5.1) de la norma ISO 12207, ¿cuál es una de las actividades clave que se realiza?",
+    "options": [
+      "Se codifica y se realizan las pruebas unitarias del software.",
+      "Se instala el software en el entorno de producción y se capacita a los usuarios.",
+      "Se definen los requisitos del sistema y se evalúan proveedores potenciales.",
+      "Se corrigen errores y se implementan mejoras en el software ya operativo."
+    ],
+    "correct_option": "Se definen los requisitos del sistema y se evalúan proveedores potenciales.",
+    "topic": "Norma ISO 12207",
+    "difficulty": "medio"
+  },
+  {
+    "id": 66,
+    "question": "¿Cuál es una diferencia clave entre el CRMR (Computer Resource Management Review) y una Auditoría Informática completa?",
+    "options": [
+      "El CRMR es más formal y profundo que una auditoría.",
+      "La auditoría es más flexible y adaptable que el CRMR.",
+      "El CRMR se enfoca en optimizar el uso de recursos y proponer soluciones rápidas, mientras que la auditoría busca garantizar seguridad y cumplimiento normativo de forma más exhaustiva.",
+      "El CRMR solo puede ser realizado por auditores externos."
+    ],
+    "correct_option": "El CRMR se enfoca en optimizar el uso de recursos y proponer soluciones rápidas, mientras que la auditoría busca garantizar seguridad y cumplimiento normativo de forma más exhaustiva.",
+    "topic": "CRMR vs Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 67,
+    "question": "En una auditoría, ¿qué significa que un 'hecho' debe estar 'consolidado' para incluirse en el informe final?",
+    "options": [
+      "Que el hecho fue mencionado por al menos tres personas.",
+      "Que el hecho es fácil de solucionar.",
+      "Que el hecho está verificado objetivamente, documentado y soportado por pruebas.",
+      "Que el hecho solo afecta al área financiera de la empresa."
+    ],
+    "correct_option": "Que el hecho está verificado objetivamente, documentado y soportado por pruebas.",
+    "topic": "Informe de Auditoría",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 68,
+    "question": "Dentro de las técnicas de auditoría, ¿para qué se utilizan principalmente las 'Trazas o Huellas'?",
+    "options": [
+      "Para realizar entrevistas estructuradas con el personal.",
+      "Para enviar cuestionarios previos a los auditados.",
+      "Para rastrear la ejecución de procesos y analizar grandes volúmenes de datos en busca de problemas.",
+      "Para verificar el cumplimiento de una lista de controles predefinida (checklist)."
+    ],
+    "correct_option": "Para rastrear la ejecución de procesos y analizar grandes volúmenes de datos en busca de problemas.",
+    "topic": "Técnicas de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 69,
+    "question": "En la auditoría informática de sistemas, el 'Tuning' es una actividad principalmente:",
+    "options": [
+      "Reactiva, que se realiza solo cuando un sistema falla gravemente.",
+      "Proactiva, que busca evaluar y mejorar el comportamiento del sistema sin esperar a que aparezcan síntomas de ineficiencia.",
+      "Administrativa, relacionada con la compra de licencias de software.",
+      "Documental, que consiste en actualizar los manuales de usuario."
+    ],
+    "correct_option": "Proactiva, que busca evaluar y mejorar el comportamiento del sistema sin esperar a que aparezcan síntomas de ineficiencia.",
+    "topic": "Auditoría de Sistemas",
+    "difficulty": "medio"
+  },
+  {
+    "id": 70,
+    "question": "En la tabla del 'Ciclo de Seguridad' utilizada en auditoría, ¿qué representa la columna 'Pesos Finales'?",
+    "options": [
+      "El costo en miles de pesos de auditar cada segmento.",
+      "Una ponderación final de la importancia de cada segmento, que combina la visión técnica y la política/estratégica de la empresa.",
+      "El número de vulnerabilidades encontradas en cada segmento.",
+      "El porcentaje de cumplimiento normativo de cada segmento."
+    ],
+    "correct_option": "Una ponderación final de la importancia de cada segmento, que combina la visión técnica y la política/estratégica de la empresa.",
+    "topic": "Auditoría de Seguridad",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 71,
+    "question": "Durante el 'Estudio inicial del entorno' en una auditoría, ¿por qué es importante analizar los 'Flujos de Información' no oficiales?",
+    "options": [
+      "Porque siempre son positivos y mejoran la eficiencia.",
+      "Porque son la única forma de comunicación en la empresa.",
+      "Porque pueden indicar fallos en la estructura organizativa formal o problemas de comunicación que la empresa intenta compensar.",
+      "Porque es una obligación legal documentarlos."
+    ],
+    "correct_option": "Porque pueden indicar fallos en la estructura organizativa formal o problemas de comunicación que la empresa intenta compensar.",
+    "topic": "Metodologías de Auditoría",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 72,
+    "question": "Dentro de las funciones del área de RRHH, ¿a qué se refiere la 'Función de Interrelación'?",
+    "options": [
+      "Gestionar las tareas diarias como la nómina y las contrataciones.",
+      "Intervenir en los procesos de la empresa para mejorar su eficiencia y eficacia general.",
+      "Investigar las tendencias del mercado laboral y desarrollar soluciones innovadoras.",
+      "Comprender y gestionar la cultura de la empresa."
+    ],
+    "correct_option": "Intervenir en los procesos de la empresa para mejorar su eficiencia y eficacia general.",
+    "topic": "Funciones de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 73,
+    "question": "El proceso que un administrador sigue, partiendo de la 'REALIDAD' para definir una 'VISIÓN' y luego identificar la 'BRECHA' entre ambas, es un paso fundamental para:",
+    "options": [
+      "Calcular los salarios.",
+      "Desarrollar estrategias y objetivos claros para cerrar esa brecha.",
+      "Realizar la inducción de un nuevo empleado.",
+      "Escribir el manual de políticas de la empresa."
+    ],
+    "correct_option": "Desarrollar estrategias y objetivos claros para cerrar esa brecha.",
+    "topic": "Administración de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 74,
+    "question": "¿Cuáles son los tres ejes patológicos o negativos que pueden motivar a una persona a ejercer el poder, según el texto?",
+    "options": [
+      "Legitimidad, Motivación y Comunicación.",
+      "Carisma, Empatía e Inteligencia.",
+      "Planificación, Organización y Control.",
+      "Narcisismo, Celos/Envidia y Miedo."
+    ],
+    "correct_option": "Narcisismo, Celos/Envidia y Miedo.",
+    "topic": "Poder y Liderazgo",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 75,
+    "question": "¿A qué se refiere el concepto de comunicación de 'doble vínculo' o el ejemplo del 'tarro de mermelada'?",
+    "options": [
+      "A un tipo de comunicación escrita formal usada en informes.",
+      "A una comunicación contradictoria, como alabar constantemente a alguien y luego cuestionarlo duramente ante el primer error.",
+      "A un método de feedback exclusivamente positivo para motivar al equipo.",
+      "A la comunicación no verbal que se da entre dos personas."
+    ],
+    "correct_option": "A una comunicación contradictoria, como alabar constantemente a alguien y luego cuestionarlo duramente ante el primer error.",
+    "topic": "Comunicación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 76,
+    "question": "En el coaching, una técnica de 'Feedback' efectivo implica que la retroalimentación sea:",
+    "options": [
+      "General y enfocada en la personalidad del empleado para que cambie.",
+      "Retrasada, para que el empleado olvide el error y no se sienta mal.",
+      "Oportuna, descriptiva, enfocada en el comportamiento y no en la persona.",
+      "Pública, para que todo el equipo aprenda del error de uno."
+    ],
+    "correct_option": "Oportuna, descriptiva, enfocada en el comportamiento y no en la persona.",
+    "topic": "Coaching",
+    "difficulty": "medio"
+  },
+  {
+    "id": 77,
+    "question": "En la evolución de la consideración estratégica de los RRHH, ¿qué caracteriza a la cuarta y última etapa?",
+    "options": [
+      "Los RRHH no se tienen en cuenta en absoluto en la planeación.",
+      "Se reconoce la existencia de RRHH, pero sin la intervención de un especialista.",
+      "Se considera formalmente el tema de RRHH, pero el especialista aún no participa en la estrategia.",
+      "Se involucra activamente al especialista en RRHH en el proceso de planeación estratégica de la empresa."
+    ],
+    "correct_option": "Se involucra activamente al especialista en RRHH en el proceso de planeación estratégica de la empresa.",
+    "topic": "Planificación Estratégica de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 78,
+    "question": "¿Cuál es la diferencia entre una Escala de Remuneración 'Fija' y una 'Móvil'?",
+    "options": [
+      "La fija es para puestos directivos y la móvil para operativos.",
+      "La fija incluye bonos y la móvil no.",
+      "En la fija, cada nivel tiene un sueldo determinado y constante; en la móvil, cada categoría tiene un rango salarial con un mínimo y un máximo.",
+      "La fija se actualiza anualmente, mientras que la móvil lo hace mensualmente."
+    ],
+    "correct_option": "En la fija, cada nivel tiene un sueldo determinado y constante; en la móvil, cada categoría tiene un rango salarial con un mínimo y un máximo.",
+    "topic": "Administración de Remuneración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 79,
+    "question": "Al realizar una selección de personal interna, una de las fases finales es la 'Revisión Médica'. ¿Cuál es uno de los posibles resultados de esta revisión?",
+    "options": [
+      "Apto o no apto para el puesto.",
+      "Clasificación en cuatro categorías, como 'totalmente sano' o 'con defectos no impeditivos'.",
+      "Un diagnóstico psicológico completo.",
+      "Una recomendación sobre el salario a ofrecer."
+    ],
+    "correct_option": "Clasificación en cuatro categorías, como 'totalmente sano' o 'con defectos no impeditivos'.",
+    "topic": "Selección de Personal",
+    "difficulty": "medio"
+  },
+  {
+    "id": 80,
+    "question": "El 'Informe de Entrevista', utilizado en la fase de Post-entrevista, tiene como uno de sus componentes principales:",
+    "options": [
+      "La grabación de audio de toda la entrevista.",
+      "El currículum vitae del candidato.",
+      "Una tabla de evaluación con una escala y categorías para calificar al candidato.",
+      "La oferta económica formal para el candidato."
+    ],
+    "correct_option": "Una tabla de evaluación con una escala y categorías para calificar al candidato.",
+    "topic": "Entrevista",
+    "difficulty": "medio"
+  },
+  {
+    "id": 81,
+    "question": "El proceso de inducción se divide en dos etapas. La segunda etapa, 'Inducción al sector específico', se enfoca en:",
+    "options": [
+      "La historia y misión general de la empresa.",
+      "Conocer el sector donde trabajará el empleado, sus normas de seguridad, horarios y funciones específicas del puesto.",
+      "Presentar al nuevo empleado a todos los directores de la compañía.",
+      "Entregar el manual de bienvenida y los formularios de alta."
+    ],
+    "correct_option": "Conocer el sector donde trabajará el empleado, sus normas de seguridad, horarios y funciones específicas del puesto.",
+    "topic": "Inducción",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 82,
+    "question": "En el contexto de la importancia de los objetivos (TOCE), ¿a qué se refiere la 'Optimización de Recursos'?",
+    "options": [
+      "Asegurar que todos los miembros trabajen hacia la misma meta.",
+      "Medir el desempeño individual y de la organización.",
+      "Proporcionar un marco para la toma de decisiones diarias.",
+      "Ayudar a los gerentes a utilizar sus recursos de manera más eficiente, concentrando esfuerzos en actividades de valor."
+    ],
+    "correct_option": "Ayudar a los gerentes a utilizar sus recursos de manera más eficiente, concentrando esfuerzos en actividades de valor.",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 83,
+    "question": "Una auditoría de comunicaciones y redes se centra en evaluar:",
+    "options": [
+      "El rendimiento del software de base de datos.",
+      "El ciclo de vida del desarrollo de proyectos.",
+      "La infraestructura de red, examinando aspectos físicos y lógicos que afectan el rendimiento y la seguridad.",
+      "La satisfacción de los usuarios con las aplicaciones."
+    ],
+    "correct_option": "La infraestructura de red, examinando aspectos físicos y lógicos que afectan el rendimiento y la seguridad.",
+    "topic": "Auditoría de Comunicaciones",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 84,
+    "question": "De acuerdo al texto, para generar 'Confianza y Pertenencia' en un equipo, un mánager debe asegurar que los objetivos sean:",
+    "options": [
+      "Secretos y conocidos solo por la alta gerencia.",
+      "Ambiguos para fomentar la creatividad.",
+      "Claros y revisados periódicamente con el equipo.",
+      "Impuestos sin posibilidad de discusión."
+    ],
+    "correct_option": "Claros y revisados periódicamente con el equipo.",
+    "topic": "Confianza y Pertenencia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 85,
+    "question": "¿Cuál es uno de los roles clave en la 'Estructura Organizacional del Cambio'?",
+    "options": [
+      "El 'Opositor', que intenta detener cualquier cambio.",
+      "El 'Espectador', que solo observa sin participar.",
+      "El 'Promotor', una persona con poder que apoya e impulsa el cambio.",
+      "El 'Crítico', cuyo único rol es encontrar fallos en la propuesta."
+    ],
+    "correct_option": "El 'Promotor', una persona con poder que apoya e impulsa el cambio.",
+    "topic": "Cambio Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 86,
+    "question": "En la auditoría de Desarrollo de Proyectos, ¿por qué es importante verificar el uso de 'Juegos de ensayo de datos sin uso de datos reales' en las pruebas?",
+    "options": [
+      "Porque los datos reales son más difíciles de conseguir.",
+      "Para proteger la confidencialidad y la integridad de la información real de la empresa.",
+      "Porque los datos de prueba son más caros.",
+      "Para hacer las pruebas más rápidas, ya que los datos reales ralentizan el sistema."
+    ],
+    "correct_option": "Para proteger la confidencialidad y la integridad de la información real de la empresa.",
+    "topic": "Auditoría de Desarrollo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 87,
+    "question": "¿Por qué un administrador debe tener un rol de 'Conductor' en lugar de intentar ser un 'Líder' carismático si no posee esas cualidades innatas?",
+    "options": [
+      "Porque el rol de Conductor es superior al de Líder.",
+      "Porque ser Conductor se basa en habilidades de gestión y técnicas que se pueden aprender y entrenar para dirigir eficazmente.",
+      "Porque las empresas prohíben el liderazgo carismático.",
+      "Porque los Conductores ganan más que los Líderes."
+    ],
+    "correct_option": "Porque ser Conductor se basa en habilidades de gestión y técnicas que se pueden aprender y entrenar para dirigir eficazmente.",
+    "topic": "Líder vs Conductor",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 88,
+    "question": "En el contexto de la comunicación escrita, ¿cuál es el propósito de una 'Revista Interna' en una empresa?",
+    "options": [
+      "Reemplazar todas las reuniones de equipo.",
+      "Publicar los salarios de todos los empleados.",
+      "Informar sobre temas de interés general y fomentar el sentido de pertenencia.",
+      "Servir como canal oficial para quejas y reclamos."
+    ],
+    "correct_option": "Informar sobre temas de interés general y fomentar el sentido de pertenencia.",
+    "topic": "Comunicación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 89,
+    "question": "La 'Prueba del Desempeño', una de las tres pruebas para una estrategia ganadora, evalúa si la estrategia:",
+    "options": [
+      "Se ajusta a la misión de la empresa.",
+      "Es mejor que la de la competencia.",
+      "Está generando los resultados financieros y de posicionamiento de mercado esperados.",
+      "Es fácil de implementar por el equipo."
+    ],
+    "correct_option": "Está generando los resultados financieros y de posicionamiento de mercado esperados.",
+    "topic": "Estrategias Ganadoras",
+    "difficulty": "medio"
+  },
+  {
+    "id": 90,
+    "question": "En la auditoría de Desarrollo de Proyectos, ¿qué aspecto fundamental se verifica en la etapa de 'Diseño de Programas'?",
+    "options": [
+      "Que los programas sean los más complejos tecnológicamente.",
+      "Que los programas posean la máxima sencillez, modularidad y economía de recursos.",
+      "Que los programas utilicen únicamente el lenguaje de programación más reciente.",
+      "Que el diseño sea realizado exclusivamente por el gerente del proyecto."
+    ],
+    "correct_option": "Que los programas posean la máxima sencillez, modularidad y economía de recursos.",
+    "topic": "Auditoría de Desarrollo de Proyectos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 91,
+    "question": "Un gerente que asigna tareas pero no proporciona la capacitación necesaria para realizarlas está fallando en un paso crucial del proceso de:",
+    "options": [
+      "Selección de personal",
+      "Evaluación de desempeño",
+      "Delegación",
+      "Inducción"
+    ],
+    "correct_option": "Delegación",
+    "topic": "Delegación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 92,
+    "question": "La afirmación 'La información de la empresa y para la empresa se ha convertido en un ACTIVO REAL de la misma' justifica la necesidad de realizar principalmente auditorías de:",
+    "options": [
+      "Recursos Humanos y clima laboral.",
+      "Inversión Informática y de Seguridad (física y lógica).",
+      "Marketing y ventas.",
+      "Cumplimiento legal exclusivamente."
+    ],
+    "correct_option": "Inversión Informática y de Seguridad (física y lógica).",
+    "topic": "Características de la Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 93,
+    "question": "Si durante una auditoría se detecta que varios empleados reportan a dos jefes diferentes, ¿qué aspecto del estudio inicial de la organización está fallando?",
+    "options": [
+      "Inventario de Hardware y Software.",
+      "Situación geográfica de los Sistemas.",
+      "Relaciones Jerárquicas y funcionales.",
+      "Volumen de las Aplicaciones."
+    ],
+    "correct_option": "Relaciones Jerárquicas y funcionales.",
+    "topic": "Estudio Inicial del Entorno (Auditoría)",
+    "difficulty": "medio"
+  },
+  {
+    "id": 94,
+    "question": "Para una auditoría que requiere analizar flujos de información y la estructura organizativa, ¿cuál sería el perfil profesional más idóneo a incluir en el equipo auditor?",
+    "options": [
+      "Experto en DB y administración de las mismas.",
+      "Experto en Sw de comunicaciones.",
+      "Técnico de organización.",
+      "Técnico de Sistemas."
+    ],
+    "correct_option": "Técnico de organización.",
+    "topic": "Determinación de Recursos (Auditoría)",
+    "difficulty": "medio"
+  },
+  {
+    "id": 95,
+    "question": "¿Cuál es una de las principales deficiencias que el texto atribuye a un 'Centro de Información' mal gestionado?",
+    "options": [
+      "Exceso de seguridad en los datos.",
+      "Falta de presupuesto para marketing.",
+      "Invasión de entornos, redundancia de datos y desaprovechamiento de recursos.",
+      "Poca comunicación con los clientes finales."
+    ],
+    "correct_option": "Invasión de entornos, redundancia de datos y desaprovechamiento de recursos.",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 96,
+    "question": "La existencia del 'radio pasillo' (rumores) en una organización es un claro síntoma de una falla en el pilar de:",
+    "options": [
+      "Motivación",
+      "Cultura Organizacional",
+      "Comunicación Efectiva",
+      "Liderazgo y Poder"
+    ],
+    "correct_option": "Comunicación Efectiva",
+    "topic": "Comunicación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 97,
+    "question": "Según el texto, ¿por qué un administrador debe ser consciente de sus límites y no intentar solucionar los problemas personales de sus empleados?",
+    "options": [
+      "Porque está prohibido por ley.",
+      "Porque su foco debe estar en el ámbito laboral, potenciando el desarrollo profesional.",
+      "Porque no tiene la formación de un psicólogo.",
+      "Porque podría generar favoritismos."
+    ],
+    "correct_option": "Porque su foco debe estar en el ámbito laboral, potenciando el desarrollo profesional.",
+    "topic": "Administrador de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 98,
+    "question": "La 'Descripción de Tareas' es un prerrequisito fundamental para llevar a cabo eficazmente la:",
+    "options": [
+      "Encuesta de clima laboral.",
+      "Evaluación de Tareas.",
+      "Selección de un proveedor de software.",
+      "Planificación del presupuesto anual."
+    ],
+    "correct_option": "Evaluación de Tareas.",
+    "topic": "Planificación Estratégica de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 99,
+    "question": "Un líder que fomenta el trabajo en equipo e involucra a sus miembros en la toma de decisiones está ejerciendo un liderazgo de tipo:",
+    "options": [
+      "Autoritario",
+      "Narcisista",
+      "Participativo",
+      "Reactivo"
+    ],
+    "correct_option": "Participativo",
+    "topic": "Liderazgo y Administración",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 100,
+    "question": "En el contexto del 'Flujo del Hecho' de un informe de auditoría, ¿cuál es el propósito de la 'Recomendación' final?",
+    "options": [
+      "Resumir el problema encontrado.",
+      "Dirigir una solución concreta y verificable a la persona o personas que pueden implementarla.",
+      "Calcular el impacto financiero del hecho.",
+      "Criticar la gestión del área auditada."
+    ],
+    "correct_option": "Dirigir una solución concreta y verificable a la persona o personas que pueden implementarla.",
+    "topic": "Informe de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 101,
+    "question": "¿Cuál de las siguientes acciones NO corresponde a la función de 'Planificar' dentro del modelo PODIO?",
+    "options": [
+      "Definir la Misión y Visión.",
+      "Fijar metas y objetivos específicos.",
+      "Representar gráficamente los puestos de trabajo en un organigrama.",
+      "Desarrollar las estrategias para alcanzar los objetivos."
+    ],
+    "correct_option": "Representar gráficamente los puestos de trabajo en un organigrama.",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 102,
+    "question": "La transición de un modelo donde cada departamento tiene su propio sistema informático a uno donde toda la información se almacena en una única base de datos centralizada es un ejemplo de:",
+    "options": [
+      "Una auditoría de seguridad.",
+      "Una estrategia para centralizar la gestión de datos y mejorar la consistencia.",
+      "Un proceso de selección de personal.",
+      "Una evaluación de desempeño."
+    ],
+    "correct_option": "Una estrategia para centralizar la gestión de datos y mejorar la consistencia.",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 103,
+    "question": "Al realizar una selección de personal interna, ¿quién es finalmente el responsable por el desempeño del candidato elegido?",
+    "options": [
+      "El departamento de Recursos Humanos.",
+      "El candidato mismo.",
+      "El superior inmediato que toma la decisión final de contratación.",
+      "La consultora externa, si se utilizó en alguna fase."
+    ],
+    "correct_option": "El superior inmediato que toma la decisión final de contratación.",
+    "topic": "Selección de Personal",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 104,
+    "question": "El concepto de 'operatividad' como objetivo fundamental de la auditoría informática implica que:",
+    "options": [
+      "El sistema debe ser el más moderno del mercado.",
+      "El sistema debe funcionar constantemente, incluso de manera básica, ya que detenerlo puede causar grandes inconvenientes.",
+      "El sistema debe ser auditado diariamente.",
+      "El sistema debe ser completamente rediseñado después de cada auditoría."
+    ],
+    "correct_option": "El sistema debe funcionar constantemente, incluso de manera básica, ya que detenerlo puede causar grandes inconvenientes.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 105,
+    "question": "¿Qué tipo de usuario, según el texto, se enfoca en tareas rutinarias y repetitivas y utiliza herramientas con interfaces sencillas, como un cajero de supermercado?",
+    "options": [
+      "Usuario de Centro de Información",
+      "Usuario en Evolución",
+      "Usuario Final no Informático Puro",
+      "Usuario Administrador"
+    ],
+    "correct_option": "Usuario Final no Informático Puro",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 106,
+    "question": "Si una empresa tiene una cultura fuerte y positiva, ¿cuál es un efecto probable en los empleados?",
+    "options": [
+      "Aumento de la rotación de personal.",
+      "Disminución de la productividad.",
+      "Aumento de la productividad y el compromiso.",
+      "Indiferencia hacia los objetivos de la empresa."
+    ],
+    "correct_option": "Aumento de la productividad y el compromiso.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 107,
+    "question": "La necesidad de una 'Revisión de Controles de la Gestión Informática' (NI-PGEI) surge inmediatamente después de haber conseguido:",
+    "options": [
+      "Aprobar el presupuesto del área.",
+      "La operatividad de los sistemas.",
+      "Contratar a un nuevo gerente de TI.",
+      "Finalizar el desarrollo de una aplicación."
+    ],
+    "correct_option": "La operatividad de los sistemas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 108,
+    "question": "Dentro del proceso de selección de personal externa, si la empresa cliente no está satisfecha con los candidatos presentados, el siguiente paso es:",
+    "options": [
+      "Contratar al menos malo de los candidatos.",
+      "Cancelar el proceso de selección indefinidamente.",
+      "Pedir a la empresa externa que ajuste el perfil y presente una nueva carpeta de candidatos.",
+      "Iniciar un proceso legal contra la consultora."
+    ],
+    "correct_option": "Pedir a la empresa externa que ajuste el perfil y presente una nueva carpeta de candidatos.",
+    "topic": "Selección de Personal",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 109,
+    "question": "¿Qué busca lograr una organización al establecer una 'Carrera Tipo' para sus empleados?",
+    "options": [
+      "Limitar las oportunidades de crecimiento a unos pocos elegidos.",
+      "Proporcionar un camino claro y estructurado hacia el ascenso, motivando el desarrollo de habilidades.",
+      "Hacer que todos los empleados sigan exactamente la misma trayectoria profesional.",
+      "Eliminar la necesidad de evaluaciones de desempeño."
+    ],
+    "correct_option": "Proporcionar un camino claro y estructurado hacia el ascenso, motivando el desarrollo de habilidades.",
+    "topic": "Plan de Carrera",
+    "difficulty": "medio"
+  },
+  {
+    "id": 110,
+    "question": "En un análisis FODA, ¿cómo se clasificaría la aparición de un nuevo competidor con tecnología superior en el mercado?",
+    "options": [
+      "Como una Fortaleza, porque obliga a la empresa a mejorar.",
+      "Como una Oportunidad, porque se puede aprender del competidor.",
+      "Como una Debilidad, porque expone las carencias internas.",
+      "Como una Amenaza, porque es un factor externo que puede afectar negativamente a la empresa."
+    ],
+    "correct_option": "Como una Amenaza, porque es un factor externo que puede afectar negativamente a la empresa.",
+    "topic": "Administradores",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 111,
+    "question": "¿Qué aspecto fundamental se verifica en la etapa de 'Diseño de Programas' en una auditoría de Desarrollo de Proyectos?",
+    "options": [
+      "Que los programas sean los más complejos tecnológicamente.",
+      "Que los programas posean la máxima sencillez, modularidad y economía de recursos.",
+      "Que los programas utilicen únicamente el lenguaje de programación más reciente.",
+      "Que el diseño sea realizado exclusivamente por el gerente del proyecto."
+    ],
+    "correct_option": "Que los programas posean la máxima sencillez, modularidad y economía de recursos.",
+    "topic": "Auditoría de Desarrollo de Proyectos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 112,
+    "question": "Un gerente que asigna tareas pero no proporciona la capacitación necesaria para realizarlas está fallando en un paso crucial del proceso de:",
+    "options": [
+      "Selección de personal",
+      "Evaluación de desempeño",
+      "Delegación",
+      "Inducción"
+    ],
+    "correct_option": "Delegación",
+    "topic": "Delegación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 113,
+    "question": "La afirmación 'La información de la empresa... se ha convertido en un ACTIVO REAL' justifica la necesidad de realizar principalmente auditorías de:",
+    "options": [
+      "Recursos Humanos y clima laboral.",
+      "Inversión Informática y de Seguridad (física y lógica).",
+      "Marketing y ventas.",
+      "Cumplimiento legal exclusivamente."
+    ],
+    "correct_option": "Inversión Informática y de Seguridad (física y lógica).",
+    "topic": "Características de la Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 114,
+    "question": "Si durante una auditoría se detecta que varios empleados reportan a dos jefes diferentes, ¿qué aspecto del estudio inicial de la organización está fallando?",
+    "options": [
+      "Inventario de Hardware y Software.",
+      "Situación geográfica de los Sistemas.",
+      "Relaciones Jerárquicas y funcionales.",
+      "Volumen de las Aplicaciones."
+    ],
+    "correct_option": "Relaciones Jerárquicas y funcionales.",
+    "topic": "Estudio Inicial del Entorno (Auditoría)",
+    "difficulty": "medio"
+  },
+  {
+    "id": 115,
+    "question": "Para una auditoría que requiere analizar flujos de información y la estructura organizativa, ¿cuál sería el perfil profesional más idóneo a incluir en el equipo auditor?",
+    "options": [
+      "Experto en DB y administración de las mismas.",
+      "Experto en Sw de comunicaciones.",
+      "Técnico de organización.",
+      "Técnico de Sistemas."
+    ],
+    "correct_option": "Técnico de organización.",
+    "topic": "Determinación de Recursos (Auditoría)",
+    "difficulty": "medio"
+  },
+  {
+    "id": 116,
+    "question": "¿Cuál es una de las principales deficiencias que el texto atribuye a un 'Centro de Información' mal gestionado?",
+    "options": [
+      "Exceso de seguridad en los datos.",
+      "Falta de presupuesto para marketing.",
+      "Invasión de entornos, redundancia de datos y desaprovechamiento de recursos.",
+      "Poca comunicación con los clientes finales."
+    ],
+    "correct_option": "Invasión de entornos, redundancia de datos y desaprovechamiento de recursos.",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 117,
+    "question": "La existencia del 'radio pasillo' (rumores) en una organización es un claro síntoma de una falla en el pilar de:",
+    "options": [
+      "Motivación",
+      "Cultura Organizacional",
+      "Comunicación Efectiva",
+      "Liderazgo y Poder"
+    ],
+    "correct_option": "Comunicación Efectiva",
+    "topic": "Comunicación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 118,
+    "question": "Según el texto, ¿por qué un administrador debe ser consciente de sus límites y no intentar solucionar los problemas personales de sus empleados?",
+    "options": [
+      "Porque está prohibido por ley.",
+      "Porque su foco debe estar en el ámbito laboral, potenciando el desarrollo profesional.",
+      "Porque no tiene la formación de un psicólogo.",
+      "Porque podría generar favoritismos."
+    ],
+    "correct_option": "Porque su foco debe estar en el ámbito laboral, potenciando el desarrollo profesional.",
+    "topic": "Administrador de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 119,
+    "question": "La 'Descripción de Tareas' es un prerrequisito fundamental para llevar a cabo eficazmente la:",
+    "options": [
+      "Encuesta de clima laboral.",
+      "Evaluación de Tareas.",
+      "Selección de un proveedor de software.",
+      "Planificación del presupuesto anual."
+    ],
+    "correct_option": "Evaluación de Tareas.",
+    "topic": "Planificación Estratégica de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 120,
+    "question": "Un líder que fomenta el trabajo en equipo e involucra a sus miembros en la toma de decisiones está ejerciendo un liderazgo de tipo:",
+    "options": [
+      "Autoritario",
+      "Narcisista",
+      "Participativo",
+      "Reactivo"
+    ],
+    "correct_option": "Participativo",
+    "topic": "Liderazgo y Administración",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 121,
+    "question": "¿Cuál es el propósito de la 'Recomendación' en el 'Flujo del Hecho' de un informe de auditoría?",
+    "options": [
+      "Resumir el problema encontrado.",
+      "Dirigir una solución concreta y verificable a la persona o personas que pueden implementarla.",
+      "Calcular el impacto financiero del hecho.",
+      "Criticar la gestión del área auditada."
+    ],
+    "correct_option": "Dirigir una solución concreta y verificable a la persona o personas que pueden implementarla.",
+    "topic": "Informe de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 122,
+    "question": "¿Cuál de las siguientes acciones NO corresponde a la función de 'Planificar' dentro del modelo PODIO?",
+    "options": [
+      "Definir la Misión y Visión.",
+      "Fijar metas y objetivos específicos.",
+      "Representar gráficamente los puestos de trabajo en un organigrama.",
+      "Desarrollar las estrategias para alcanzar los objetivos."
+    ],
+    "correct_option": "Representar gráficamente los puestos de trabajo en un organigrama.",
+    "topic": "Administración General",
+    "difficulty": "medio"
+  },
+  {
+    "id": 123,
+    "question": "La transición de un modelo descentralizado de sistemas a uno con una base de datos centralizada busca principalmente:",
+    "options": [
+      "Realizar una auditoría de seguridad.",
+      "Centralizar la gestión de datos para mejorar la consistencia y el acceso a la información.",
+      "Implementar un proceso de selección de personal.",
+      "Llevar a cabo una evaluación de desempeño."
+    ],
+    "correct_option": "Centralizar la gestión de datos para mejorar la consistencia y el acceso a la información.",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 124,
+    "question": "Al realizar una selección de personal interna, ¿quién es finalmente el responsable por el desempeño del candidato elegido?",
+    "options": [
+      "El departamento de Recursos Humanos.",
+      "El candidato mismo.",
+      "El superior inmediato que toma la decisión final de contratación.",
+      "La consultora externa, si se utilizó en alguna fase."
+    ],
+    "correct_option": "El superior inmediato que toma la decisión final de contratación.",
+    "topic": "Selección de Personal",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 125,
+    "question": "El concepto de 'operatividad' como objetivo fundamental de la auditoría informática implica que:",
+    "options": [
+      "El sistema debe ser el más moderno del mercado.",
+      "El sistema debe funcionar constantemente, incluso de manera básica, ya que detenerlo puede causar grandes inconvenientes.",
+      "El sistema debe ser auditado diariamente.",
+      "El sistema debe ser completamente rediseñado después de cada auditoría."
+    ],
+    "correct_option": "El sistema debe funcionar constantemente, incluso de manera básica, ya que detenerlo puede causar grandes inconvenientes.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 126,
+    "question": "¿Qué tipo de usuario, según el texto, se enfoca en tareas rutinarias y repetitivas y utiliza herramientas con interfaces sencillas, como un cajero de supermercado?",
+    "options": [
+      "Usuario de Centro de Información",
+      "Usuario en Evolución",
+      "Usuario Final no Informático Puro",
+      "Usuario Administrador"
+    ],
+    "correct_option": "Usuario Final no Informático Puro",
+    "topic": "Tendencias de Auditoría",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 127,
+    "question": "Si una empresa tiene una cultura fuerte y positiva, ¿cuál es un efecto probable en los empleados?",
+    "options": [
+      "Aumento de la rotación de personal.",
+      "Disminución de la productividad.",
+      "Aumento de la productividad y el compromiso.",
+      "Indiferencia hacia los objetivos de la empresa."
+    ],
+    "correct_option": "Aumento de la productividad y el compromiso.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 128,
+    "question": "La necesidad de una 'Revisión de Controles de la Gestión Informática' (NI-PGEI) surge inmediatamente después de haber conseguido:",
+    "options": [
+      "Aprobar el presupuesto del área.",
+      "La operatividad de los sistemas.",
+      "Contratar a un nuevo gerente de TI.",
+      "Finalizar el desarrollo de una aplicación."
+    ],
+    "correct_option": "La operatividad de los sistemas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 129,
+    "question": "Dentro del proceso de selección de personal externa, si la empresa cliente no está satisfecha con los candidatos presentados, el siguiente paso es:",
+    "options": [
+      "Contratar al menos malo de los candidatos.",
+      "Cancelar el proceso de selección indefinidamente.",
+      "Pedir a la empresa externa que ajuste el perfil y presente una nueva carpeta de candidatos.",
+      "Iniciar un proceso legal contra la consultora."
+    ],
+    "correct_option": "Pedir a la empresa externa que ajuste el perfil y presente una nueva carpeta de candidatos.",
+    "topic": "Selección de Personal",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 130,
+    "question": "¿Qué busca lograr una organización al establecer una 'Carrera Tipo' para sus empleados?",
+    "options": [
+      "Limitar las oportunidades de crecimiento a unos pocos elegidos.",
+      "Proporcionar un camino claro y estructurado hacia el ascenso, motivando el desarrollo de habilidades.",
+      "Hacer que todos los empleados sigan exactamente la misma trayectoria profesional.",
+      "Eliminar la necesidad de evaluaciones de desempeño."
+    ],
+    "correct_option": "Proporcionar un camino claro y estructurado hacia el ascenso, motivando el desarrollo de habilidades.",
+    "topic": "Plan de Carrera",
+    "difficulty": "medio"
+  },
+  {
+    "id": 131,
+    "question": "Un objetivo como 'Expandir la línea de productos a ropa deportiva para fortalecer nuestra posición competitiva' es un ejemplo de:",
+    "options": [
+      "Objetivo Financiero",
+      "Objetivo Cualitativo",
+      "Objetivo Cuantitativo",
+      "Objetivo Estratégico"
+    ],
+    "correct_option": "Objetivo Estratégico",
+    "topic": "Objetivos",
+    "difficulty": "fácil"
+  }
+]

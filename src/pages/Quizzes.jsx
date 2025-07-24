@@ -1,0 +1,618 @@
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { 
+  PlayIcon, 
+  ArrowPathIcon, 
+  CheckIcon, 
+  XMarkIcon,
+  TrophyIcon,
+  FunnelIcon,
+  ArrowsUpDownIcon,
+  ClipboardDocumentListIcon
+} from '@heroicons/react/24/outline'
+import { toast } from 'react-toastify'
+import { useDataStore, useStudyStore } from '../store'
+import LoadingSpinner from '../components/LoadingSpinner'
+
+const Quizzes = () => {
+  const { quizzes } = useDataStore()
+  const { updateStudyProgress } = useStudyStore()
+
+  const [currentQuiz, setCurrentQuiz] = useState(null)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [selectedAnswer, setSelectedAnswer] = useState('')
+  const [showResult, setShowResult] = useState(false)
+  const [quizResults, setQuizResults] = useState([])
+  const [isQuizActive, setIsQuizActive] = useState(false)
+  const [filteredQuizzes, setFilteredQuizzes] = useState([])
+  const [selectedTopic, setSelectedTopic] = useState('all')
+  const [selectedDifficulty, setSelectedDifficulty] = useState('all')
+  const [isShuffled, setIsShuffled] = useState(false)
+  const [shuffleOptions, setShuffleOptions] = useState(false)
+
+  // Get unique topics and difficulties
+  const topics = [...new Set(quizzes.map(quiz => quiz.topic))].sort()
+  const difficulties = [...new Set(quizzes.map(quiz => quiz.difficulty))].sort()
+
+  // Filter quizzes based on topic and difficulty
+  useEffect(() => {
+    let filtered = quizzes.filter(quiz => {
+      const topicMatch = selectedTopic === 'all' || quiz.topic === selectedTopic
+      const difficultyMatch = selectedDifficulty === 'all' || quiz.difficulty === selectedDifficulty
+      return topicMatch && difficultyMatch
+    })
+
+    setFilteredQuizzes(filtered)
+  }, [quizzes, selectedTopic, selectedDifficulty])
+
+  // Function to shuffle options for each question
+  const shuffleQuizOptions = (quiz) => {
+    if (!shuffleOptions) return quiz
+    
+    return quiz.map(question => {
+      const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5)
+      return {
+        ...question,
+        options: shuffledOptions
+      }
+    })
+  }
+
+  const startQuiz = () => {
+    if (filteredQuizzes.length === 0) {
+      toast.info('No hay preguntas disponibles con los filtros seleccionados', {
+        autoClose: 3000
+      })
+      return
+    }
+    
+    // Start with the filtered quizzes
+    let quizToProcess = [...filteredQuizzes]
+    
+    // Apply question shuffling if enabled
+    if (isShuffled) {
+      quizToProcess = quizToProcess.sort(() => Math.random() - 0.5)
+    }
+    
+    // Apply option shuffling if enabled
+    const processedQuiz = shuffleQuizOptions(quizToProcess)
+    
+    setCurrentQuiz(processedQuiz)
+    setCurrentQuestionIndex(0)
+    setSelectedAnswer('')
+    setShowResult(false)
+    setQuizResults([])
+    setIsQuizActive(true)
+  }
+
+  const selectAnswer = (answer) => {
+    setSelectedAnswer(answer)
+  }
+
+  const submitAnswer = () => {
+    if (!selectedAnswer) {
+      // Visual feedback through button state instead of toast
+      // The disabled state of the button already indicates this
+      return
+    }
+
+    const currentQuestion = currentQuiz[currentQuestionIndex]
+    const isCorrect = selectedAnswer === currentQuestion.correct_option
+    
+    const result = {
+      question: currentQuestion.question,
+      selectedAnswer,
+      correctAnswer: currentQuestion.correct_option,
+      isCorrect,
+      topic: currentQuestion.topic,
+      difficulty: currentQuestion.difficulty
+    }
+
+    setQuizResults([...quizResults, result])
+    setShowResult(true)
+    
+    // Update study progress
+    updateStudyProgress('quiz', currentQuestion.id, isCorrect)
+    
+    // Visual feedback is handled by the UI color changes
+    // No need for toast notifications as the answer options show the result clearly
+  }
+
+  const nextQuestion = () => {
+    if (currentQuestionIndex < currentQuiz.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1)
+      setSelectedAnswer('')
+      setShowResult(false)
+    } else {
+      finishQuiz()
+    }
+  }
+
+  const finishQuiz = () => {
+    setIsQuizActive(false)
+    const correctCount = quizResults.filter(r => r.isCorrect).length
+    const totalQuestions = quizResults.length
+    const percentage = Math.round((correctCount / totalQuestions) * 100)
+    
+    // Results are shown clearly in the completion screen, no need for toast
+  }
+
+  const resetQuiz = () => {
+    setCurrentQuiz(null)
+    setCurrentQuestionIndex(0)
+    setSelectedAnswer('')
+    setShowResult(false)
+    setQuizResults([])
+    setIsQuizActive(false)
+  }
+
+  const restartQuiz = () => {
+    // Reset and start a fresh quiz with new shuffling
+    resetQuiz()
+    // Small delay to ensure state is reset, then start new quiz
+    setTimeout(() => startQuiz(), 100)
+  }
+
+  const getDifficultyColor = (difficulty) => {
+    switch (difficulty?.toLowerCase()) {
+      case 'fácil':
+        return 'difficulty-easy'
+      case 'medio':
+        return 'difficulty-medium'
+      case 'difícil':
+        return 'difficulty-hard'
+      default:
+        return 'difficulty-easy'
+    }
+  }
+
+  const getScoreColor = (percentage) => {
+    if (percentage >= 80) return 'text-green-600 dark:text-green-400'
+    if (percentage >= 60) return 'text-yellow-600 dark:text-yellow-400'
+    return 'text-red-600 dark:text-red-400'
+  }
+
+  if (!quizzes.length) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <LoadingSpinner size="large" />
+      </div>
+    )
+  }
+
+  // Quiz Results View
+  if (!isQuizActive && quizResults.length > 0) {
+    const correctCount = quizResults.filter(r => r.isCorrect).length
+    const totalQuestions = quizResults.length
+    const percentage = Math.round((correctCount / totalQuestions) * 100)
+
+    return (
+      <div className="min-h-screen p-4 lg:p-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center mb-8"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, type: 'spring' }}
+              className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <TrophyIcon className="w-10 h-10 text-white" />
+            </motion.div>
+            
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              ¡Quiz Completado!
+            </h1>
+            
+            <div className={`text-6xl font-bold mb-2 ${getScoreColor(percentage)}`}>
+              {percentage}%
+            </div>
+            
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+              {correctCount} de {totalQuestions} respuestas correctas
+            </p>
+          </motion.div>
+
+          {/* Results Details */}
+          <div className="space-y-4 mb-8">
+            {quizResults.map((result, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className={`card p-6 border-l-4 ${
+                  result.isCorrect 
+                    ? 'border-green-500 bg-green-50 dark:bg-green-900/10' 
+                    : 'border-red-500 bg-red-50 dark:bg-red-900/10'
+                }`}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                    result.isCorrect ? 'bg-green-100 dark:bg-green-900/20' : 'bg-red-100 dark:bg-red-900/20'
+                  }`}>
+                    {result.isCorrect ? (
+                      <CheckIcon className="w-5 h-5 text-green-600 dark:text-green-400" />
+                    ) : (
+                      <XMarkIcon className="w-5 h-5 text-red-600 dark:text-red-400" />
+                    )}
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {result.question}
+                    </h3>
+                    
+                    <div className="space-y-1 text-sm">
+                      <p>
+                        <span className="text-gray-600 dark:text-gray-400">Tu respuesta:</span>{' '}
+                        <span className={result.isCorrect ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}>
+                          {result.selectedAnswer}
+                        </span>
+                      </p>
+                      
+                      {!result.isCorrect && (
+                        <p>
+                          <span className="text-gray-600 dark:text-gray-400">Respuesta correcta:</span>{' '}
+                          <span className="text-green-600 dark:text-green-400">
+                            {result.correctAnswer}
+                          </span>
+                        </p>
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center space-x-4 mt-3">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(result.difficulty)}`}>
+                        {result.difficulty}
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {result.topic}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <button
+              onClick={startQuiz}
+              className="w-full sm:w-auto btn-primary flex items-center justify-center space-x-2"
+            >
+              <ArrowPathIcon className="w-5 h-5" />
+              <span>Nuevo Quiz</span>
+            </button>
+            
+            <button
+              onClick={resetQuiz}
+              className="w-full sm:w-auto btn-secondary flex items-center justify-center space-x-2"
+            >
+              <span>Volver al inicio</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Active Quiz View
+  if (isQuizActive && currentQuiz) {
+    const currentQuestion = currentQuiz[currentQuestionIndex]
+    const progress = ((currentQuestionIndex + 1) / currentQuiz.length) * 100
+
+    return (
+      <div className="min-h-screen p-4 lg:p-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Quiz Header */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
+                Pregunta {currentQuestionIndex + 1} de {currentQuiz.length}
+              </h1>
+              
+              <button
+                onClick={resetQuiz}
+                className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                Salir
+              </button>
+            </div>
+            
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+              <motion.div
+                className="bg-primary-600 h-2 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Question Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="card mb-8"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
+                {currentQuestion.difficulty}
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {currentQuestion.topic}
+              </span>
+            </div>
+            
+            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-relaxed">
+              {currentQuestion.question}
+            </h2>
+            
+            {/* Answer Options */}
+            <div className="space-y-3">
+              {currentQuestion.options.map((option, index) => {
+                const isSelected = selectedAnswer === option
+                const isCorrect = option === currentQuestion.correct_option
+                const showCorrectAnswer = showResult && isCorrect
+                const showWrongAnswer = showResult && isSelected && !isCorrect
+                
+                return (
+                  <motion.button
+                    key={index}
+                    onClick={() => !showResult && selectAnswer(option)}
+                    disabled={showResult}
+                    className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-200 ${
+                      showCorrectAnswer
+                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400'
+                        : showWrongAnswer
+                        ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'
+                        : isSelected
+                        ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                    whileHover={!showResult ? { scale: 1.02 } : {}}
+                    whileTap={!showResult ? { scale: 0.98 } : {}}
+                  >
+                    <div className="flex items-start space-x-3">
+                      <div className={`w-6 h-6 min-w-6 min-h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+                        showCorrectAnswer
+                          ? 'border-green-500 bg-green-500'
+                          : showWrongAnswer
+                          ? 'border-red-500 bg-red-500'
+                          : isSelected
+                          ? 'border-primary-500 bg-primary-500'
+                          : 'border-gray-300 dark:border-gray-600'
+                      }`}>
+                        {showCorrectAnswer && (
+                          <CheckIcon className="w-4 h-4 text-white" />
+                        )}
+                        {showWrongAnswer && (
+                          <XMarkIcon className="w-4 h-4 text-white" />
+                        )}
+                        {isSelected && !showResult && (
+                          <CheckIcon className="w-4 h-4 text-white" />
+                        )}
+                      </div>
+                      <span className="font-medium flex-1">{option}</span>
+                    </div>
+                  </motion.button>
+                )
+              })}
+            </div>
+          </motion.div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center justify-center space-x-4">
+            {!showResult ? (
+              <button
+                onClick={submitAnswer}
+                disabled={!selectedAnswer}
+                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+              >
+                <CheckIcon className="w-5 h-5" />
+                <span>Confirmar respuesta</span>
+              </button>
+            ) : (
+              <button
+                onClick={nextQuestion}
+                className="btn-primary flex items-center space-x-2"
+              >
+                <span>
+                  {currentQuestionIndex < currentQuiz.length - 1 ? 'Siguiente pregunta' : 'Ver resultados'}
+                </span>
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Quiz Start View
+  return (
+    <div className="min-h-screen p-4 lg:p-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-8"
+        >
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Quiz de Administración
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            Pon a prueba tus conocimientos con preguntas de opción múltiple
+          </p>
+        </motion.div>
+
+        {/* Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="card mb-8"
+        >
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+            Configuración del Quiz
+          </h2>
+          
+          {/* Filters Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Tema
+              </label>
+              <select
+                value={selectedTopic}
+                onChange={(e) => setSelectedTopic(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+              >
+                <option value="all">Todos los temas</option>
+                {topics.map(topic => (
+                  <option key={topic} value={topic}>{topic}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Dificultad
+              </label>
+              <select
+                value={selectedDifficulty}
+                onChange={(e) => setSelectedDifficulty(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+              >
+                <option value="all">Todas las dificultades</option>
+                {difficulties.map(difficulty => (
+                  <option key={difficulty} value={difficulty}>{difficulty}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Modern Toggle Options */}
+          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 mb-6">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
+              Opciones de Mezcla
+            </h3>
+            
+            <div className="space-y-4">
+              {/* Shuffle Questions Toggle */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center justify-center w-8 h-8 bg-primary-100 dark:bg-primary-900/20 rounded-lg">
+                    <ArrowsUpDownIcon className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-900 dark:text-white">
+                      Mezclar preguntas
+                    </h4>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      Cambia el orden de las preguntas en cada ronda
+                    </p>
+                  </div>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={isShuffled}
+                    onChange={() => setIsShuffled(!isShuffled)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 dark:peer-focus:ring-primary-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all after:duration-300 dark:border-gray-600 peer-checked:bg-primary-600 hover:bg-gray-300 dark:hover:bg-gray-600 peer-checked:hover:bg-primary-700"></div>
+                </label>
+              </div>
+
+              {/* Shuffle Options Toggle */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center justify-center w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
+                    <ArrowsUpDownIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-900 dark:text-white">
+                      Mezclar opciones
+                    </h4>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      Cambia el orden de las respuestas para evitar memorización
+                    </p>
+                  </div>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={shuffleOptions}
+                    onChange={() => setShuffleOptions(!shuffleOptions)}
+                    className="sr-only peer"
+                  />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all after:duration-300 dark:border-gray-600 peer-checked:bg-blue-600 hover:bg-gray-300 dark:hover:bg-gray-600 peer-checked:hover:bg-blue-700"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <span className="font-semibold text-primary-600 dark:text-primary-400">
+                {filteredQuizzes.length}
+              </span> preguntas disponibles con los filtros seleccionados
+            </p>
+            
+            <button
+              onClick={startQuiz}
+              disabled={filteredQuizzes.length === 0}
+              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 mx-auto px-8 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+            >
+              <PlayIcon className="w-5 h-5" />
+              <span>Comenzar Quiz</span>
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Quiz Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+        >
+          {[
+            { label: 'Total de preguntas', value: quizzes.length, icon: ClipboardDocumentListIcon },
+            { label: 'Temas disponibles', value: topics.length, icon: FunnelIcon },
+            { label: 'Niveles de dificultad', value: difficulties.length, icon: TrophyIcon }
+          ].map((stat, index) => {
+            const Icon = stat.icon
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 + index * 0.1 }}
+                className="card text-center"
+              >
+                <Icon className="w-8 h-8 text-primary-600 dark:text-primary-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  {stat.label}
+                </div>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
+    </div>
+  )
+}
+
+export default Quizzes

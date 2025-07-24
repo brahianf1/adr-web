@@ -1,0 +1,1017 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué significa el acrónimo PODIO en el contexto de la administración?",
+    "answer": "Es un acrónimo que representa las cinco funciones gerenciales esenciales: Planificar, Organizar, Dirigir, Integrar y Controlar.",
+    "topic": "Administración",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es la diferencia fundamental entre Misión y Visión en una empresa?",
+    "answer": "La Misión describe la actividad y propósito actual del negocio (¿qué hacemos?, ¿quiénes somos?), mientras que la Visión retrata el horizonte de negocios futuro de la empresa (¿hacia dónde vamos?, ¿en qué nos queremos convertir?).",
+    "topic": "Estrategia",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué evalúa el análisis FODA y qué representa cada una de sus letras?",
+    "answer": "Evalúa la situación actual de una organización. F: Fortalezas (interno, positivo), O: Oportunidades (externo, positivo), D: Debilidades (interno, negativo), A: Amenazas (externo, negativo).",
+    "topic": "Administración Estratégica",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es la diferencia entre Estrategia y Táctica?",
+    "answer": "La Estrategia define el QUÉ (el rumbo general a largo plazo para alcanzar un objetivo), mientras que la Táctica detalla el CÓMO (acciones específicas y puntuales para ejecutar la estrategia). La estrategia engloba a muchas tácticas.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 5,
+    "question": "¿Qué características debe tener un objetivo según el método SMART?",
+    "answer": "Un objetivo SMART debe ser: Específico (Specific), Medible (Measurable), Alcanzable (Achievable), Realista (Realistic) y Limitado en el tiempo (Timely).",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 6,
+    "question": "¿Cuáles son los dos pilares fundamentales de un modelo de negocios (PROV-FU)?",
+    "answer": "1. Propuesta de Valor para el cliente (cómo se satisfacen sus deseos y necesidades) y 2. Fórmula de Utilidades (cómo la empresa genera ganancias de manera rentable).",
+    "topic": "Modelo de Negocios",
+    "difficulty": "medio"
+  },
+  {
+    "id": 7,
+    "question": "¿Qué es la segregación de funciones en el área de TI?",
+    "answer": "Es una práctica de control interno que consiste en dividir las tareas críticas entre diferentes personas o equipos para que ninguna persona tenga control total sobre un proceso, previniendo así fraudes y errores.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 8,
+    "question": "¿Qué es la metodología CRMR y en qué se diferencia de una auditoría informática completa?",
+    "answer": "CRMR (Revisión de la Gestión de Recursos Informáticos) es una metodología simplificada para evaluar y proponer mejoras rápidas en la gestión de recursos informáticos. A diferencia de una auditoría formal, es más flexible, menos profunda y se enfoca en soluciones concretas a problemas notorios.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 9,
+    "question": "¿Cuál es el objetivo fundamental de la auditoría informática y por qué es prioritario?",
+    "answer": "El objetivo fundamental es la OPERATIVIDAD de los sistemas. Es prioritario porque detener un sistema para buscar fallas puede causar grandes inconvenientes operativos y pérdidas económicas, por lo que garantizar que funcione constantemente es la prioridad número uno.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 10,
+    "question": "¿Cuáles son los 4 síntomas que indican la necesidad de una auditoría informática (DIDI)?",
+    "answer": "1. Descoordinación y Desorganización. 2. Insatisfacción de los usuarios. 3. Debilidades económico-financieras. 4. Inseguridad (lógica, física, confidencialidad, continuidad del servicio).",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 11,
+    "question": "¿Qué establece la Norma ISO 12207?",
+    "answer": "Establece un estándar internacional que proporciona un marco de referencia común para los procesos del ciclo de vida del software, buscando asegurar la calidad y eficiencia en su desarrollo, operación y mantenimiento.",
+    "topic": "Norma ISO 12207",
+    "difficulty": "medio"
+  },
+  {
+    "id": 12,
+    "question": "¿Cuáles son los 5 procesos principales del ciclo de vida del software según la ISO 12207 (ASDOM)?",
+    "answer": "Los cinco procesos principales son: 5.1 Adquisición, 5.2 Suministro, 5.3 Desarrollo, 5.4 Operación y 5.5 Mantenimiento.",
+    "topic": "Norma ISO 12207",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué tres pruebas se deben realizar para determinar si una estrategia es ganadora (VAD-ANA)?",
+    "answer": "1. Prueba de la Ventaja Competitiva (¿otorga una ventaja sostenible?). 2. Prueba de Ajuste (¿encaja con el entorno y la empresa?). 3. Prueba del Desempeño (¿produce buenos resultados financieros y de mercado?).",
+    "topic": "Estrategia",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué es la Administración de Recursos Humanos (RRHH)?",
+    "answer": "Es la disciplina que estudia las relaciones de las personas en las organizaciones y se enfoca en las políticas y métodos para conseguir, conservar y desarrollar el talento humano con el fin de lograr los objetivos organizacionales.",
+    "topic": "Recursos Humanos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 15,
+    "question": "¿Cuáles son los 4 pilares fundamentales de la Administración de RRHH?",
+    "answer": "Los cuatro pilares son: 1. Motivación, 2. Liderazgo y Poder, 3. Comunicación Efectiva, y 4. Cultura Organizacional.",
+    "topic": "Recursos Humanos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 16,
+    "question": "¿Cuál es la diferencia entre liderar y administrar?",
+    "answer": "Liderar es influir, inspirar y guiar a otros hacia un objetivo (se enfoca en el \"por qué\" y la visión). Administrar es planificar, organizar y controlar recursos y tareas de manera eficiente (se enfoca en el \"cómo\" y el presente).",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 17,
+    "question": "En el contexto de RRHH, ¿qué es la delegación efectiva?",
+    "answer": "Es el proceso de asignar a una persona una función o responsabilidad, dándole el poder necesario para ejercerla. Una delegación efectiva aumenta la productividad, desarrolla al equipo y libera al líder para tareas estratégicas.",
+    "topic": "Liderazgo",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 18,
+    "question": "¿En qué consiste el coaching en el ámbito laboral?",
+    "answer": "Es un proceso en el que una persona con experiencia (coach) asesora y apoya a otra (coachee) para ayudarle a mejorar su desempeño, fomentar su autocrítica y desarrollar sus habilidades a través de la observación, escucha y retroalimentación.",
+    "topic": "Coaching",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 19,
+    "question": "¿Qué es la cultura organizacional?",
+    "answer": "Es el conjunto de valores, creencias, normas y comportamientos compartidos por los miembros de una organización, que define cómo se trabaja y se convive dentro de ella.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 20,
+    "question": "¿Cuál es el propósito de la 'descripción de tareas' en RRHH?",
+    "answer": "Establecer los objetivos, responsabilidades y requisitos básicos de cada puesto en una organización. Sirve como base fundamental para procesos como la selección, evaluación y desarrollo del personal.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 21,
+    "question": "¿Para qué sirve la 'evaluación de tareas'?",
+    "answer": "Sirve para analizar y asignar un valor relativo a cada puesto de trabajo, con el objetivo de establecer una estructura de remuneración justa y equitativa, mantener la equidad interna y poder comparar salarios con el mercado.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 22,
+    "question": "¿En qué consiste la Evaluación de Desempeño?",
+    "answer": "Es una técnica sistemática que permite definir y registrar el valor de la contribución de un empleado en su puesto. Sirve para dar feedback, abrir canales de comunicación y como base para decisiones sobre remuneración, capacitación y carrera.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 23,
+    "question": "¿Qué son los 'cuadros de reemplazo'?",
+    "answer": "Son una herramienta de planificación de RRHH que visualiza los posibles sustitutos para puestos clave en la organización. Especifican qué empleados tienen el potencial de asumir dichas funciones y qué necesitan desarrollar.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 24,
+    "question": "¿En qué consiste la Evaluación 360?",
+    "answer": "Es un sistema de retroalimentación que recoge opiniones sobre el desempeño de un empleado desde múltiples perspectivas (superiores, colegas, subordinados, clientes). Se basa en competencias y busca obtener una visión completa para planes de mejora personal.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 25,
+    "question": "¿Cuál es la diferencia entre una auditoría informática proactiva y una reactiva?",
+    "answer": "La proactiva se realiza de manera planificada y periódica para prevenir problemas antes de que ocurran. La reactiva se ejecuta en respuesta a un problema o incidencia ya detectado para investigar sus causas y proponer soluciones.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 26,
+    "question": "¿Qué significa que la estrategia de una empresa es proactiva y reactiva a la vez?",
+    "answer": "Significa que la estrategia se compone de dos partes: una parte proactiva (un plan de acción deliberado para alcanzar objetivos) y una parte reactiva (ajustes y respuestas a situaciones o desafíos imprevistos del mercado).",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 27,
+    "question": "¿Cuál es el propósito del método 5W-2H?",
+    "answer": "Es una técnica de análisis estructurado para entender una situación o planificar una acción, respondiendo a 7 preguntas clave: Qué (What), Por qué (Why), Cuándo (When), Dónde (Where), Quién (Who), Cómo (How) y Cuánto (How Much).",
+    "topic": "Metodologías",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 28,
+    "question": "¿Cuáles son los tres ejes o motivaciones negativas del poder en una organización?",
+    "answer": "1. Narcisismo (deseo de poder por el 'enamoramiento' con la propia posición). 2. Celos/Envidia (deseo de generar admiración y provocar rivalidades). 3. Miedo (ejercer poder mediante la intimidación y el temor).",
+    "topic": "Liderazgo",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 29,
+    "question": "¿Qué es el 'valor añadido' en un modelo de negocios?",
+    "answer": "Es la característica o cualidad extra que convierte un producto o servicio en algo especial y deseable para los clientes, siendo la clave para diferenciarse de la competencia y justificar su precio.",
+    "topic": "Modelo de Negocios",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 30,
+    "question": "¿Qué es la 'sorpresa gerencial' y cómo se evita?",
+    "answer": "Es un fenómeno perjudicial que ocurre cuando un superior se entera de un problema o situación crítica en el último momento. Se evita fomentando una cultura de comunicación abierta y constante, donde los problemas se informan de manera proactiva.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 31,
+    "question": "¿Cuál es la diferencia entre objetivos cuantitativos y cualitativos?",
+    "answer": "Los objetivos cuantitativos son medibles y se expresan en cantidades (ej: 'alcanzar 1M de usuarios'). Los objetivos cualitativos son más subjetivos y complementarios, enfocados en cualidades (ej: 'crear una comunidad activa').",
+    "topic": "Objetivos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 32,
+    "question": "¿Qué es la 'separación de entornos' en desarrollo de sistemas y cuáles son los 3 entornos?",
+    "answer": "Es una práctica que divide el ciclo de vida de un sistema para aislar problemas y controlar la calidad. Los 3 entornos son: Desarrollo (donde se crea y modifica el código), Testing (para probar la aplicación) y Producción (donde la usan los usuarios finales).",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 33,
+    "question": "¿Cuáles son los 4 pasos para consolidar un 'hecho importante' en un informe de auditoría (E-CO-RE-CORE)?",
+    "answer": "1. Hecho Encontrado (describirlo con evidencia). 2. Consecuencias del Hecho (identificar el riesgo). 3. Repercusión del Hecho (describir los impactos). 4. Conclusión y Recomendación (resumir y proponer una solución).",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 34,
+    "question": "¿Cuál es la diferencia principal entre una Auditoría Interna y una Externa?",
+    "answer": "La Auditoría Interna es realizada por personal de la propia empresa, es continua y evalúa procesos internos. La Auditoría Externa es realizada por profesionales independientes, suele ser reactiva y se enfoca en el cumplimiento normativo y la salud financiera/operativa.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 35,
+    "question": "¿Cuáles son las 5 áreas específicas de la auditoría informática (DESSC)?",
+    "answer": "Las 5 áreas específicas son: Desarrollo de Proyectos, Explotación, Sistemas, Comunicaciones/Redes y Seguridad.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 36,
+    "question": "En auditoría de sistemas, ¿qué es 'Tuning'?",
+    "answer": "Es el conjunto de técnicas de observación y evaluación del comportamiento de los subsistemas y del sistema en su conjunto, con el objetivo de optimizar su rendimiento y refinarlo para alcanzar la máxima eficiencia. Se considera una acción proactiva.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 37,
+    "question": "¿Cuál es el propósito de la Carta de Presentación del Informe Final de una auditoría?",
+    "answer": "Es un resumen ejecutivo (3-4 folios) destinado al responsable máximo que contrató la auditoría. Resume los objetivos, alcance, conclusión general y presenta las debilidades en orden de importancia, pero NO incluye las recomendaciones detalladas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 38,
+    "question": "Según la administración de RRHH, ¿cuál es el paradigma del costo y beneficio de tener personas?",
+    "answer": "El paradigma sostiene que las personas no deben ser vistas como un costo para la empresa, sino como un activo o una inversión. El capital humano, con sus conocimientos e ideas, es lo que crea la diferencia competitiva.",
+    "topic": "Recursos Humanos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 39,
+    "question": "¿Cuáles son las cinco funciones del área de RRHH según el modelo PIIMCE?",
+    "answer": "1. Función de administración de Personal. 2. Función de Interrelación. 3. Función de Investigación y Métodos. 4. Función Cultural. 5. Función Empresarial.",
+    "topic": "Recursos Humanos",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 40,
+    "question": "¿Cuál es la diferencia entre un líder participativo y uno autoritario?",
+    "answer": "El líder participativo fomenta el trabajo en equipo e involucra a sus miembros en la toma de decisiones. El líder autoritario exige obediencia, impone sus ideas y centraliza las decisiones. El primero motiva, el segundo puede desmotivar a largo plazo.",
+    "topic": "Liderazgo",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 41,
+    "question": "En el proceso de selección de personal, ¿cuáles son las dos modalidades principales para reclutar?",
+    "answer": "1. Selección Propia: Realizada internamente por la empresa, dando más control sobre el proceso. 2. Selección Externa: Se delega el proceso a una empresa consultora especializada, útil para puestos difíciles o para reducir la carga interna.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 42,
+    "question": "¿Qué es la 'carrera tipo' en la planificación de RRHH?",
+    "answer": "Es la secuencia de puestos ideal que una persona debería ocupar para llegar a una posición determinada dentro de la empresa. Proporciona un camino claro de ascenso y desarrollo profesional.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 43,
+    "question": "¿Qué se evalúa en la auditoría de 'Explotación o Producción'?",
+    "answer": "Se auditan las secciones del centro productivo, como la planificación de la producción y la producción misma, para asegurar que los resultados informáticos (listados, archivos, etc.) sean precisos, completos y consistentes, priorizando siempre la operatividad.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 44,
+    "question": "¿Cuál es la finalidad de los objetivos en una organización?",
+    "answer": "La finalidad es transformar los lineamientos de la misión y la visión en acciones concretas e indicadores de desempeño específicos. Esto permite a los administradores seguir el progreso y tomar decisiones basadas en datos.",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 45,
+    "question": "¿Qué significa la 'compatibilidad' como palabra clave en una auditoría de sistemas?",
+    "answer": "Se refiere a la capacidad de diferentes componentes o sistemas (hardware, software) de funcionar juntos de manera armoniosa y eficiente. Una mayor compatibilidad permite una mejor integración de recursos diversos.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 46,
+    "question": "En el flujo de la administración de RRHH, ¿qué es la 'brecha'?",
+    "answer": "La brecha es la diferencia entre la visión (hacia dónde se quiere ir con el recurso humano) y la realidad (la situación actual). Una vez identificada, las estrategias y objetivos se enfocan en cerrarla.",
+    "topic": "Recursos Humanos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 47,
+    "question": "¿Qué es la 'comunicación de doble vínculo' y por qué es perjudicial?",
+    "answer": "Es un patrón de comunicación donde se envían mensajes contradictorios (ej. el lenguaje verbal dice una cosa y el corporal otra), lo que genera confusión, desconfianza y ansiedad en el receptor. Es perjudicial porque socava la claridad y la sinceridad en las relaciones.",
+    "topic": "Comunicación",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 48,
+    "question": "¿Qué es el 'potencial' de un empleado según la gestión de RRHH?",
+    "answer": "Es una evaluación subjetiva que hace la organización sobre las cualidades y capacidades de un empleado para asumir responsabilidades mayores en el futuro, incluso si aún no ha demostrado esas habilidades en un puesto concreto. Sirve para identificar futuros líderes.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 49,
+    "question": "¿Qué es la inducción y cuáles son sus dos etapas?",
+    "answer": "La inducción es el proceso para familiarizar a un nuevo empleado con la empresa. Sus dos etapas son: 1. Conocimiento general de la empresa (historia, misión, visión, etc.) y 2. Inducción al sector específico (funciones del puesto, normas, equipo, etc.).",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 50,
+    "question": "¿Qué es una 'ventaja competitiva sustentable'?",
+    "answer": "Es una ventaja que permite a una empresa satisfacer a los clientes con mayor eficacia o eficiencia que sus rivales, y que es duradera en el tiempo a pesar de los esfuerzos de la competencia por igualarla o superarla.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 51,
+    "question": "Según el texto, ¿cuáles son los 3 elementos para crear una Misión estratégicamente reveladora?",
+    "answer": "1. QUÉ necesidades del cliente se están tratando de satisfacer. 2. A QUIÉN se está tratando de satisfacer (grupos de clientes). 3. LAS ACTIVIDADES, TECNOLOGÍAS Y CAPACIDADES de la empresa.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 52,
+    "question": "¿Cuál es la diferencia entre objetivos estratégicos y objetivos financieros?",
+    "answer": "Los Objetivos Estratégicos son metas cualitativas a largo plazo que fortalecen la posición competitiva (el QUÉ). Los Objetivos Financieros son metas cuantificables sobre el desempeño económico (el RESULTADO). Los OE guían el camino y los OF miden el éxito de ese camino.",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 53,
+    "question": "¿Qué consecuencia enfrenta una empresa si no logra una ventaja competitiva?",
+    "answer": "Se arriesga a quedar fuera de la competencia, a que sus clientes queden en manos de rivales más fuertes y a permanecer con un desempeño financiero deficiente.",
+    "topic": "Estrategia",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 54,
+    "question": "Nombra los 4 principales planteamientos estratégicos para destacar en el mercado (BEEM).",
+    "answer": "1. Ser el más Barato (proveedor de bajo costo). 2. Ofrecer características únicas (El mejor). 3. Enfocarse en un nicho Específico. 4. Mejor costo-híbrida (el más Eficiente).",
+    "topic": "Estrategia",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 55,
+    "question": "¿Cómo evoluciona la estrategia de una empresa con el tiempo?",
+    "answer": "La estrategia es un proceso dinámico. Evoluciona abandonando elementos estratégicos que ya no son útiles, añadiendo nuevas iniciativas proactivas y reaccionando de forma adaptativa a los cambios del entorno.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 56,
+    "question": "En el contexto del modelo de negocios, ¿qué significa que 'V > P + C'?",
+    "answer": "Esta fórmula representa la base de la rentabilidad. Significa que el Valor (V) que percibe el cliente debe ser mayor que el Precio (P) que paga más los Costos (C) de producción para que la empresa obtenga beneficios.",
+    "topic": "Modelo de Negocios",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 57,
+    "question": "¿Qué es una auditoría y cuál es su finalidad?",
+    "answer": "Una auditoría es un examen exhaustivo y crítico para evaluar y verificar los procesos y resultados de una empresa. Su finalidad es descubrir el valor del área evaluada para fortalecer y mejorar los procesos, identificando debilidades, amenazas y disfunciones.",
+    "topic": "Auditoría",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 58,
+    "question": "¿Cuáles son las 4 fases de una auditoría informática según el acrónimo PRE-EL?",
+    "answer": "1. Planificación (alcance, objetivos). 2. Recopilación de información. 3. Evaluación de los controles (identificar debilidades). 4. Elaboración del informe (hallazgos y recomendaciones).",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 59,
+    "question": "¿Qué son las áreas generales de auditoría (DIUS) y las específicas (DESSC)?",
+    "answer": "Las áreas generales (DIUS) proporcionan un marco global: Dirección, Interna, Usuario y Seguridad. Las áreas específicas (DESSC) se concentran en aspectos técnicos: Desarrollo, Explotación, Sistemas, Seguridad y Comunicaciones.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 60,
+    "question": "¿Qué técnicas y herramientas se utilizan en una auditoría, según el acrónimo CECI-CUQUI?",
+    "answer": "Cuestionarios, Entrevistas, Checklist, Software de Interrogación y Trazas o Huellas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 61,
+    "question": "¿En qué tres casos una empresa con auditoría interna debería contratar una auditoría externa (TE-CI-MEP)?",
+    "answer": "1. Para auditar Temas de Especialización que el equipo interno no domina. 2. Para Contrastar Informes internos que generan dudas. 3. Como Medida Preventiva para prepararse ante auditorías obligatorias de terceros.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 62,
+    "question": "En auditoría de sistemas, ¿qué es 'Tuning' y por qué es proactivo?",
+    "answer": "Es el conjunto de técnicas para evaluar y optimizar el comportamiento de los sistemas. Se considera proactivo porque se realiza periódicamente para buscar mejoras y alcanzar la eficiencia total, sin esperar a que aparezcan síntomas de deterioro o problemas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 63,
+    "question": "¿Cuáles son las 7 fases del método de trabajo de una auditoría informática?",
+    "answer": "1. Definir alcance y objetivos. 2. Estudio inicial del entorno. 3. Determinar recursos. 4. Elaborar plan y programas. 5. Realizar las actividades de auditoría. 6. Confeccionar el informe final. 7. Redactar la carta de introducción.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 64,
+    "question": "¿Qué dos principios rigen la exposición del informe final de una auditoría?",
+    "answer": "1. Incluir solo hechos importantes y relevantes. 2. Consolidar los hechos, lo que significa que deben estar verificados objetivamente, probados documentalmente y soportados.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 65,
+    "question": "Según el 'Ciclo de Seguridad', ¿cuáles son los segmentos con mayor peso o importancia?",
+    "answer": "Los segmentos con mayor peso final son: Aplicaciones (16%), Procesos (14%) y Seguridad Física (14%). Esto indica que son áreas críticas en la evaluación de la seguridad.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 66,
+    "question": "¿Cuáles son los 6 elementos para generar Confianza y Pertenencia en un equipo?",
+    "answer": "1. Visión compartida. 2. Análisis de la realidad compartido. 3. Desarrollo de estrategias compartido. 4. Objetivos claros y revisados. 5. Delegación de poder clara. 6. Controles gerenciales establecidos.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 67,
+    "question": "¿Cuál es la principal diferencia entre un 'Líder' y un 'Conductor' según el texto?",
+    "answer": "El Líder se basa en la fe profunda, el carisma y el entusiasmo para tomar riesgos. El Conductor se basa en saber hacia dónde va, la organización clara y la motivación para gestionar riesgos menores de forma eficiente. El liderazgo es más innato, la conducción más aprendida.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 68,
+    "question": "¿Cuáles son los 5 pasos del proceso de delegación?",
+    "answer": "1. Definición de objetivos y funciones. 2. Entrenamiento. 3. Establecimiento de tiempos de decisión. 4. Análisis de resultados. 5. Consolidación del puesto.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 69,
+    "question": "¿Cuáles son los roles que sostienen un proceso de cambio organizacional?",
+    "answer": "Los roles son: la persona que tiene la Idea, quien toma la Iniciativa, quienes tienen el poder de Promoción, quienes ejecutan el Cambio y quienes realizan el Control del proceso.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 70,
+    "question": "Describe la evolución de la consideración de RRHH en el planeamiento estratégico (las 4 etapas).",
+    "answer": "Etapa 1: No se considera a RRHH. Etapa 2: Se reconoce su existencia pero sin involucrar al especialista. Etapa 3: Se considera formalmente pero aún sin participación del especialista. Etapa 4: Se reconoce plenamente su importancia, involucrando activamente al especialista en RRHH.",
+    "topic": "Recursos Humanos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 71,
+    "question": "¿Cuál es la diferencia entre una escala de remuneración Fija y una Móvil?",
+    "answer": "Una escala Fija asigna un sueldo determinado y constante para cada nivel o categoría. Una escala Móvil establece un rango salarial (con un mínimo y un máximo) para cada categoría, permitiendo movimiento dentro del rango basado en desempeño o antigüedad.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 72,
+    "question": "¿Qué información clave debe contener el 'informe de entrevista' en un proceso de selección?",
+    "answer": "Debe incluir un encabezado (candidato, fecha), una tabla de evaluación con categorías (apariencia, conocimientos, cultura, etc.), comentarios adicionales del entrevistador, y su firma para validar el informe.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 73,
+    "question": "¿Cuál es la diferencia entre la Administración y una Organización?",
+    "answer": "La Administración es la disciplina universal que busca la mejora en la gestión de recursos (MOHFT) para lograr efectividad. Una Organización es un grupo de personas coordinadas para alcanzar un objetivo común. La administración se aplica a las organizaciones.",
+    "topic": "Administración",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 74,
+    "question": "En el informe final de auditoría, ¿qué se expone en la sección 'Cuerpo Expositivo' para cada tema?",
+    "answer": "Para cada tema, se expone en orden: a) La situación actual (comparando lo previsto vs. lo real si aplica). b) Las tendencias futuras. c) Los puntos débiles y amenazas detectados.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 75,
+    "question": "¿Cuál es el propósito de una 'encuesta de remuneración' en RRHH?",
+    "answer": "Es una herramienta para relevar y comparar los salarios y beneficios que ofrecen otras empresas del mercado para puestos similares. Ayuda a la organización a definir una escala salarial competitiva y a mantener la equidad externa.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 76,
+    "question": "¿Qué se busca en la auditoría de Desarrollo de Proyectos o Aplicaciones?",
+    "answer": "Se busca garantizar que los sistemas desarrollados cumplan con los requisitos del usuario, sean seguros, y estén listos para producción. Se revisan metodologías, satisfacción del usuario, control de procesos y el control interno de las propias aplicaciones.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 77,
+    "question": "En el contexto del liderazgo, ¿qué es un 'conductor' y qué habilidades debe tener?",
+    "answer": "Un 'conductor' es un tipo de líder que se caracteriza por su capacidad para gestionar equipos de manera efectiva, basada en habilidades técnicas y de gestión que pueden ser adquiridas. Debe tener visión, saber delegar, ser proactivo y comunicarse con claridad.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 78,
+    "question": "¿Qué es una 'matriz de riesgos' en el contexto de la seguridad informática?",
+    "answer": "Es una herramienta que se utiliza para identificar y evaluar sistemáticamente las amenazas, su probabilidad de ocurrencia y su impacto potencial en la organización. Ayuda a definir medidas de mitigación y a asignar recursos de seguridad de manera eficiente.",
+    "topic": "Auditoría Informática",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 79,
+    "question": "¿Qué implica la 'integración' en el acrónimo PODIO de la administración?",
+    "answer": "Significa lograr que la diversidad de recursos (humanos, tecnológicos, financieros, etc.) se integren de manera compatible para que trabajen en conjunto y se consigan los objetivos de la organización.",
+    "topic": "Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 80,
+    "question": "En la creación de una Visión, ¿qué significan los conceptos de 'Relevante y Alineada' y 'Participación y Compromiso'?",
+    "answer": "'Relevante y Alineada' significa que la visión debe estar vinculada a la realidad de la empresa y ser ambiciosa. 'Participación y Compromiso' implica que debe ser co-creada con los miembros de la organización para generar un compromiso compartido.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 81,
+    "question": "¿Qué es la estrategia de 'Mejor Costo-Híbrida'?",
+    "answer": "Es una estrategia que busca ofrecer un producto con características y calidad similares o superiores a las de los rivales, pero a un precio más bajo. Se enfoca en ser el proveedor más eficiente en costos dentro de su categoría. (Ejemplo: Xiaomi vs. Apple).",
+    "topic": "Estrategia",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 82,
+    "question": "En la auditoría de Desarrollo, ¿qué se controla en la fase de 'Métodos de Prueba'?",
+    "answer": "Se verifica que las pruebas se realicen de acuerdo con las Normas de la Instalación y, crucialmente, que se utilicen juegos de ensayo de datos de prueba (datos ficticios), no datos reales de producción, para garantizar la seguridad y confidencialidad.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 83,
+    "question": "En el contexto de la auditoría de sistemas, ¿qué se audita en el software de 'Teleproceso'?",
+    "answer": "Se evalúa el software utilizado para la comunicación entre sistemas remotos, que es complementario al software básico. Se verifica su rendimiento, seguridad y compatibilidad para asegurar que las conexiones y transferencias de datos funcionen correctamente.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 84,
+    "question": "Desde el punto de vista de la utilidad empresarial, ¿por qué la información es considerada un 'activo real' de la empresa?",
+    "answer": "Porque la información, al igual que los stocks o las materias primas, tiene un valor tangible y puede generar beneficios si se gestiona y utiliza de forma inteligente. Por ello, debe ser protegida, rentabilizada y auditada como cualquier otro activo.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 85,
+    "question": "En el estudio inicial de una auditoría, ¿qué se analiza respecto a la 'Situación geográfica de los Sistemas'?",
+    "answer": "Se determina la ubicación de los distintos Centros de Proceso de Datos de la empresa y se verifica si existe un responsable claro en cada uno, así como si se utilizan los mismos estándares de trabajo en todas las ubicaciones para garantizar la coherencia.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 86,
+    "question": "En la determinación de recursos para una auditoría, ¿qué tipo de 'Recursos Materiales' se necesitan?",
+    "answer": "Se necesitan recursos de Software (programas propios de auditoría como monitores o generadores de datos) y de Hardware (tiempo de máquina, pantallas, impresoras), que generalmente son proporcionados por el cliente (la empresa auditada).",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 87,
+    "question": "¿Cuál es la diferencia entre el Plan y la Programación de una auditoría?",
+    "answer": "El Plan establece los recursos, esfuerzos globales, prioridades y estructura de las tareas de forma genérica. La Programación, en cambio, cuantifica el plan, estableciendo un calendario real de actividades y la asignación de recursos concretos a personas específicas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 88,
+    "question": "En el flujo de una debilidad en un informe de auditoría, ¿qué se debe considerar en la 'Recomendación del auditor'?",
+    "answer": "La recomendación debe ser concreta y exacta para que su implementación pueda ser verificada, debe dirigirse a la persona que puede implementarla y debe entenderse por sí sola sin necesidad de explicaciones adicionales.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 89,
+    "question": "¿Cuáles son las 7 necesidades humanas que un mánager puede satisfacer para motivar a su equipo?",
+    "answer": "Hacer (ser útil), Crecer (desarrollarse), Tener (recursos/poder), Pertenecer (ser parte de un equipo), Ser Reconocido, Sentir Seguridad y Transcender (dejar una huella).",
+    "topic": "Recursos Humanos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 90,
+    "question": "En RRHH, ¿por qué la 'legitimidad' es una de las formas del poder?",
+    "answer": "Porque es el poder otorgado formalmente por la estructura de la organización. Un mánager tiene poder legítimo porque ha sido nombrado para ese puesto por una autoridad superior, y esta asignación es aceptada socialmente dentro de la empresa.",
+    "topic": "Liderazgo",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 91,
+    "question": "En comunicación, ¿qué es el 'arte de escuchar' según el texto?",
+    "answer": "Implica no solo atender a las palabras, sino también observar activamente el lenguaje no verbal (gestos, posturas) y el contexto. Es un proceso activo que permite interpretar correctamente el mensaje completo y responder de manera adecuada.",
+    "topic": "Comunicación",
+    "difficulty": "medio"
+  },
+  {
+    "id": 92,
+    "question": "¿Cuáles son las dos técnicas de coaching mencionadas y en qué consisten?",
+    "answer": "1. Técnicas de Apertura: Fomentan la participación y exploración de alternativas mediante preguntas abiertas. 2. Técnicas de Feedback: Proporcionan retroalimentación oportuna y descriptiva, enfocada en el comportamiento y no en la persona, para ayudar a mejorar.",
+    "topic": "Coaching",
+    "difficulty": "medio"
+  },
+  {
+    "id": 93,
+    "question": "¿Qué es una 'encuesta de cultura' en una organización?",
+    "answer": "Es una herramienta que ayuda a identificar la percepción, las creencias y los valores reales de los empleados. Permite obtener una 'línea de percepción y creencia' para analizar la cultura organizacional y detectar brechas o áreas de mejora.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 94,
+    "question": "En un proceso de selección interna, ¿qué medios de contacto se pueden utilizar para encontrar candidatos?",
+    "answer": "Presentación por empleados, presentación espontánea, formulario de ingreso en la web, archivo de candidatos, avisos clasificados y contacto con escuelas y universidades para pasantías.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 95,
+    "question": "En las fases finales de la selección, ¿quién toma la decisión de ingreso y por qué?",
+    "answer": "La decisión final la toma el superior inmediato del puesto a cubrir. Es él quien responderá por el desempeño futuro del candidato y quien debe asegurar que el nuevo miembro se integre correctamente al equipo.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 96,
+    "question": "En el proceso de la entrevista, ¿cuáles son los tres momentos de la 'entrevista propiamente dicha'?",
+    "answer": "1. Apertura (bienvenida e introducción). 2. Consideración de la cuestión (escucha activa y preguntas al candidato). 3. Cierre (resumen de conclusiones y explicación de los siguientes pasos).",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 97,
+    "question": "¿Cuál es la importancia del 'principio de subordinación' en una auditoría?",
+    "answer": "Porque garantiza que todas las áreas de la empresa, incluida la de informática, trabajen bajo un mismo marco normativo. Esto evita conflictos entre departamentos, asegura la coherencia y contribuye a una gestión eficiente y alineada con los objetivos generales.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 98,
+    "question": "¿Qué son los 'controles compensatorios' en una matriz de segregación de funciones?",
+    "answer": "Son medidas de control adicionales que se deben implementar cuando, por necesidad o tamaño de la empresa, no es posible separar completamente dos funciones incompatibles y estas recaen en la misma persona o sector. Su objetivo es mitigar el riesgo asociado.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 99,
+    "question": "¿Qué implica la 'revisión de controles de la gestión informática' y en qué orden se realiza (NGI-PGEI)?",
+    "answer": "Implica verificar que las normas informáticas existan y sean coherentes con las de la empresa. Se realiza en este orden: 1. Normas Generales de la Instalación, 2. Procedimientos Generales Informáticos, 3. Procedimientos Específicos Informáticos.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 100,
+    "question": "¿Cuál es la diferencia entre un cambio organizacional evolutivo y uno revolucionario?",
+    "answer": "El cambio evolutivo consiste en modificaciones incrementales y progresivas que ocurren de forma natural con el tiempo. El cambio revolucionario implica transformaciones radicales y profundas que afectan a la organización en un corto período.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 101,
+    "question": "En administración, ¿cómo se define la 'efectividad' y de qué dos componentes depende?",
+    "answer": "La efectividad es el resultado del mejoramiento constante. Se logra mediante la combinación de eficacia (que se logren los resultados esperados) y eficiencia (que se utilicen los recursos de la mejor manera posible).",
+    "topic": "Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 102,
+    "question": "Además de ser un plan, ¿qué nos dice el texto sobre la naturaleza de las tácticas?",
+    "answer": "Las tácticas pueden ser singulares, específicas, secuenciales o paralelas, y sus resultados son más inmediatos en comparación con los de una estrategia, que son a largo plazo.",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 103,
+    "question": "¿Qué rol debe jugar la administración frente a los cambios del entorno para formular una visión estratégica?",
+    "answer": "La administración debe ver más allá del presente y ser capaz de pronosticar los cambios en los clientes, el mercado, los competidores y los impactos de factores externos e internos (RRHH, económicos, etc.).",
+    "topic": "Estrategia",
+    "difficulty": "medio"
+  },
+  {
+    "id": 104,
+    "question": "En la evaluación de desempeño, ¿qué principio se establece sobre los miembros más productivos?",
+    "answer": "El principio es que quienes más aporten al cumplimiento de los objetivos de la empresa deben ser considerados y reconocidos como los miembros más productivos del equipo.",
+    "topic": "Objetivos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 105,
+    "question": "¿De qué 3 factores depende la cantidad de cambios internos necesarios para ejecutar una nueva estrategia?",
+    "answer": "1. Del número de elementos nuevos de la estrategia. 2. Del grado de desviación de las prácticas internas respecto a lo que se requiere. 3. De la forma en que el clima laboral y la cultura apoyen la ejecución.",
+    "topic": "Estrategia",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 106,
+    "question": "¿Cuáles son los 3 niveles de alcance que puede tener una revisión CRMR?",
+    "answer": "El alcance puede ser: 1. Reducido (identificar problemas puntuales). 2. Medio (análisis más profundo y recomendaciones generales). 3. Amplio (desarrollar un plan de mejora detallado).",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 107,
+    "question": "¿Qué significa el 'soporte de independencia y confianza' para un auditor interno?",
+    "answer": "Significa que la auditoría interna no debe depender de otro órgano y ningún otro órgano debe tener autoridad sobre ella. El auditor debe limitarse a describir hechos objetivos, sin juicios de valor y con pruebas.",
+    "topic": "Auditoría",
+    "difficulty": "medio"
+  },
+  {
+    "id": 108,
+    "question": "Nombra y describe los 4 criterios generales (FI-AD-PUS) para auditar cualquier área específica de TI.",
+    "answer": "1. Funcionamiento Interno (eficiencia de procesos). 2. Apoyo de la Dirección (recursos y soporte). 3. Perspectiva del Usuario (satisfacción de necesidades). 4. Seguridad (cumplimiento de estándares).",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 109,
+    "question": "En seguridad informática, ¿qué significan los tres pilares de la Confidencialidad, Integridad y Disponibilidad (CIA Triad)?",
+    "answer": "Confidencialidad: la información es accesible solo por personal autorizado. Integridad: la información es exacta y completa. Disponibilidad: la información y los sistemas están accesibles cuando se necesitan.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 110,
+    "question": "Describe el flujo estratégico de RRHH que conecta la estrategia organizacional con las competencias del personal.",
+    "answer": "El flujo es: Estrategia de la Organización → Define las Capacidades Organizacionales necesarias → Se crea un Plan Estratégico → Se desarrollan las Competencias del personal (Conseguir, Conservar, Desarrollar) para soportar el plan.",
+    "topic": "Recursos Humanos",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 111,
+    "question": "¿Qué significa la afirmación 'El sistema de poder define la política' en una organización?",
+    "answer": "Significa que la forma en que se distribuye y ejerce el poder (quién toma decisiones, quién influye) es lo que determina las 'reglas no escritas' y las dinámicas internas de la organización, es decir, su política.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 112,
+    "question": "En un proceso de cambio, ¿cuál es el dilema entre 'Tecnología o Personas'?",
+    "answer": "Es la discusión sobre qué se debe abordar primero: si implementar la nueva tecnología y forzar a las personas a adaptarse, o si preparar y adaptar primero a las personas para que luego adopten la tecnología de forma más fluida. No hay una única respuesta correcta.",
+    "topic": "Cultura Organizacional",
+    "difficulty": "medio"
+  },
+  {
+    "id": 113,
+    "question": "¿Cuáles son los 3 requisitos clave para realizar una evaluación de tareas efectiva?",
+    "answer": "1. Una descripción de tareas clara y actualizada. 2. Un manual de evaluación que establezca los criterios. 3. Un mecanismo de evaluación definido (ej. método de puntos, matrices, etc.).",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 114,
+    "question": "Según el texto, ¿cuáles son los dos tipos de personas o jefes en función de a quién contratan?",
+    "answer": "1. Los que tienen la habilidad de rodearse de gente capaz, incluso más que ellos. 2. Los que, por miedo a 'que les hagan sombra', se rodean de gente que no está en condiciones de cumplir las tareas, perjudicando a la organización.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 115,
+    "question": "En el acrónimo PODIO, ¿cuál es la función específica de 'Organizar'?",
+    "answer": "Se refiere directamente al diseño del organigrama y al ordenamiento de los puestos de trabajo, definiendo funciones, responsabilidades, jerarquía y dependencia entre ellos. No se trata de organizar cosas materiales.",
+    "topic": "Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 116,
+    "question": "¿Cuál es la composición de un 'Plan Estratégico' según la fórmula presentada?",
+    "answer": "Un Plan Estratégico es la suma de: Visión Estratégica + Objetivos + Estrategia.",
+    "topic": "Estrategia",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 117,
+    "question": "En la auditoría de Desarrollo, ¿qué 4 características debe tener un buen diseño de programas?",
+    "answer": "Debe poseer la máxima sencillez, ser modular (dividido en partes independientes), tener economía de recursos (ser eficiente) y ser compatible con las herramientas técnicas utilizadas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 118,
+    "question": "En el estudio inicial de una auditoría, ¿qué se analiza sobre el 'Número de personas por Puesto de Trabajo'?",
+    "answer": "Se compara la plantilla real con la estructura oficial. Una distribución inadecuada (falta de personal en un área y exceso en otra) pone de manifiesto una asignación ineficiente de recursos o la necesidad de una reorganización.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 119,
+    "question": "Según el texto, ¿cuál es la diferencia en la dedicación de tiempo a las funciones gerenciales entre gerentes de alto y bajo nivel?",
+    "answer": "Los gerentes de alto nivel dedican más tiempo a planificar y organizar. Los supervisores de primera línea (menor nivel) dedican más tiempo a dirigir.",
+    "topic": "Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 120,
+    "question": "¿Qué es 'radio pasillo' en el contexto de la comunicación organizacional y cómo se gestiona?",
+    "answer": "'Radio pasillo' es un término para la propagación de rumores y comunicación informal. Se gestiona estableciendo canales de comunicación formales, claros y transparentes para que la información oficial y veraz llegue a todos los empleados.",
+    "topic": "Comunicación",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 121,
+    "question": "En RRHH, ¿cómo ha cambiado el rol del administrador de 'ANTES' a 'HOY'?",
+    "answer": "ANTES: se basaba en la jerarquía, el mando y la moderación. HOY: se basa en el conocimiento valorado, la convicción, la velocidad, la agilidad y la habilidad para gestionar el cambio.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 122,
+    "question": "En el 'Ciclo de Seguridad' de una auditoría, ¿cuál es el propósito de asignar 'Pesos Finales'?",
+    "answer": "El propósito es ponderar la importancia relativa de cada segmento de seguridad (SO, BD, Redes, etc.), combinando la perspectiva técnica y la política (de negocio). Esto ayuda a priorizar los esfuerzos de la auditoría en las áreas de mayor riesgo o impacto.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 123,
+    "question": "¿Qué deficiencias principales puede tener un 'Centro de Información' según el texto?",
+    "answer": "Las principales deficiencias son: la invasión de entornos, las explotaciones paralelas de sistemas, la redundancia e inconsistencia de datos y el desaprovechamiento de los recursos informáticos.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 124,
+    "question": "¿Qué es la 'administración de la capacitación' en RRHH y cuáles son sus tres etapas?",
+    "answer": "Es el proceso estructurado para preparar y actualizar a los empleados. Sus etapas son: 1. Recepción de información (necesidades de capacitación), 2. Concreción del entrenamiento (logística y ejecución), y 3. Relevamiento de resultados (evaluación del impacto).",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 125,
+    "question": "En el proceso de selección de personal, ¿cuál es el propósito del 'estudio vecinal' y por qué se usa con cautela?",
+    "answer": "El propósito es averiguar información sobre el entorno y los antecedentes del candidato. Se usa con cautela porque puede ser considerado invasivo y plantear problemas éticos o de privacidad.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 126,
+    "question": "En la auditoría de Explotación, ¿cuál es la función del 'Centro de Control y Seguimiento de Trabajo'?",
+    "answer": "Es el corazón de la planificación diaria. Se encarga de programar los trabajos, monitorear su ejecución en tiempo real y generar alertas en caso de incidencias o retrasos, asegurando el cumplimiento del plan de producción.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 127,
+    "question": "¿Por qué es importante para un administrador ser consciente de sus límites en la relación con sus empleados?",
+    "answer": "Porque su responsabilidad se enfoca en el ámbito laboral y el desarrollo profesional. No es su función solucionar problemas personales (familiares o emocionales) de los empleados, y debe mantener esa frontera para ser efectivo y profesional.",
+    "topic": "Liderazgo",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 128,
+    "question": "¿Cuál es la relación entre los objetivos y la estrategia de una empresa?",
+    "answer": "Los objetivos son los 'fines' que se quieren alcanzar (el qué), mientras que la estrategia es el 'medio' o el plan de acción para lograrlos (el cómo).",
+    "topic": "Estrategia",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 129,
+    "question": "¿Qué son los KPIs (Indicadores Clave de Desempeño) y para qué se usan?",
+    "answer": "Son métricas específicas que se utilizan para medir el progreso hacia el logro de los objetivos. Permiten a una organización rastrear su avance y realizar ajustes cuando sea necesario.",
+    "topic": "Objetivos",
+    "difficulty": "medio"
+  },
+  {
+    "id": 130,
+    "question": "Además de planificar, organizar, etc. (PODIO), ¿qué otras tres cualidades debe tener un buen administrador según el texto de RRHH?",
+    "answer": "Un buen administrador debe añadir a las funciones del PODIO las siguientes cualidades: Carisma, capacidad de Motivación y una excelente Comunicación.",
+    "topic": "Liderazgo",
+    "difficulty": "medio"
+  },
+  {
+    "id": 131,
+    "question": "En el estudio inicial de una auditoría, ¿qué se analiza sobre los 'Flujos de Información' de una organización?",
+    "answer": "Se analizan las corrientes de información verticales, horizontales y oblicuas, especialmente las no previstas en el organigrama. Su proliferación puede indicar fallos en la estructura, pero también son necesarios para una gestión eficiente si no distorsionan la jerarquía.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 132,
+    "question": "En la auditoría de Comunicaciones y Redes, ¿qué aspectos se examinan?",
+    "answer": "Se evalúa la infraestructura de red, examinando tanto sus aspectos físicos (hardware, cableado) como lógicos (software, protocolos). Se analiza el uso eficiente de los recursos (ej. líneas contratadas) y la correcta asignación de puestos de trabajo a la red.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 133,
+    "question": "¿Qué es el 'Plan de Carrera' y por qué es importante para los empleados?",
+    "answer": "Es una técnica estratégica de RRHH que coordina y organiza los movimientos y el desarrollo del personal dentro de la empresa. Es importante porque clarifica las oportunidades de crecimiento, permitiendo a los empleados visualizar su futuro y sentirse valorados.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 134,
+    "question": "En el proceso de selección, ¿qué categorías se usan en la revisión médica final?",
+    "answer": "La evaluación médica clasifica al candidato en cuatro categorías: 1. Totalmente sano, 2. Con defectos no impeditivos, 3. Con defectos que aconsejan no ingreso, y 4. Con defectos impeditivos.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 135,
+    "question": "¿Cuál es la importancia de la 'documentación' en el desarrollo de aplicaciones según la auditoría?",
+    "answer": "Una documentación adecuada proporciona beneficios tangibles e inmediatos, como la disminución significativa de los costos y el tiempo de mantenimiento de los programas. Es un pilar para la gestión y evolución del software.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 136,
+    "question": "¿Qué son las 'trazas o huellas' como herramienta de auditoría?",
+    "answer": "Son una técnica que utiliza software especializado para rastrear la ejecución de procesos y analizar grandes volúmenes de datos. Sirven para validar la integridad de los datos, detectar patrones de problemas de seguridad o ineficiencias.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 137,
+    "question": "¿Qué es la 'utilidad empresarial' que debe buscar un administrador?",
+    "answer": "Es lograr el máximo rendimiento de los recursos y beneficios, minimizando al mismo tiempo los costos de la empresa. Es un objetivo clave de la gestión.",
+    "topic": "Administración",
+    "difficulty": "medio"
+  },
+  {
+    "id": 138,
+    "question": "En el contexto de la auditoría de sistemas, ¿qué se audita en el software 'Básico'?",
+    "answer": "Se analiza el conjunto de software que proporciona las funcionalidades básicas del sistema (como gestores de bases de datos o utilidades). Se verifica su compatibilidad, si está actualizado, su impacto en el rendimiento y su coste en comparación con alternativas.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 139,
+    "question": "¿Cuál es la función del 'Centro de Diagnosis y de Control de Red' en una auditoría de Explotación?",
+    "answer": "Este centro se encarga de gestionar las comunicaciones de la organización, monitorear el estado de la red, resolver problemas de conectividad y atender las incidencias reportadas por los usuarios, actuando como una mesa de ayuda.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 140,
+    "question": "En el estudio inicial de una auditoría, ¿qué se analiza sobre el 'Inventario de Hardware y Software'?",
+    "answer": "El auditor recaba una lista detallada de todos los elementos físicos (CPUs, periféricos) y lógicos (software básico, utilidades, aplicaciones) de la instalación. El software suele clasificarse en facturable y no facturable.",
+    "topic": "Auditoría Informática",
+    "difficulty": "medio"
+  },
+  {
+    "id": 141,
+    "question": "En la auditoría de Desarrollo, ¿por qué es fundamental el 'Estudio de Viabilidad'?",
+    "answer": "Es fundamental, especialmente en proyectos grandes, caros y complejos, porque evalúa si el proyecto es técnica, económica y operativamente factible antes de comprometer recursos significativos, minimizando el riesgo de fracaso.",
+    "topic": "Auditoría Informática",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 142,
+    "question": "¿Qué se evalúa en la auditoría de 'Investigación y Desarrollo (I+D)' dentro del área de sistemas?",
+    "answer": "Se evalúa si las actividades de innovación y desarrollo de nuevas tecnologías están interfiriendo con las operaciones diarias de la empresa y si representan un riesgo para la estabilidad y seguridad de los sistemas existentes.",
+    "topic": "Auditoría Informática",
+    "difficulty": "difícil"
+  },
+  {
+    "id": 143,
+    "question": "En RRHH, ¿por qué es importante motivar a los empleados?",
+    "answer": "La motivación es el motor que impulsa a actuar. Motivar a los empleados conociendo y satisfaciendo sus necesidades (hacer, crecer, pertenecer, etc.) es esencial para lograr un alto rendimiento, satisfacción laboral y para que se sientan valorados e involucrados.",
+    "topic": "Recursos Humanos",
+    "difficulty": "fácil"
+  },
+  {
+    "id": 144,
+    "question": "En un proceso de selección de personal, ¿cuál es el objetivo de la política de selección y empleo?",
+    "answer": "El objetivo es asegurar que los puestos vacantes sean ocupados por las personas más calificadas, que se ajusten a la cultura organizacional y que su remuneración sea coherente con la estructura salarial interna y el mercado laboral.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "medio"
+  },
+  {
+    "id": 145,
+    "question": "¿En qué consiste la fase de 'Post-entrevista' en un proceso de selección?",
+    "answer": "Consiste en revisar y analizar toda la información recopilada durante la entrevista para completar un informe formal. En esta fase, el entrevistador consolida sus impresiones y toma una decisión fundamentada sobre la idoneidad del candidato.",
+    "topic": "Gestión de RRHH",
+    "difficulty": "fácil"
+  }
+]

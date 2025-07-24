@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "summary": "La administración es una disciplina universal que busca la mejora constante en la gestión de recursos (MOHFT: materiales, humanos, financieros, tecnológicos) para lograr efectividad.",
+    "topic": "Administración: Definición y Propósito"
+  },
+  {
+    "id": 2,
+    "summary": "El proceso administrativo se resume en el acrónimo PODIO: Planificar, Organizar, Dirigir, Integrar y Controlar. Es el camino para que los gerentes creen valor y alcancen el éxito.",
+    "topic": "Proceso Administrativo: El Ciclo PODIO"
+  },
+  {
+    "id": 3,
+    "summary": "La planificación (P) implica definir la Misión, Visión, Objetivos y Estrategias. La organización (O) se refiere a la estructura de puestos y jerarquías (organigrama).",
+    "topic": "Desglose de PODIO: Planificación y Organización"
+  },
+  {
+    "id": 4,
+    "summary": "La dirección (D) es guiar a la organización hacia los objetivos. La integración (I) busca compatibilizar los diversos recursos. El control (O) monitorea el rumbo para corregir desviaciones.",
+    "topic": "Desglose de PODIO: Dirección, Integración y Control"
+  },
+  {
+    "id": 5,
+    "summary": "La estrategia define el 'QUÉ' (el plan a largo plazo), mientras que la táctica detalla el 'CÓMO' (acciones específicas e inmediatas para implementar la estrategia).",
+    "topic": "Planificación: Estrategia vs. Táctica"
+  },
+  {
+    "id": 6,
+    "summary": "La Misión responde a '¿qué hacemos?' y describe el propósito actual, mientras que la Visión responde a '¿hacia dónde vamos?' y proyecta el futuro deseado.",
+    "topic": "Direccionamiento Estratégico: Misión y Visión"
+  },
+  {
+    "id": 7,
+    "summary": "Una misión efectiva identifica qué necesidades se satisfacen, a qué clientes se sirve y las capacidades de la empresa. Una visión debe ser clara, relevante y generar compromiso.",
+    "topic": "Creación de Misión y Visión"
+  },
+  {
+    "id": 8,
+    "summary": "Los objetivos transforman la visión en metas específicas. Pueden ser cuantitativos (medibles numéricamente) o cualitativos (subjetivos y descriptivos).",
+    "topic": "Objetivos: Tipos y Clasificación"
+  },
+  {
+    "id": 9,
+    "summary": "Los objetivos estratégicos fortalecen la posición competitiva (el 'qué'), mientras que los objetivos financieros miden el desempeño económico (el resultado).",
+    "topic": "Objetivos: Estratégicos vs. Financieros"
+  },
+  {
+    "id": 10,
+    "summary": "Los objetivos deben ser SMART: Específicos (Claros), Medibles (Cuantificables), Alcanzables (Realizables), Realistas (Acordes a los recursos) y con un plazo definido (Timely).",
+    "topic": "Formulación de Objetivos: Método SMART"
+  },
+  {
+    "id": 11,
+    "summary": "La importancia de los objetivos (TOCE) radica en que guían la Toma de decisiones, Optimizan recursos, crean Coherencia organizacional y permiten Evaluar el desempeño.",
+    "topic": "Importancia de los Objetivos: Marco TOCE"
+  },
+  {
+    "id": 12,
+    "summary": "Un administrador debe responder 3 preguntas: ¿Cuál es nuestra situación actual? (Misión/FODA), ¿Hacia dónde vamos? (Visión) y ¿Cómo llegaremos? (Estrategia).",
+    "topic": "El Rol del Administrador: 3 Preguntas Clave"
+  },
+  {
+    "id": 13,
+    "summary": "El análisis FODA evalúa una situación analizando sus factores internos (Fortalezas, Debilidades) y externos (Oportunidades, Amenazas).",
+    "topic": "Análisis Estratégico: FODA"
+  },
+  {
+    "id": 14,
+    "summary": "La Administración Estratégica es el proceso de crear, implementar y evaluar decisiones para alcanzar los objetivos, combinando acciones proactivas (planificadas) y reactivas (adaptativas).",
+    "topic": "Administración Estratégica: Concepto y Dinámica"
+  },
+  {
+    "id": 15,
+    "summary": "El proceso de gestión estratégica tiene 5 funciones (VOEPA): desarrollar una Visión, determinar Objetivos, crear una Estrategia, Ponerla en práctica y Evaluarla para hacer Ajustes.",
+    "topic": "Funciones de la Gestión Estratégica"
+  },
+  {
+    "id": 16,
+    "summary": "Un plan estratégico es la suma de una Visión estratégica bien definida, Objetivos claros y una Estrategia coherente para lograrlos.",
+    "topic": "Componentes del Plan Estratégico"
+  },
+  {
+    "id": 17,
+    "summary": "Existen 4 planteamientos estratégicos (BEEM) para competir: ser el más Barato, ofrecer características Excepcionales, Enfocarse en un nicho o buscar el Mejor costo-beneficio.",
+    "topic": "Estrategias Competitivas: Modelo BEEM"
+  },
+  {
+    "id": 18,
+    "summary": "Una estrategia es ganadora si pasa 3 pruebas (VAD): genera una Ventaja competitiva, se Ajusta a la empresa y su entorno, y produce un buen Desempeño financiero y de mercado.",
+    "topic": "Validación de Estrategias: Las 3 Pruebas (VAD)"
+  },
+  {
+    "id": 19,
+    "summary": "La estrategia de una empresa evoluciona constantemente, abandonando elementos obsoletos, añadiendo iniciativas proactivas y adaptándose a cambios del entorno de forma reactiva.",
+    "topic": "Evolución de la Estrategia"
+  },
+  {
+    "id": 20,
+    "summary": "La ISO 12207 establece un marco para el ciclo de vida del software, con procesos principales (ASDOM): Adquisición, Suministro, Desarrollo, Operación y Mantenimiento.",
+    "topic": "Estándares de Calidad: Norma ISO 12207"
+  },
+  {
+    "id": 21,
+    "summary": "Un modelo de negocios explica cómo una empresa crea y entrega valor. Sus dos pilares son la propuesta de valor para el cliente y la fórmula de utilidades (V > P + C).",
+    "topic": "Modelo de Negocios y Valor"
+  },
+  {
+    "id": 22,
+    "summary": "El método 5W-2H es una técnica de análisis que responde a 7 preguntas clave: Qué (What), Por qué (Why), Cuándo (When), Dónde (Where), Quién (Who), Cómo (How) y Cuánto (How Much).",
+    "topic": "Herramientas de Análisis: 5W-2H"
+  },
+  {
+    "id": 23,
+    "summary": "La separación de entornos divide el desarrollo en áreas aisladas (Desarrollo, Testing, Producción) para asegurar la calidad y evitar fallos en el sistema final.",
+    "topic": "Control en TI: Separación de Entornos"
+  },
+  {
+    "id": 24,
+    "summary": "La segregación de funciones es un control que impide que una sola persona tenga control total sobre un proceso crítico, distribuyendo responsabilidades para prevenir fraudes.",
+    "topic": "Control en TI: Segregación de Funciones"
+  },
+  {
+    "id": 25,
+    "summary": "CRMR es una metodología rápida para evaluar la gestión de recursos informáticos y proponer mejoras. Se enfoca en la optimización y es menos formal que una auditoría.",
+    "topic": "Metodologías de Evaluación Rápida: CRMR"
+  },
+  {
+    "id": 26,
+    "summary": "La auditoría es un examen crítico para evaluar procesos, identificar debilidades, amenazas y disfunciones (DA), y proponer recomendaciones de mejora.",
+    "topic": "Auditoría: Concepto y Finalidad"
+  },
+  {
+    "id": 27,
+    "summary": "Un hecho de auditoría se consolida en 4 pasos (E-CO-RE-CORE): describir el Hecho Encontrado, sus Consecuencias, su Repercusión, y la Conclusión con Recomendaciones.",
+    "topic": "Documentación de Auditoría: Hechos Importantes"
+  },
+  {
+    "id": 28,
+    "summary": "La auditoría informática evalúa la eficacia, seguridad y cumplimiento de los sistemas, con el objetivo fundamental de garantizar la operatividad constante.",
+    "topic": "Auditoría Informática: Objetivo y Alcance"
+  },
+  {
+    "id": 29,
+    "summary": "La necesidad de una auditoría informática se manifiesta con 4 síntomas (DIDI): Descoordinación, Insatisfacción de usuarios, Debilidades económicas e Inseguridad.",
+    "topic": "Diagnóstico: Señales para una Auditoría de TI"
+  },
+  {
+    "id": 30,
+    "summary": "La revisión de controles de la gestión informática verifica que las normas y procedimientos sean coherentes, consistentes y estén subordinados a las políticas de la empresa.",
+    "topic": "Revisión de Controles de Gestión Informática"
+  },
+  {
+    "id": 31,
+    "summary": "La auditoría interna es continua y realizada por personal de la empresa, mientras que la externa es puntual, realizada por terceros para obtener una visión imparcial y experta.",
+    "topic": "Tipos de Auditoría: Interna vs. Externa"
+  },
+  {
+    "id": 32,
+    "summary": "Las auditorías informáticas se dividen en áreas específicas como Explotación (producción), Desarrollo (proyectos), Sistemas (software base), Comunicaciones y Seguridad.",
+    "topic": "Auditoría Informática: Áreas de Revisión"
+  },
+  {
+    "id": 33,
+    "summary": "La auditoría de Explotación revisa la planificación y producción de resultados informáticos, asegurando que sean precisos, completos y consistentes.",
+    "topic": "Auditoría Específica: De Explotación"
+  },
+  {
+    "id": 34,
+    "summary": "La auditoría de Desarrollo de Proyectos evalúa todo el ciclo de vida de una aplicación para garantizar que cumpla los requisitos y la satisfacción del usuario.",
+    "topic": "Auditoría Específica: De Desarrollo"
+  },
+  {
+    "id": 35,
+    "summary": "La auditoría de Sistemas analiza la 'Técnica de Sistemas' (SO, software básico) para optimizar el rendimiento y asegurar la compatibilidad e integración de los recursos.",
+    "topic": "Auditoría Específica: De Sistemas"
+  },
+  {
+    "id": 36,
+    "summary": "La auditoría de Seguridad examina las medidas de protección físicas y lógicas para identificar vulnerabilidades y riesgos que afecten la confidencialidad, integridad y disponibilidad.",
+    "topic": "Auditoría Específica: De Seguridad"
+  },
+  {
+    "id": 37,
+    "summary": "El proceso de trabajo de una auditoría incluye: definir alcance y objetivos, estudiar el entorno, determinar recursos, elaborar un plan, ejecutar las actividades y redactar el informe final.",
+    "topic": "Metodología de Trabajo de Auditoría"
+  },
+  {
+    "id": 38,
+    "summary": "El informe final de auditoría documenta los hallazgos. Su estructura incluye: objetivos, alcance, situación actual, puntos débiles, amenazas y recomendaciones.",
+    "topic": "Resultados de Auditoría: Estructura del Informe Final"
+  },
+  {
+    "id": 39,
+    "summary": "La carta de presentación es un resumen ejecutivo del informe para la alta dirección; destaca las debilidades más importantes en orden de prioridad, pero sin detallar recomendaciones.",
+    "topic": "Resultados de Auditoría: Contenido de la Carta de Presentación"
+  },
+  {
+    "id": 40,
+    "summary": "La Administración de Recursos Humanos (ARH) gestiona las relaciones de las personas para conseguir, conservar y desarrollar el talento alineado a los objetivos de la organización.",
+    "topic": "Recursos Humanos: Definición y Propósito"
+  },
+  {
+    "id": 41,
+    "summary": "La ARH ve a las personas como un activo y una inversión que genera valor, no como un costo. El capital humano es lo que diferencia a las empresas exitosas.",
+    "topic": "Paradigma de RRHH: Personas como Activo"
+  },
+  {
+    "id": 42,
+    "summary": "Los 4 pilares de la ARH son: Motivación (el motor), Liderazgo y Poder (la guía), Comunicación (la conexión) y Cultura Organizacional (el entorno).",
+    "topic": "Fundamentos de RRHH: Los 4 Pilares"
+  },
+  {
+    "id": 43,
+    "summary": "La motivación en el trabajo surge al satisfacer necesidades humanas clave: hacer, crecer, tener, pertenecer, ser reconocido, sentir seguridad y trascender.",
+    "topic": "Pilar 1: Motivación y Necesidades Humanas"
+  },
+  {
+    "id": 44,
+    "summary": "El poder es la autoridad formal otorgada por la organización, mientras que el liderazgo es la habilidad de influir e inspirar a otros para trabajar con entusiasmo.",
+    "topic": "Pilar 2: Poder vs. Liderazgo"
+  },
+  {
+    "id": 45,
+    "summary": "El liderazgo puede ser participativo (fomenta la colaboración y el trabajo en equipo) o autoritario (impone decisiones y exige obediencia).",
+    "topic": "Estilos de Liderazgo: Participativo vs. Autoritario"
+  },
+  {
+    "id": 46,
+    "summary": "La delegación es esencial para la eficiencia; implica asignar tareas y poder de decisión, fomentando el desarrollo del equipo y liberando al líder para tareas estratégicas.",
+    "topic": "Habilidades Gerenciales: Delegación Efectiva"
+  },
+  {
+    "id": 47,
+    "summary": "La comunicación es un proceso de codificación y decodificación de mensajes. Una comunicación clara y abierta es vital para evitar el 'radio pasillo' y construir confianza.",
+    "topic": "Pilar 3: El Proceso de la Comunicación"
+  },
+  {
+    "id": 48,
+    "summary": "Existen tres formas de comunicación: Visual (lenguaje corporal), Oral (ágil, con matices de tono) y Escrita (formal, deja registro).",
+    "topic": "Formas de Comunicación: Visual, Oral y Escrita"
+  },
+  {
+    "id": 49,
+    "summary": "La comunicación de 'doble vínculo' ocurre cuando hay mensajes contradictorios (verbales y no verbales), lo que genera confusión y desconfianza.",
+    "topic": "Barreras de la Comunicación: Doble Vínculo"
+  },
+  {
+    "id": 50,
+    "summary": "El coaching es un proceso de acompañamiento donde un experto guía a otra persona para mejorar su desempeño, utilizando la observación, la escucha activa y el feedback constructivo.",
+    "topic": "Desarrollo de Talento: El Proceso de Coaching"
+  },
+  {
+    "id": 51,
+    "summary": "La cultura organizacional es el conjunto de valores, creencias y normas compartidas que definen la identidad de una empresa y guían el comportamiento de sus miembros.",
+    "topic": "Pilar 4: Cultura Organizacional"
+  },
+  {
+    "id": 52,
+    "summary": "El cambio organizacional puede ser evolutivo (gradual y progresivo) o revolucionario (radical y rápido), y requiere una gestión cuidadosa para tener éxito.",
+    "topic": "Gestión del Cambio Organizacional"
+  },
+  {
+    "id": 53,
+    "summary": "La planificación estratégica de RRHH alinea las políticas de personal con los objetivos de la empresa, evolucionando desde un rol administrativo a uno estratégico.",
+    "topic": "Planificación Estratégica de RRHH"
+  },
+  {
+    "id": 54,
+    "summary": "La descripción de tareas es la base de RRHH. Define la función, responsabilidades y requisitos de cada puesto de forma clara, sirviendo para selección, evaluación y desarrollo.",
+    "topic": "Técnica de RRHH: Descripción de Tareas"
+  },
+  {
+    "id": 55,
+    "summary": "La evaluación de tareas determina la importancia relativa de cada puesto para establecer una estructura de remuneración justa y equitativa, manteniendo la equidad interna.",
+    "topic": "Técnica de RRHH: Evaluación de Tareas"
+  },
+  {
+    "id": 56,
+    "summary": "La encuesta de remuneración compara los salarios de la empresa con los del mercado para asegurar la competitividad externa, atraer y retener talento.",
+    "topic": "Técnica de RRHH: Encuesta de Remuneración"
+  },
+  {
+    "id": 57,
+    "summary": "La administración de remuneraciones es el sistema que establece una estructura salarial justa, combinando la equidad interna (valor del puesto) y la competitividad externa (mercado).",
+    "topic": "Técnica de RRHH: Administración de Remuneraciones"
+  },
+  {
+    "id": 58,
+    "summary": "La evaluación de desempeño es un proceso sistemático para medir la contribución de un empleado, identificar fortalezas, áreas de mejora y facilitar el feedback.",
+    "topic": "Técnica de RRHH: Evaluación de Desempeño"
+  },
+  {
+    "id": 59,
+    "summary": "La evaluación 360° ofrece una visión integral del desempeño al recoger feedback anónimo de superiores, colegas, subordinados y a veces clientes.",
+    "topic": "Técnica de RRHH: Evaluación 360°"
+  },
+  {
+    "id": 60,
+    "summary": "Un plan de carrera estructura las oportunidades de crecimiento, mientras que la 'carrera tipo' define la secuencia de puestos recomendada para alcanzar una posición superior.",
+    "topic": "Técnica de RRHH: Plan de Carrera y Carrera Tipo"
+  },
+  {
+    "id": 61,
+    "summary": "La evaluación de potencial es un juicio sobre la capacidad futura de un empleado. Junto a la 'carrera tipo', alimenta los cuadros de reemplazo para planificar la sucesión.",
+    "topic": "Técnica de RRHH: Potencial y Cuadros de Reemplazo"
+  },
+  {
+    "id": 62,
+    "summary": "El proceso de selección busca al candidato idóneo que cumpla con los requisitos técnicos y se ajuste a la cultura organizacional, y puede ser gestionado interna o externamente.",
+    "topic": "Proceso de Selección de Personal"
+  },
+  {
+    "id": 63,
+    "summary": "La entrevista de selección es un proceso en tres fases: pre-entrevista (preparación), entrevista (diálogo y evaluación) y post-entrevista (análisis y decisión).",
+    "topic": "Herramientas de Selección: Fases de la Entrevista"
+  },
+  {
+    "id": 64,
+    "summary": "La inducción es el proceso final de incorporación. Familiariza al nuevo empleado con la empresa (cultura, historia) y su puesto específico, asegurando una correcta adaptación.",
+    "topic": "Proceso de Inducción al Puesto"
+  }
+]
