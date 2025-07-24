@@ -1,0 +1,25 @@
+spec:
+  name: adr-web-educational-platform
+  region: nyc
+  services:
+  - dockerfile_path: Dockerfile
+    github:
+      branch: main
+      repo: brahianf1/adr-web
+    http_port: 3000
+    instance_count: 1
+    instance_size_slug: basic-xs
+    name: adr-web-service
+    routes:
+    - path: /
+    source_dir: /
+    envs:
+    - key: PORT
+      value: "3000"
+      scope: RUN_TIME
+    - key: NODE_ENV
+      value: "production"
+      scope: RUN_TIME
+    - key: VITE_APP_NAME
+      value: "ADR Educational Platform"
+      scope: RUN_TIME

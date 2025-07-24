@@ -101,6 +101,27 @@ npm run dev
 
 La aplicación estará disponible en `http://localhost:3000`
 
+## 🌐 Despliegue en Digital Ocean
+
+### Despliegue con un solo clic (Recomendado)
+
+[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/brahianf1/adr-web/tree/main)
+
+**Pasos simples:**
+1. Haz clic en el botón "Deploy to DigitalOcean"
+2. Inicia sesión en tu cuenta de DigitalOcean
+3. La configuración se carga automáticamente desde `.do/deploy.template.yaml`
+4. Haz clic en "Next" y "Create Resources"
+5. ¡Listo! Tu app estará disponible en minutos
+
+### Otras opciones de despliegue
+
+- **App Platform Manual**: Configuración manual en Digital Ocean
+- **Droplets con Docker**: Para usuarios avanzados con VPS
+- **Dominio personalizado**: Configuración de DNS y SSL
+
+📖 **[Ver guía completa de despliegue](DEPLOYMENT.md)** para instrucciones detalladas.
+
 ### 🏗️ Build para Producción
 
 ```bash
@@ -127,7 +148,7 @@ docker-compose --profile dev up
 docker build -t adr-web .
 
 # Ejecutar contenedor
-docker run -d -p 3000:80 --name adr-web-app adr-web
+docker run -d -p 3000:3000 --name adr-web-app adr-web
 ```
 
 La aplicación estará disponible en `http://localhost:3000`

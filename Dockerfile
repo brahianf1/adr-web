@@ -1,4 +1,4 @@
-# Multi-stage Docker build for React application
+# Multi-stage Docker build for React application optimized for Digital Ocean App Platform
 FROM node:18-alpine as build
 
 # Set working directory
@@ -19,8 +19,8 @@ RUN npm run build
 # Production stage with nginx
 FROM nginx:alpine
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+# Install curl for health checks
+RUN apk add --no-cache curl bash
 
 # Copy built application from build stage
 COPY --from=build /app/dist /usr/share/nginx/html
@@ -28,17 +28,31 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Copy data files to be served statically
 COPY --from=build /app/data /usr/share/nginx/html/data
 
-# Create a script to replace environment variables at runtime
-RUN echo '#!/bin/sh' > /docker-entrypoint.d/30-envsubst-on-templates.sh && \
-    echo 'envsubst < /usr/share/nginx/html/index.html > /tmp/index.html && mv /tmp/index.html /usr/share/nginx/html/index.html' >> /docker-entrypoint.d/30-envsubst-on-templates.sh && \
-    chmod +x /docker-entrypoint.d/30-envsubst-on-templates.sh
+# Copy startup script
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
-# Expose port 80
-EXPOSE 80
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Create nginx main config that doesn't specify server blocks
+RUN echo 'events {' > /etc/nginx/nginx.conf && \
+    echo '    worker_connections 1024;' >> /etc/nginx/nginx.conf && \
+    echo '}' >> /etc/nginx/nginx.conf && \
+    echo 'http {' >> /etc/nginx/nginx.conf && \
+    echo '    include /etc/nginx/mime.types;' >> /etc/nginx/nginx.conf && \
+    echo '    default_type application/octet-stream;' >> /etc/nginx/nginx.conf && \
+    echo '    sendfile on;' >> /etc/nginx/nginx.conf && \
+    echo '    keepalive_timeout 65;' >> /etc/nginx/nginx.conf && \
+    echo '    include /etc/nginx/conf.d/*.conf;' >> /etc/nginx/nginx.conf && \
+    echo '}' >> /etc/nginx/nginx.conf
+
+# Expose port (will be overridden by Digital Ocean)
+EXPOSE 3000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:80/ || exit 1
+    CMD curl -f http://localhost:${PORT:-3000}/health || exit 1
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start with custom script
+CMD ["/start.sh"]
