@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { 
   HiDocument, 
-  HiMagnifyingGlass
+  HiMagnifyingGlass,
+  HiEye,
+  HiEyeSlash
 } from 'react-icons/hi2'
 import { useDataStore } from '../store'
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -16,6 +18,9 @@ const Summaries = () => {
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage, setItemsPerPage] = useState(6)
+  
+  // Focus mode state for concentrated reading - Default to true
+  const [isFocusMode, setIsFocusMode] = useState(true)
 
   // Ref for content area to scroll to
   const contentRef = useRef(null)
@@ -24,17 +29,27 @@ const Summaries = () => {
   // Get unique topics
   const topics = [...new Set(summaries.map(summary => summary.topic))].sort()
 
-  // Professional page change handler with smooth scroll
+  // Professional page change handler with smart scroll behavior
   const handlePageChange = (newPage, scrollToContent = false) => {
     setCurrentPage(newPage)
     
-    // Scroll to top pagination when changing page from bottom pagination (professional UX)
-    if (scrollToContent && topPaginationRef.current) {
+    if (scrollToContent) {
       setTimeout(() => {
-        topPaginationRef.current.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
-        })
+        if (isFocusMode) {
+          // In focus mode, scroll to top of page for better UX
+          window.scrollTo({ 
+            top: 0, 
+            behavior: 'smooth' 
+          })
+        } else {
+          // In normal mode, scroll to top pagination
+          if (topPaginationRef.current) {
+            topPaginationRef.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start' 
+            })
+          }
+        }
       }, 100) // Small delay to ensure content is updated
     }
   }
@@ -79,115 +94,164 @@ const Summaries = () => {
   return (
     <div className="min-h-screen p-4 lg:p-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
-        >
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Resúmenes
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Accede a resúmenes organizados por temas para repasar rápidamente los conceptos clave.
-          </p>
-        </motion.div>
+        {/* Header - Collapsible in focus mode */}
+        {!isFocusMode && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="mb-8"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
+                  Resúmenes
+                </h1>
+              </div>
+              <button
+                onClick={() => setIsFocusMode(true)}
+                className="flex items-center space-x-2 px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg transition-all duration-200 group"
+                title="Vista concentrada"
+              >
+                <HiEyeSlash className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span>Vista concentrada</span>
+              </button>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
+              Accede a resúmenes organizados por temas para repasar rápidamente los conceptos clave.
+            </p>
+          </motion.div>
+        )}
 
-        {/* Filters and Search */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="card mb-8"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-            {/* Search */}
-            <div className="lg:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Buscar en resúmenes
-              </label>
-              <div className="relative">
-                <HiMagnifyingGlass className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Buscar por contenido o tema..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                />
+        {/* Compact Header for Focus Mode */}
+        {isFocusMode && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-4"
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                Resúmenes
+              </h2>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                  <span>{filteredSummaries.length} resúmenes</span>
+                  {searchTerm && <span>• "{searchTerm}"</span>}
+                  {selectedTopic !== 'all' && <span>• {selectedTopic}</span>}
+                </div>
+                <button
+                  onClick={() => setIsFocusMode(false)}
+                  className="flex items-center space-x-2 px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg transition-all duration-200 group"
+                  title="Mostrar filtros"
+                >
+                  <HiEye className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  <span className="hidden sm:inline">Mostrar filtros</span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Filters and Search - Collapsible */}
+        {!isFocusMode && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="card mb-8"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+              {/* Search */}
+              <div className="lg:col-span-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Buscar en resúmenes
+                </label>
+                <div className="relative">
+                  <HiMagnifyingGlass className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Buscar por contenido o tema..."
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Topic Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Filtrar por tema
+                </label>
+                <select
+                  value={selectedTopic}
+                  onChange={(e) => setSelectedTopic(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                >
+                  <option value="all">Todos los temas ({summaries.length})</option>
+                  {topics.map(topic => {
+                    const count = summaries.filter(s => s.topic === topic).length
+                    return (
+                      <option key={topic} value={topic}>
+                        {topic} ({count})
+                      </option>
+                    )
+                  })}
+                </select>
+              </div>
+
+              {/* Items per page */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Por página
+                </label>
+                <select
+                  value={itemsPerPage}
+                  onChange={(e) => {
+                    const value = Number(e.target.value)
+                    setItemsPerPage(value)
+                    setCurrentPage(1)
+                  }}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+                >
+                  <option value={3}>3 resúmenes</option>
+                  <option value={6}>6 resúmenes</option>
+                  <option value={9}>9 resúmenes</option>
+                  <option value={12}>12 resúmenes</option>
+                  <option value={Math.max(filteredSummaries.length, 1)}>Todos ({filteredSummaries.length})</option>
+                </select>
               </div>
             </div>
 
-            {/* Topic Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Filtrar por tema
-              </label>
-              <select
-                value={selectedTopic}
-                onChange={(e) => setSelectedTopic(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
-              >
-                <option value="all">Todos los temas ({summaries.length})</option>
-                {topics.map(topic => {
-                  const count = summaries.filter(s => s.topic === topic).length
-                  return (
-                    <option key={topic} value={topic}>
-                      {topic} ({count})
-                    </option>
-                  )
-                })}
-              </select>
-            </div>
-
-            {/* Items per page */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Por página
-              </label>
-              <select
-                value={itemsPerPage}
-                onChange={(e) => {
-                  const value = Number(e.target.value)
-                  setItemsPerPage(value)
-                  setCurrentPage(1)
-                }}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
-              >
-                <option value={3}>3 resúmenes</option>
-                <option value={6}>6 resúmenes</option>
-                <option value={9}>9 resúmenes</option>
-                <option value={12}>12 resúmenes</option>
-                <option value={Math.max(filteredSummaries.length, 1)}>Todos ({filteredSummaries.length})</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Results info and pagination info */}
-          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Mostrando <span className="font-semibold text-primary-600 dark:text-primary-400">
-                {Math.min(startIndex + 1, filteredSummaries.length)}-{Math.min(endIndex, filteredSummaries.length)}
-              </span> de {filteredSummaries.length} resúmenes
-              {searchTerm && (
-                <span> para "{searchTerm}"</span>
-              )}
-            </p>
-            {totalPages > 1 && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Página {currentPage} de {totalPages}
+            {/* Results info and pagination info */}
+            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Mostrando <span className="font-semibold text-primary-600 dark:text-primary-400">
+                  {Math.min(startIndex + 1, filteredSummaries.length)}-{Math.min(endIndex, filteredSummaries.length)}
+                </span> de {filteredSummaries.length} resúmenes
+                {searchTerm && (
+                  <span> para "{searchTerm}"</span>
+                )}
               </p>
-            )}
-          </div>
-        </motion.div>
+              {totalPages > 1 && (
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Página {currentPage} de {totalPages}
+                </p>
+              )}
+            </div>
+          </motion.div>
+        )}
 
-        {/* Top Pagination - Minimal design for quick access */}
+        {/* Top Pagination - Clean design for quick access */}
         <div ref={topPaginationRef}>
           {totalPages > 1 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex items-center justify-center space-x-3 py-2 mb-6"
+              className="flex items-center justify-center py-2 mb-6"
             >
+              {/* Previous */}
               <button
                 onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                 disabled={currentPage === 1}
@@ -196,10 +260,12 @@ const Summaries = () => {
                 ← Anterior
               </button>
               
-              <span className="text-sm text-gray-600 dark:text-gray-400 font-medium px-3">
+              {/* Page indicator */}
+              <span className="text-sm text-gray-600 dark:text-gray-400 font-medium px-8">
                 {currentPage} / {totalPages}
               </span>
               
+              {/* Next */}
               <button
                 onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
                 disabled={currentPage === totalPages}
